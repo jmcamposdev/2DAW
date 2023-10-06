@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dados {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #999999;
+}
+
+#tirarDadosButton {
+  margin-top: 50px;
+  font-size: .5rem;
+  font-weight: 700;
+  color: #999999;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  transition: all 0.2s ease-in-out;
+}
+
+#tirarDadosButton:hover {
+  color: #f5f5f5;
+  background-color: #999999;
+}
+
