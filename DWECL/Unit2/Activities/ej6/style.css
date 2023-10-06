@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#dia-reyes {
+  font: 700 2em 'Montserrat', sans-serif;
+  color: #7d7d7d;
+  text-align: center;
+}
+
+#dia-reyes span {
+  color: #3f3f3f;
+}
