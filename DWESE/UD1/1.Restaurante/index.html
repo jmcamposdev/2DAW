@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <h1 class="title">CREATE</h1>
+      <hr>
+      <h2>A new Order</h2>
+      <form action="process.php" method="post" class="form-style-5">
+        <label for="numMesa">
+          Numero de Mesa:
+          <input type="number" name="numMesa" id="numMesa" placeholder="Ej: 3" required/>
+        </label>
+  
+        <div class="form-nombre-container">
+          Nombre del camarero:
+          <div class="form-nombre-inputs-container">
+            <input
+              type="text"
+              name="nombreCamarero"
+              id="nombreCamarero"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="text"
+              name="apellidosCamarero"
+              id="apellidosCamarero"
+              placeholder="Apellidos"
+              required
+            />
+          </div>
+        </div>
+  
+        <label for="primerPlato">
+          Primer Plato:
+          <select name="primerPlato" id="primerPlato">
+            <option value="Crema de Calabaza">Crema de Calabaza</option>
+            <option value="Ensaladilla de Gambas">Ensaladilla de Gambas</option>
+            <option value="Ensalada Mediterránea">Ensalada Mediterránea</option>
+          </select>
+        </label>
+  
+        <label for="segundoPlato">
+          Segundo Plato:
+          <select name="segundoPlato" id="segundoPlato">
+            <option value="Pollo con cigalas">Pollo con cigalas</option>
+            <option value="Solomillo de cerdo">Solomillo de cerdo</option>
+            <option value="Empanada de atún">Empanada de atún</option>
+          </select>
+        </label>
+  
+        <label for="bebida">
+          Bebida:
+          <select name="bebida" id="bebida" required>
+            <option value="Agua">Agua</option>
+            <option value="Cerveza">Cerveza</option>
+            <option value="Coca Cola">Coca Cola</option>
+          </select>
+        </label>
+  
+        <div class="extra-container">
+          Extra:
+          <div>
+            <input type="checkbox" id="pan" name="extras[]" value="Pan" /> Pan
+          </div>
+          <div>
+            <input type="checkbox" id="pan" name="extras[]" value="Mantequilla" />
+            Mantequilla
+          </div>
+          <div>
+            <input type="checkbox" id="pan" name="extras[]" value="Aceite" />
+            Aceite
+          </div>
+          <div>
+            <input type="checkbox" id="pan" name="extras[]" value="Café" /> Café
+          </div>
+        </div>
+  
+        <input type="submit" name="submit-button" value="Solicitar" />
+      </form>
+    </section>
+  </body>
+</html>
