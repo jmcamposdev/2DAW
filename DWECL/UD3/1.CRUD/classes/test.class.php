@@ -35,4 +35,16 @@ class Test extends Dbh {
       echo $name['nombreusuario'] . ' ' . $name['telefono'];
     }
   }
+
+  /**
+   * Set users with prepared statements
+   */
+  public function setUsersStmt(string $nombreUsuario ,string $password, string $telefono, string $fechentrega) {
+    // Create the prepared statement
+    $sql = "INSERT INTO USUARIOS(nombreusuario, password, telefono, fechentrega) VALUES (?, ?, ?, ?)";
+    // Prepare the statement
+    $stmt = $this->connect()->prepare($sql);
+    // Execute the prepared statement and pass the parameters as an array
+    $stmt->execute([$nombreUsuario, $password, $telefono, $fechentrega]);
+  }
 }
