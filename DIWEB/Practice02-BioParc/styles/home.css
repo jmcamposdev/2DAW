@@ -1,0 +1,287 @@
+/* ------------------- HERO ------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+  min-height: 100vh;
+  background-image: url(../img/home/hero.jpg);
+  background-size: cover;
+  background-position: left;
+  padding: 0 50px;
+}
+
+/* ------------------- ABOUT US ------------------- */
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 50px;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.about-us .text-wrapper p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-us .btn-primary {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1745px) {
+  .about-us .big-title {
+    font-size: 8vw;
+  }
+}
+
+/* ------------------- WHY CHOOSE US ------------------- */
+.why-choose-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/home/whyChooseUs.webp);
+  background-size: cover;
+  background-position: center;
+  padding: 0 50px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.why-choose-us .text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.why-choose-us-text {
+  flex: 1 1 470px;
+  max-width: 470px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7rem;
+}
+
+/* ------------------- FACILITIES ------------------- */
+.facilities {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.facilities .text-wrapper .thin-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+.facilities .btn-primary {
+  margin-top: 30px;
+}
+
+/* ------------------- TAKE CARE - BANNER ------------------- */
+.take-care {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 500px;
+  background-image: url(../img/home/takerCare.jpg);
+  background-size: cover;
+  background-position: top;
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+/* ------------------- CONSERVATION - SECTION ------------------- */
+.conservation {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.conservation .big-title {
+  flex: 1;
+  text-align: center;
+}
+
+.conservation .normal-title {
+  display: none;
+}
+
+.conservation .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conservation .container .text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.conservation p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.conservation .text-container p:nth-child(5) {
+  margin-bottom: 50px;
+}
+
+.conservation .btn-primary {
+  margin: 0 auto;
+}
+
+/* ------------------- OUR TEAM - SECTION ------------------- */
+.our-team {
+  background-color: var(--background-color);
+  box-sizing: border-box;
+}
+.our-team .big-title {
+  text-align: center;
+  /*margin-bottom: 0;*/
+}
+.our-team .normal-title {
+  display: none;
+}
+.our-team .sub-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-team img {
+  width: 100%;
+}
+
+.our-team .thin-text {
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+@media screen and (max-width: 1800px) {
+  .conservation .image-container {
+    display: none;
+  }
+
+  .conservation .container .text-container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero {
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../img/home/hero.jpg);
+  }
+
+  .about-us .big-title {
+    font-size: 6vw;
+  }
+  .about-us .text-container {
+    flex: 1;
+  }
+  .about-us .img-container {
+    align-self: center;
+    flex: 1;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .why-choose-us {
+    padding: 50px 20px;
+  }
+  .why-choose-us .text-wrapper {
+    gap: 0;
+  }
+
+  .take-care {
+    background-position: -155px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../img/home/takerCare.jpg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 0 20px;
+    justify-content: flex-start;
+  }
+
+  .about-us .big-title {
+    font-size: 8vw;
+  }
+
+  .about-us .text-wrapper,
+  .facilities .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .about-us .text-wrapper .btn-primary,
+  .facilities .text-wrapper .btn-primary {
+    margin: 30px auto 0 auto;
+  }
+
+  .about-us {
+    padding: 50px 20px 100px 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .facilities {
+    padding: 50px 20px 100px 20px;
+    flex-direction: column;
+  }
+
+  .conservation {
+    padding: 50px 20px 100px 20px;
+  }
+  .conservation .big-title {
+    text-align: left;
+  }
+  .conservation .normal-title {
+    display: block;
+  }
+
+  .our-team .big-title {
+    text-align: left;
+  }
+  .our-team .normal-title {
+    display: block;
+    text-align: left;
+
+  }
+  .our-team .text-wrapper,
+  .our-team .big-title,
+  .our-team .normal-title {
+    padding: 0 20px 0 20px;
+  }
+  .our-team .normal-title {
+    margin-bottom: 40px;
+  }
+  .our-team .thin-text {
+    margin-bottom: 50px;
+  }
+}

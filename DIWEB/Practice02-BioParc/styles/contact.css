@@ -1,0 +1,257 @@
+/* ------------------- HERO ------------------- */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/contact/bannerHero.jpg);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--background-color);
+  padding: 100px 50px 0 50px;
+  box-sizing: border-box;
+}
+
+.contact .contact-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.contact .contact-wrapper > div {
+  flex: 1 1 425px;
+}
+
+.contact .contact-wrapper .text-container > .thin-text {
+  margin-bottom: 50px;
+}
+
+.contact .text-container .thin-text {
+  max-width: 600px;
+}
+
+.contact .ubication-item img {
+  width: 12px;
+}
+.contact .phone-item img {
+  width: 17px;
+}
+.contact .mail-item img {
+  width: 17px;
+}
+
+.contact .contact-list img {
+  margin-right: 10px;
+}
+
+.contact .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact form label {
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  min-height: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #202926;
+  border-radius: 2px;
+  margin-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 18px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid white;
+}
+
+input[type="submit"] {
+  font-size: 1.1rem;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.ticket {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.ticket .ticket-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.calendar {
+  border: 1px solid #1e2926;
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+.ticket .ticket-wrapper > div {
+  flex: 1 1 425px;
+}
+
+.ticket .text-container .sub-title-section span {
+  color: white
+}
+
+.ticket .hours-title {
+  margin-top: 75px;
+}
+
+.ticket .mes-container {
+  display: flex;
+  justify-content: space-between;
+}
+.ticket .mes-container img {
+  width: 12px;
+  cursor: pointer;
+}
+.reverse-icon {
+  transform: rotate(180deg);
+}
+
+.ticket .mes-text {
+  font-size: 2rem;
+}
+
+.ticket table {
+  width: 100%;
+  text-align: center;
+}
+
+.ticket .dia-inicial {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.ticket .day {
+  font-size: 0.9rem;
+  line-height: 41px;
+  color: #e7e8e8;
+  cursor: pointer;
+}
+
+.ticket .day:hover {
+  background-color: #1e2926;
+  color: white;
+}
+
+.day-next-month {
+  color: #a0a0a0;
+}
+
+.user-tickets-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.user-ticket p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+.ticket-counter 
+{
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-counter svg {
+  cursor: pointer;
+}
+
+.ticket-counter svg:hover {
+  fill: var(--secondary-color)
+}
+
+.total-price-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.total-price {
+  font-size: 1.2rem;
+}
+
+.total-price p {
+  border: 1px solid #1e2926;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+/* ------------------- LOCATION ------------------- */
+.location {
+  background-color: var(--background-color);
+  box-sizing: border-box;
+}
+
+.location .normal-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.location iframe {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero,
+  .contact,
+  .ticket {
+    padding: 100px 20px 0 20px;
+  }
+  .location {
+    padding-top: 100px;
+  }
+}

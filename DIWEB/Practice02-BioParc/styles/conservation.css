@@ -1,0 +1,256 @@
+/* ------------------- HERO ------------------- */
+.hero {
+  background-image: url(../img/conservation/conservationBanner.jpg);
+}
+/* ------------------- EXPLORE FACILITIES - SECTION ------------------- */
+.veterinarians {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.veterinarians .normal-title {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.veterinarians .thin-text {
+  max-width: 650px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.veterinarians-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+}
+
+.veterinarian {
+  flex: 0 0 370px;
+}
+
+.veterinarian img {
+  width: 100%;
+}
+
+.veterinarian .text-container {
+  padding-top: 20px;
+}
+
+.sub-title-small {
+  color: #ed7f38;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.normal-title-small {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Yeseva One", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.02em;
+}
+
+/* ------------------- CONTRIBUTION - SECTION ------------------- */
+.contribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 0 50px 100px 50px;
+  box-sizing: border-box;
+}
+
+.contribution .normal-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contribution .text-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.contribution .text-grid .text-col {
+  max-width: 600px;
+}
+
+.contribution .text-grid .text-col .text-container {
+  flex: none;
+  margin-bottom: 50px;
+}
+.contribution .text-grid .text-col .text-container:last-child {
+  margin-bottom: 0;
+}
+
+.contribution .text-grid .text-col .text-container .sub-title-section {
+  margin-bottom: 10px;
+}
+.contribution .text-grid .text-col .text-container .thin-text {
+  margin: 0;
+}
+
+/* ------------------- CHAMELEON - SECTION ------------------- */
+.chameleon {
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 0 50px 100px 50px;
+  box-sizing: border-box;
+}
+
+.chameleon > div {
+  flex: none;
+}
+
+.chameleon .text-wrapper {
+  margin-bottom: 50px;
+}
+
+.chameleon .normal-title {
+  margin-bottom: 50px;
+}
+
+.chameleon .sub-title-section {
+  margin-bottom: 10px;
+}
+
+.chameleon .thin-text {
+  margin: 0;
+  max-width: 650px;
+}
+
+.chameleon .text-container div:nth-child(2n) {
+  margin-bottom: 25px;
+}
+
+.chameleon .text-container .special-text {
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.chameleon .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------- ANIMALS - BANNER ------------------- */
+.animals-banner {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 600px;
+}
+
+.animals-banner .animals-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 600px;
+}
+
+.animals-banner .animals-container .animal-img {
+  flex: 1 1;
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 50%;
+}
+
+.animal-img1 {
+  width: 100%;
+  background-image: url(../img/conservation/bannerAnimal1.jpg);
+}
+.animal-img2 {
+  width: 100%;
+  background-image: url(../img/conservation/bannerAnimal2.jpg);
+}
+.animal-img3 {
+  width: 100%;
+  background-image: url(../img/conservation/bannerAnimal3.jpg);
+}
+.animals-banner .animals-container .animal-img4 {
+  width: 100%;
+  background-image: url(../img/conservation/bannerAnimal4.jpg);
+  background-position: top;
+}
+
+@media screen and (max-width: 1300px) {
+  .chameleon .text-container {
+    flex: 1;
+  }
+  .chameleon .img-container {
+    align-self: center;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contribution .text-grid {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .chameleon {
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+  }
+  .chameleon .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chameleon .text-container .btn-primary {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 0 20px;
+    background-position: -255px;
+  }
+
+  .veterinarians, .contribution {
+    padding: 100px 20px 0px 20px;
+  }
+
+  .veterinarians .normal-title,
+  .veterinarians > .thin-text,
+  .contribution .normal-title {
+    text-align: left;
+  }
+
+  .contribution {
+    align-items: start;
+  }
+
+  .chameleon .text-wrapper {
+    margin-bottom: 25px;
+}
+
+}
+
+@media screen and (max-width: 410px) {
+  .veterinarian {
+    flex: 1 1 100%;
+  }
+}

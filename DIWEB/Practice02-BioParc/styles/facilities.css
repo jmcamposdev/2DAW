@@ -1,0 +1,190 @@
+/* ------------------- HERO ------------------- */
+.hero {
+  background-image: url(../img/facilities/hero-facilities.jpg);
+}
+
+
+
+/* ------------------- OVERVIEW -------------------- */
+.overview {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.overview .container,
+.accessibility .container {
+  display: flex;
+  gap: 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.overview .thin-text {
+  max-width: 650px;
+}
+
+.overview .img-container,
+.accessibility .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.overview .text-container,
+.accessibility .text-container {
+  flex: 3;
+}
+
+/* ------------------- EXPLORE FACILITIES - 
+ ------------------- */
+
+.explore-facilities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 0 50px 100px 50px;
+  box-sizing: border-box;
+}
+
+.explore-facilities .normal-title {
+  text-align: center;
+}
+
+.facilities-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+}
+
+.facility {
+  background-color: black;
+  flex: 0 0 370px;
+}
+
+.facility img {
+  width: 100%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.facility .normal-title {
+  margin-bottom: 50px;
+}
+
+.facility  h4 {
+  margin: 0;
+  font-size: 24px;
+  font-family: "Yeseva One", cursive;
+  text-align: center;
+}
+
+.facility .text-container {
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+/* ------------------- EXPERIENCE - BANNER ------------------- */
+.experience-banner {
+  display: flex;
+  align-items: center;
+  background-image: url(../img/facilities/experienceBanner.jpg);
+  background-size: cover;
+  background-position: right;
+  min-height: 600px;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.experience-banner .text-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-banner .thin-text {
+  max-width: 400px;
+}
+
+/* ------------------- ACCESSIBILITY -------------------- */
+.accessibility {
+  display: flex;
+  align-items: start;
+  gap: 50px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.accessibility p {
+  max-width: 565px;
+}
+
+.accessibility .special-text {
+  margin-top: 50px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .overview .container,
+  .accessibility .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .overview, .accessibility {
+    padding: 100px 20px 100px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 0 20px;
+  }
+  .experience-banner {
+    background-position: -925px;
+    padding: 50px 20px;
+  }
+
+  .explore-facilities {
+    padding: 0 20px 100px 20px;
+  }
+
+  .explore-facilities {
+    align-items: start;
+  }
+  .explore-facilities .normal-title {
+    text-align: left;
+  }
+
+  .accessibility .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accessibility .text-container .btn-primary {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 410px) { 
+  .facility {
+    flex: 1 1 100%;
+  }
+
+  .experience-banner {
+    background-position: -1080px;
+}
+
+}
+
