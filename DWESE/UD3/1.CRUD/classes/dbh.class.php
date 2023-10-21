@@ -2,8 +2,8 @@
 
 class Dbh {
   private $host = "localhost";
-  private $user = "YOUR_USER";
-  private $pwd = "YOUR_PASSWORD";
+  private $user = "biblioteca_admin";
+  private $pwd = "jiptus-qeghod-0rizXa";
   private $dbName = "biblioteca";
 
   protected function connect() {
