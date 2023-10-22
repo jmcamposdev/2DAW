@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Moirai+One&display=swap');
+:root {
+    --text: #040901;
+    --background: #F5F6FB;
+    --background-box: #FFFFFF;
+    --primary-button: #54ce12;
+    --secondary-button: #f2fdec;
+    --accent: #5de614;
+    --not-read: #FF6D60;
+    --read: #98D8AA;
+    --border-radius: 15px;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Grandiflora One', serif;
+    color: var(--text);
+}
