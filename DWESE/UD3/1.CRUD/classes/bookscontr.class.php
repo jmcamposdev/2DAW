@@ -6,4 +6,9 @@ class BooksContr extends Books {
   public function removeBook($id) {
     return $this->deleteBook($id);
   }
+
+  // Function to edit a Book from the DB
+  public function editBook($id, $title, $category, $author, $description) {
+    return $this->updateBook($id, $title, $category, $author, $description);
+  }
 }
