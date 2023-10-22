@@ -87,4 +87,14 @@ class Books extends Dbh {
       return false;
     }
   }
+
+  protected function setBook($title, $category, $author, $description) {
+    $sql = "INSERT INTO LIBROS (titulo, categoria, autor_id, descripcion) VALUES (?, ?, ?, ?)";
+    $stmt = $this->connect()->prepare($sql);
+    if ($stmt->execute([$title, $category, $author, $description])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
