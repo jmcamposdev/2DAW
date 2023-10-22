@@ -77,4 +77,14 @@ class Books extends Dbh {
       return false;
     }
   }
+
+  protected function updateBook($id, $title, $category, $author, $description) {
+    $sql = "UPDATE LIBROS SET titulo = ?, categoria = ?, autor_id = ?, descripcion = ? WHERE id_libro = ?";
+    $stmt = $this->connect()->prepare($sql);
+    if ($stmt->execute([$title, $category, $author, $description, $id])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
