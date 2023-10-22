@@ -6,6 +6,9 @@ class BooksView extends Books {
 
   public function showBooks() {
     $result = $this->getBooks();
+    if (empty($result)) {
+      return "<h3>No books found</h3>";
+    }
     $html = "";
     $html .= "<table>";
     $html .= "<thead>";
@@ -32,6 +35,9 @@ class BooksView extends Books {
 
   public function showBooksByCategory($category) {
     $result = $this->getBooksByCategory($category);
+    if (empty($result)) {
+      return "<h3>No books found in this category</h3>";
+    }
     $html = "";
     $html .= "<table>";
     $html .= "<thead>";
