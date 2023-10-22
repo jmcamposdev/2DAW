@@ -11,4 +11,9 @@ class BooksContr extends Books {
   public function editBook($id, $title, $category, $author, $description) {
     return $this->updateBook($id, $title, $category, $author, $description);
   }
+
+  // Function to create a Book in the DB
+  public function createBook($title, $category, $author, $description) {
+    return $this->setBook($title, $category, $author, $description);
+  }
 }
