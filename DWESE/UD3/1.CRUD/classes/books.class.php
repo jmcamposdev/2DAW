@@ -12,7 +12,16 @@ class Books extends Dbh {
    * Returns an associative array with all the books
    */
   protected function getBooks() {
-    $sql = "SELECT LIBROS.titulo,LIBROS.categoria,AUTORES.nombre AS nombreAutor,AUTORES.apellidos AS apellidosAutor,LIBROS.descripcion FROM LIBROS JOIN AUTORES ON LIBROS.autor_id = AUTORES.id_autor";
+    $sql = "SELECT 
+    LIBROS.id_libro, 
+    LIBROS.titulo, 
+    LIBROS.categoria, 
+    AUTORES.nombre AS nombreAutor, 
+    AUTORES.apellidos AS apellidosAutor, 
+    LIBROS.descripcion 
+    FROM LIBROS 
+    JOIN AUTORES ON LIBROS.autor_id = AUTORES.id_autor";
+
     $stmt = $this->connect()->prepare($sql);
     $stmt->execute();  
     $result = $stmt->fetchAll();
@@ -20,7 +29,14 @@ class Books extends Dbh {
   }
 
   protected function getBooksByCategory($category) {
-    $sql = "SELECT LIBROS.titulo,LIBROS.categoria,AUTORES.nombre AS nombreAutor,AUTORES.apellidos AS apellidosAutor,LIBROS.descripcion FROM LIBROS JOIN AUTORES ON LIBROS.autor_id = AUTORES.id_autor WHERE LIBROS.categoria = ?";
+    $sql = "SELECT LIBROS.titulo,
+    LIBROS.categoria,
+    AUTORES.nombre AS nombreAutor,
+    AUTORES.apellidos AS apellidosAutor,
+    LIBROS.descripcion
+    FROM LIBROS JOIN AUTORES ON LIBROS.autor_id = AUTORES.id_autor 
+    WHERE LIBROS.categoria = ?";
+
     $stmt = $this->connect()->prepare($sql);
     $stmt->execute([$category]);  
     $result = $stmt->fetchAll();
