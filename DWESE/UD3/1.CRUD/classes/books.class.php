@@ -42,4 +42,14 @@ class Books extends Dbh {
     $result = $stmt->fetchAll();
     return $result;
   }
+  
+  protected function deleteBook($id) {
+    $sql = "DELETE FROM LIBROS WHERE id_libro = ?";
+    $stmt = $this->connect()->prepare($sql);
+    if ($stmt->execute([$id])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
