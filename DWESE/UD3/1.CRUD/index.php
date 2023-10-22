@@ -11,10 +11,6 @@
 </head>
 <body>
 <?php
-    $testObj = new Test();
-    //$testObj->getUsers();
-    //$testObj->getUsersStmt('Paco', '666666666');
-    //$testObj->setUsersStmt('Paco', '1234', '666666666', '2020-12-12');
     // $userObj = new UsersView();
     // $userObj->showUser("Antonio Bueno");
 
