@@ -49,7 +49,7 @@ include "includes/class-autoload.inc.php";
             <?php
             foreach (BooksView::$categories as $category) {
               if (isset($_POST['submitBooksCategories']) && $_POST['category'] == $category) {
-                echo "<option value='$category' selected>$category</option>";
+                echo "<option value='$category' selected>". ucfirst($category). "</option>";
               } else {
                 echo "<option value='$category'>". ucfirst($category). "</option>";
               }
