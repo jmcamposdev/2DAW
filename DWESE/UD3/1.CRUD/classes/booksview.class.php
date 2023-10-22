@@ -84,12 +84,16 @@ class BooksView extends Books {
     return $this->generateBooksTable($result);
   }
 
-  public function showFormEditBook($id) {
+
+  /**
+   * This function generates the HTML for the book form
+   * @param $title: The title of the form
+   * @param $action: The action attribute of the form
+   * @param $book: An array with the book data to pre-fill the form
+   * Returns the HTML for the book form
+   */
+  private function generateBookForm($title, $action, $book) {
     $authorObj = new AuthorView();
-    $result = $this->getBookById($id);
-    if (empty($result)) {
-      return "<h3>No book found</h3>";
-    }
     $html = "";
     $html .= "<section class='popup__container popup__container--active'>";
     $html .= "<div class='wrapper'>";
@@ -97,20 +101,22 @@ class BooksView extends Books {
     $html .= "<?xml version='1.0' encoding='iso-8859-1'?>
     <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg fill='#000000' height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' 
-       viewBox='0 0 490 490' xml:space='preserve'>
+    viewBox='0 0 490 490' xml:space='preserve'>
     <polygon points='456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
       489.292,457.678 277.331,245.004 489.292,32.337 '/>
     </svg>";
     $html .= "</div>";
-    $html .= "<h3>Edit Book</h3>";
-    $html .= "<form action='includes/editBook.inc.php' method='post'>";
-    $html .= "<input type='hidden' name='id' value='" . $result['id_libro'] . "'>";
+    $html .= "<h3>$title</h3>";
+    $html .= "<form action='$action' method='post'>";
+    if (isset($book['id_libro'])) {
+      $html .= "<input type='hidden' name='id' value='" . $book['id_libro'] . "'>";
+    }
     $html .= "<label for='title'>Title</label>";
-    $html .= "<input type='text' name='title' id='title' value='" . $result['titulo'] . "'>";
+    $html .= "<input type='text' name='title' id='title' value='" . ($book['titulo'] ?? '') . "'>";
     $html .= "<label for='category'>Category</label>";
     $html .= "<select name='category' id='category'>";
     foreach (self::$categories as $category) {
-      if ($category == $result['categoria']) {
+      if (isset($book['categoria']) && $category == $book['categoria']) {
         $html .= "<option value='$category' selected>" . ucfirst($category) . "</option>";
       } else {
         $html .= "<option value='$category'>" . ucfirst($category) . "</option>";
@@ -119,15 +125,27 @@ class BooksView extends Books {
     $html .= "</select>";
     $html .= "<label for='authorId'>Author</label>";
     $html .= "<select name='authorId' id='author'>";
-    $html .= $authorObj->showAuthorsSelectOptions($result['nombreAutor'], $result['apellidosAutor']);
+    $html .= $authorObj->showAuthorsSelectOptions($book['nombreAutor'] ?? NULL, $book['apellidosAutor'] ?? NULL);
     $html .= "</select>";
     $html .= "<label for='description'>Description</label>";
-    $html .= "<textarea name='description' id='description' cols='30' rows='10'>" . $result['descripcion'] . "</textarea>";
-    $html .= "<input type='submit' name='submitEditBook' value='Edit Book'>";
+    $html .= "<textarea name='description' id='description' cols='30' rows='10'>" . ($book['descripcion'] ?? '') . "</textarea>";
+    $html .= "<input type='submit' name='" . ($title == 'Create Book' ? 'submitCreateBook' : 'submitEditBook') . "' value='" . ($title == 'Create Book' ? 'Create Book' : 'Edit Book') . "'>";
     $html .= "</form>";
     $html .= "</div>";
     $html .= "</section>";
     return $html;
-
   }
+
+  public function showFormEditBook($id) {
+    $result = $this->getBookById($id);
+    if (empty($result)) {
+      return "<h3>No book found</h3>";
+    }
+    return $this->generateBookForm('Edit Book', 'includes/editBook.inc.php', $result);
+  }
+
+  public function showCreateBookForm() {
+    return $this->generateBookForm('Create Book', 'includes/createBook.inc.php', []);
+  }
+
 }
