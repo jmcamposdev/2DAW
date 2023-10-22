@@ -95,7 +95,7 @@ thead {
 }
 
 td,th {
-  padding: 10px 10px;
+  padding: 5px 10px;
 }
 tr {
   border-bottom: 1px solid;
@@ -119,6 +119,22 @@ input {
 
 input[type="submit"] {
   background-color: var(--primary-button);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+form .delete__button {
+  background-color: var(--not-read);  
+}
+
+form .delete__button:hover {
+  background-color: #ff3d3d;
+}
+
+form .update__button {
+  background-color: var(--read);
   color: white;
   font-weight: bold;
   cursor: pointer;
