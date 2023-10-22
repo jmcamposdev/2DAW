@@ -18,7 +18,7 @@
     // $userObj = new UsersView();
     // $userObj->showUser("Antonio Bueno");
 
-    $userObj = new UserContr();
+    $userObj = new UsersContr();
     $userObj->createUser("Antonio Bueno", "1234", "666666666", "2020-12-12");
   ?>
 </body>
