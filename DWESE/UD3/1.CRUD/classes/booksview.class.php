@@ -45,7 +45,7 @@ class BooksView extends Books {
                   </td>";
         // We send the id of the book to the editBook.inc.php file
         $html .= "<td>
-                      <form action='editBook.php' method='post'>
+                      <form action='index.php' method='post'>
                         <input type='hidden' name='id' value='" . $row['id_libro'] . "'>
                         <input class='edit__button' type='submit' name='submitEditBook' value='Edit'>
                       </form>
@@ -83,4 +83,47 @@ class BooksView extends Books {
     return $this->generateBooksTable($result);
   }
 
+  public function showFormEditBook($id) {
+    $result = $this->getBookById($id);
+    if (empty($result)) {
+      return "<h3>No book found</h3>";
+    }
+    $html = "";
+    $html .= "<section class='popup__container popup__container--active'>";
+    $html .= "<div class='wrapper'>";
+    $html .= "<div class='close__button'>";
+    $html .= "<?xml version='1.0' encoding='iso-8859-1'?>
+    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+    <svg fill='#000000' height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' 
+       viewBox='0 0 490 490' xml:space='preserve'>
+    <polygon points='456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+      489.292,457.678 277.331,245.004 489.292,32.337 '/>
+    </svg>";
+    $html .= "</div>";
+    $html .= "<h3>Edit Book</h3>";
+    $html .= "<form action='includes/editBook.inc.php' method='post'>";
+    $html .= "<input type='hidden' name='id' value='" . $result['id_libro'] . "'>";
+    $html .= "<label for='title'>Title</label>";
+    $html .= "<input type='text' name='title' id='title' value='" . $result['titulo'] . "'>";
+    $html .= "<label for='category'>Category</label>";
+    $html .= "<select name='category' id='category'>";
+    foreach (self::$categories as $category) {
+      if ($category == $result['categoria']) {
+        $html .= "<option value='$category' selected>" . ucfirst($category) . "</option>";
+      } else {
+        $html .= "<option value='$category'>" . ucfirst($category) . "</option>";
+      }
+    }
+    $html .= "</select>";
+    $html .= "<label for='author'>Author</label>";
+    $html .= "<input type='text' name='author' id='author' value='" . $result['nombreAutor'] . " " . $result['apellidosAutor'] . "'>";
+    $html .= "<label for='description'>Description</label>";
+    $html .= "<textarea name='description' id='description' cols='30' rows='10'>" . $result['descripcion'] . "</textarea>";
+    $html .= "<input type='submit' name='submitEditBook' value='Edit Book'>";
+    $html .= "</form>";
+    $html .= "</div>";
+    $html .= "</section>";
+    return $html;
+
+  }
 }
