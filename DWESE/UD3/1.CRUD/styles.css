@@ -18,3 +18,29 @@
     font-family: 'Grandiflora One', serif;
     color: var(--text);
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: 25px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--background-box);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+h1 {
+  font-family: 'Moirai One', cursive;
+  font-size: 50px;
+}
