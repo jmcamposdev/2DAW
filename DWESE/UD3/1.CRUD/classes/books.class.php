@@ -29,7 +29,9 @@ class Books extends Dbh {
   }
 
   protected function getBooksByCategory($category) {
-    $sql = "SELECT LIBROS.titulo,
+    $sql = "SELECT 
+    LIBROS.id_libro, 
+    LIBROS.titulo,
     LIBROS.categoria,
     AUTORES.nombre AS nombreAutor,
     AUTORES.apellidos AS apellidosAutor,
@@ -42,7 +44,7 @@ class Books extends Dbh {
     $result = $stmt->fetchAll();
     return $result;
   }
-  
+
   protected function deleteBook($id) {
     $sql = "DELETE FROM LIBROS WHERE id_libro = ?";
     $stmt = $this->connect()->prepare($sql);
