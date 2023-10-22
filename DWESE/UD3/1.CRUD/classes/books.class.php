@@ -28,6 +28,29 @@ class Books extends Dbh {
     return $result;
   }
 
+  /**
+   * This function returns a book from the DB
+   * @param $id: Id of the book to return
+   * Returns an associative array with the book
+   */
+  protected function getBookById($id) {
+    $sql = "SELECT 
+    LIBROS.id_libro, 
+    LIBROS.titulo, 
+    LIBROS.categoria, 
+    AUTORES.nombre AS nombreAutor, 
+    AUTORES.apellidos AS apellidosAutor, 
+    LIBROS.descripcion 
+    FROM LIBROS 
+    JOIN AUTORES ON LIBROS.autor_id = AUTORES.id_autor 
+    WHERE LIBROS.id_libro = ?";
+
+    $stmt = $this->connect()->prepare($sql);
+    $stmt->execute([$id]);  
+    $result = $stmt->fetch();
+    return $result;
+  }
+
   protected function getBooksByCategory($category) {
     $sql = "SELECT 
     LIBROS.id_libro, 
