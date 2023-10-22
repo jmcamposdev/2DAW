@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Moirai+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Moirai+One&display=swap");
 :root {
-    --text: #040901;
-    --background: #F5F6FB;
-    --background-box: #FFFFFF;
-    --primary-button: #54ce12;
-    --secondary-button: #f2fdec;
-    --accent: #5de614;
-    --not-read: #FF6D60;
-    --read: #98D8AA;
-    --border-radius: 15px;
-    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --text: #040901;
+  --background: #f5f6fb;
+  --background-box: #ffffff;
+  --primary-button: #54ce12;
+  --secondary-button: #f2fdec;
+  --accent: #5de614;
+  --not-read: #ff6d60;
+  --read: #98d8aa;
+  --border-radius: 15px;
+  --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Grandiflora One', serif;
-    color: var(--text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Grandiflora One", serif;
+  color: var(--text);
 }
 
 body {
@@ -36,11 +36,41 @@ body {
   align-items: center;
   justify-content: center;
   padding: 15px;
+  margin-bottom: 200px;
   background-color: var(--background-box);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 h1 {
-  font-family: 'Moirai One', cursive;
+  font-family: "Moirai One", cursive;
   font-size: 50px;
+}
+
+/* MAIN */
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-family: "Moirai One", cursive;
+}
+
+table {
+  background-color: var(--background-box);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 15px;
+}
+
+thead {
+  font-size: 25px;
+}
+
+td,th {
+  padding: 10px;
 }
