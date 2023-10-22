@@ -51,8 +51,15 @@ h1 {
 .content {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  gap: 6%;
+}
+
+.title__container {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
 h2 {
   font-size: 40px;
@@ -60,11 +67,27 @@ h2 {
   font-family: "Moirai One", cursive;
 }
 
-table {
+h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.separator {
+  height: 100%;
+  width: 2px;
+  background: black;
+}
+
+.table__container {
   background-color: var(--background-box);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 thead {
@@ -72,5 +95,10 @@ thead {
 }
 
 td,th {
-  padding: 10px;
+  padding: 10px 10px;
 }
+tr {
+  border-bottom: 1px solid;
+}
+
+
