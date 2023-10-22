@@ -7,15 +7,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD</title>
+  <title>Library</title>
 </head>
 <body>
-<?php
-    // $userObj = new UsersView();
-    // $userObj->showUser("Antonio Bueno");
+  <main>
+    <h1>Library</h1>
+    <h2>All Content</h2>
 
-    $userObj = new UsersContr();
-    $userObj->createUser("Antonio Bueno", "1234", "666666666", "2020-12-12");
-  ?>
+    <section class="content">
+      <h2>Books</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Author</th>
+            <th>Description</th>
+          </tr>
+        </thead>            
+          <tbody>
+            <tr>
+              <td>The Great Gatsby</td>
+              <td>Fiction</td>
+              <td>F. Scott Fitzgerald</td>
+              <td>A story about the decadence of the Jazz Age</td>
+            </tr>
+            <tr>
+              <td>To Kill a Mockingbird</td>
+              <td>Fiction</td>
+              <td>Harper Lee</td>
+              <td>A story about racial injustice in the South</td>
+            </tr>
+            <tr>
+              <td>1984</td>
+              <td>Fiction</td>
+              <td>George Orwell</td>
+              <td>A dystopian novel about a totalitarian government</td>
+            </tr>
+            <tr>
+              <td>Pride and Prejudice</td>
+              <td>Fiction</td>
+              <td>Jane Austen</td>
+              <td>A romantic novel about the social norms of the Regency era</td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 </body>
 </html>
