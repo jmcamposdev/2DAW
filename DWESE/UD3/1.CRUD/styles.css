@@ -101,4 +101,26 @@ tr {
   border-bottom: 1px solid;
 }
 
+/* FORM */
+
+select {
+  padding: 5px;
+  border-radius: var(--border-radius);
+  border: 1px solid;
+  font-size: 1rem;
+}
+
+input {
+  padding: 5px;
+  border-radius: var(--border-radius);
+  border: 1px solid;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-button);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 
