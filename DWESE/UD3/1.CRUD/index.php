@@ -51,7 +51,7 @@ include "includes/class-autoload.inc.php";
               if (isset($_POST['submitBooksCategories']) && $_POST['category'] == $category) {
                 echo "<option value='$category' selected>$category</option>";
               } else {
-                echo "<option value='$category'>$category</option>";
+                echo "<option value='$category'>". ucfirst($category). "</option>";
               }
             }
             ?>
