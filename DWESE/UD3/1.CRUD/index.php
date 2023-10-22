@@ -21,43 +21,45 @@ include "includes/class-autoload.inc.php";
     </header>
 
     <section class="content">
-      <h2>Books</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Author</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>The Great Gatsby</td>
-            <td>Fiction</td>
-            <td>F. Scott Fitzgerald</td>
-            <td>A story about the decadence of the Jazz Age</td>
-          </tr>
-          <tr>
-            <td>To Kill a Mockingbird</td>
-            <td>Fiction</td>
-            <td>Harper Lee</td>
-            <td>A story about racial injustice in the South</td>
-          </tr>
-          <tr>
-            <td>1984</td>
-            <td>Fiction</td>
-            <td>George Orwell</td>
-            <td>A dystopian novel about a totalitarian government</td>
-          </tr>
-          <tr>
-            <td>Pride and Prejudice</td>
-            <td>Fiction</td>
-            <td>Jane Austen</td>
-            <td>A romantic novel about the social norms of the Regency era</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="title__container">
+        <h2>Books</h2>
+        <div class="separator"></div>
+      </div>
+      <div class="table__container">
+      <?php
+      if (!isset($_POST['submitBooksCategories'])) {
+        $booksObj = new BooksView();
+        echo $booksObj->showBooks();
+      } else {
+        $category = $_POST['category'];
+        if ($category == "all") {
+          $booksObj = new BooksView();
+          echo $booksObj->showBooks();
+        } else {
+          $booksObj = new BooksView();
+          echo $booksObj->showBooksByCategory($category);
+        }
+      }
+      ?>
+      <div class="filter__container">
+        <h3>Filter</h3>
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+          <select name="category" id="category">
+            <option value="all">All</option>
+            <?php
+            foreach (BooksView::$categories as $category) {
+              if (isset($_POST['submitBooksCategories']) && $_POST['category'] == $category) {
+                echo "<option value='$category' selected>$category</option>";
+              } else {
+                echo "<option value='$category'>$category</option>";
+              }
+            }
+            ?>
+          </select>
+          <input type="submit" name="submitBooksCategories" value="Filter">
+        </form>
+      </div>
+      </div>
     </section>
   </main>
 </body>
