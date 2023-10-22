@@ -1,5 +1,6 @@
 <?php
 include "includes/class-autoload.inc.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +28,18 @@ include "includes/class-autoload.inc.php";
       </div>
       <div class="table__container">
       <?php
-      if (!isset($_POST['submitBooksCategories'])) {
+      // If we don't have the category in the session, we show all the books
+      if (!isset($_POST['submitBooksCategories']) && !isset($_SESSION['category'])) {
         $booksObj = new BooksView();
         echo $booksObj->showBooks();
       } else {
-        $category = $_POST['category'];
+        if (isset($_POST['submitBooksCategories'])) {
+          $category = $_POST['category'];
+          $_SESSION['category'] = $category;
+        } else {
+          $category = $_SESSION['category'];
+        }
+
         if ($category == "all") {
           $booksObj = new BooksView();
           echo $booksObj->showBooks();
@@ -48,7 +56,9 @@ include "includes/class-autoload.inc.php";
             <option value="all">All</option>
             <?php
             foreach (BooksView::$categories as $category) {
-              if (isset($_POST['submitBooksCategories']) && $_POST['category'] == $category) {
+              if (isset($_SESSION['category']) && $_SESSION['category'] == $category) {
+                echo "<option value='$category' selected>". ucfirst($category). "</option>";
+              } else if (isset($_POST['submitBooksCategories']) && $_POST['category'] == $category) {
                 echo "<option value='$category' selected>". ucfirst($category). "</option>";
               } else {
                 echo "<option value='$category'>". ucfirst($category). "</option>";
@@ -59,9 +69,18 @@ include "includes/class-autoload.inc.php";
           <input type="submit" name="submitBooksCategories" value="Filter">
         </form>
       </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+    <?php 
+    if (isset($_POST['submitEditBook'])) {
+      $id = $_POST['id'];
+      $booksObj = new BooksView();
+      echo $booksObj->showFormEditBook($id);
+    }
+    ?>
+</main>
+<script src="popup.js"></script>
 </body>
 
 </html>
