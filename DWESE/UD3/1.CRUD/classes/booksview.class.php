@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This class is the View of the MVC (Model View Controller) Architecture.
  * The function of this view is to show the data to the user
@@ -84,6 +85,7 @@ class BooksView extends Books {
   }
 
   public function showFormEditBook($id) {
+    $authorObj = new AuthorView();
     $result = $this->getBookById($id);
     if (empty($result)) {
       return "<h3>No book found</h3>";
@@ -115,8 +117,10 @@ class BooksView extends Books {
       }
     }
     $html .= "</select>";
-    $html .= "<label for='author'>Author</label>";
-    $html .= "<input type='text' name='author' id='author' value='" . $result['nombreAutor'] . " " . $result['apellidosAutor'] . "'>";
+    $html .= "<label for='authorId'>Author</label>";
+    $html .= "<select name='authorId' id='author'>";
+    $html .= $authorObj->showAuthorsSelectOptions($result['nombreAutor'], $result['apellidosAutor']);
+    $html .= "</select>";
     $html .= "<label for='description'>Description</label>";
     $html .= "<textarea name='description' id='description' cols='30' rows='10'>" . $result['descripcion'] . "</textarea>";
     $html .= "<input type='submit' name='submitEditBook' value='Edit Book'>";
