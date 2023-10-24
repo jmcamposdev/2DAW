@@ -45,3 +45,13 @@ function siguientePrimo(int $number) {
   return $nextPrime;
 }
 
+/**
+ * Devuelve la potencia de un número
+ * @param int $number Número a elevar
+ * @param int $power Potencia a la que elevar
+ * @return int Resultado de la potencia
+ */
+function potencia(int $number, int $power) {
+  return $number ** $power;
+}
+
