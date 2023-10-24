@@ -64,3 +64,12 @@ function digitos(int $number) {
   return strlen(strval($number));
 }
 
+/**
+ * Voltea un número
+ * @param int $number Número a voltear
+ * @return int Número volteado
+ */
+function voltea(int $number) {
+  return strrev($number);
+}
+
