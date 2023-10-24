@@ -85,3 +85,22 @@ function digitoN(int $number, int $position) {
   // Devolvemos el dígito en la posición indicada
   return $numberString[$position];
 }
+
+/**
+ * Devuelve la posición de la primera ocurrencia de un dígito dentro de un número entero. Si no se encuentra, devuelve -1
+ * @param int $number Número a comprobar
+ * @param int $digit Dígito a buscar
+ * @return int Posición del dígito en el número
+ */
+function posicionDeDigito(int $number, int $digit) {
+  // Convertimos el número a string
+  $numberString = strval($number);
+  // Buscamos la posición del dígito
+  $position = strpos($numberString, strval($digit));
+  // Si no se encuentra, devolvemos -1
+  if ($position === false) {
+    $position = -1;
+  }
+  // Devolvemos la posición
+  return $position;
+}
