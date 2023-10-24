@@ -73,3 +73,15 @@ function voltea(int $number) {
   return strrev($number);
 }
 
+/**
+ * Devuelve el dígito que está en la posición n de un número entero. Se empieza contando por el 0 y de izquierda a derecha
+ * @param int $number Número a comprobar
+ * @param int $position Posición del dígito a devolver
+ * @return int Dígito en la posición indicada
+ */
+function digitoN(int $number, int $position) {
+  // Convertimos el número a string
+  $numberString = strval($number);
+  // Devolvemos el dígito en la posición indicada
+  return $numberString[$position];
+}
