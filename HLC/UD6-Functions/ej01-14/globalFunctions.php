@@ -55,3 +55,12 @@ function potencia(int $number, int $power) {
   return $number ** $power;
 }
 
+/**
+ * Devuelve el número de dígitos de un número
+ * @param int $number Número a comprobar
+ * @return int Número de dígitos
+ */
+function digitos(int $number) {
+  return strlen(strval($number));
+}
+
