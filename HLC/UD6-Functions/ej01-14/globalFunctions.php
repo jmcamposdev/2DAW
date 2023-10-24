@@ -29,4 +29,19 @@ function esPrimo(int $number) {
   return $esPrimo;
 }
 
+/**
+ * Devuelve el siguiente número primo
+ * @param int $number Número a partir del cual buscar el siguiente primo
+ * @return int Siguiente número primo
+ */
+function siguientePrimo(int $number) {
+  // Sumamos uno al número y comprobamos si es primo
+  $nextPrime = $number + 1;
+  // Mientras no sea primo, sumamos uno
+  while (!esPrimo($nextPrime)) {
+    $nextPrime++; // Sumamos uno
+  }
+  // Devolvemos el siguiente primo
+  return $nextPrime;
+}
 
