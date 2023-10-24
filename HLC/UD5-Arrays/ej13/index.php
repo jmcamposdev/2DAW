@@ -29,6 +29,8 @@ for ($i = 0; $i < 6; $i++) {
   }
 }
 
+
+
 // Encontrar el número mínimo del array y guardar su posición.
 $min_value = $array[0][0];
 $min_row = 0;
