@@ -117,7 +117,7 @@ include_once "./assets/header.php";
     <?php
     // Iteramos todos los productos para crear sus tarjetas y sus formularios
     foreach (products as $product) {
-      $buttonText = $_SESSION['firstSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg'/> alt='Product of plate'" : "Añadir";
+      $buttonText = $_SESSION['firstSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg' alt='Product of plate/>'" : "Añadir";
       echo "<div class='producto__wrapper'>";
       echo "<div class='producto'>";
       echo "<img src='" . $product['image'] . "' alt='Producto'>";
