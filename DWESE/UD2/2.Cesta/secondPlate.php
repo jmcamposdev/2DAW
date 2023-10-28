@@ -8,6 +8,11 @@ if (!isset($_SESSION['firstSelectedProduct']) || $_SESSION['firstSelectedProduct
   exit();
 }
 
+// Si no existe la sessión secondSelectedProduct la creamos e inicializamos
+if (!isset($_SESSION['secondSelectedProduct'])) {
+  $_SESSION['secondSelectedProduct'] = -1;
+}
+
 // Productos 
 const products = [
   [
@@ -129,14 +134,11 @@ if (isset($_POST['id'])) {
 <!-- Borrar la Sesión -->
 <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
   <input type="hidden" name="borrar" value="1">
-  <button class="borrar__btn">Borrar</button>
+  <button class="borrar__btn"
+  ">Borrar</button>
 </form>
 <?php
-if (isset($_POST['borrar'])) {
-  if (isset($_SESSION['cart'])) {
-    session_destroy();
-  }
-}
+
 ?>
 </body>
 
