@@ -79,65 +79,65 @@ if (isset($_POST['id'])) {
 </head>
 
 <body>
-  <?php include_once "./assets/header.php"; ?>
-  <section class="nav__container">
-    <div class="arrow__container">
-      <a href="index.php" class="arrow__wrapper">
-        <img class="left-arrow" src="./img/arrow.svg" alt="Right Arrow">
-        <span>Previous</span>
-      </a>
-    </div>
-    <div class="title">
-      <h1>Second Plate</h1>
-    </div>
-    <div class="arrow__container">
-      <a href="extras.php" class="arrow__wrapper">
-        <span>Next</span>
-        <img class="right-arrow" src="./img/arrow.svg" alt="Right Arrow">
-      </a>
-    </div>
-  </section>
-  <section class="error_container">
-    <?php
-    if (isset($_GET['error'])) {
-      echo $_GET['error'];
-    }
-    ?>
-  </section>
-  <section class="productos__wrapper">
-    <div class="productos__container">
-      <?php
-      foreach (products as $product) {
-        $buttonText = $_SESSION['secondSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg'/>" : "Añadir";
-        echo "<div class='producto__wrapper'>";
-        echo "<div class='producto'>";
-        echo "<img src='" . $product['image'] . "' alt='Producto'>";
-        echo "<h3>" . $product['name'] . "</h3>";
-        echo "<p class='producto__precio'>" . $product['price'] . "€</p>";
-        echo "<form action='" . $_SERVER['PHP_SELF'] . "' method='POST'>";
-        echo "<input type='hidden' name='id' value='" . $product['id'] . "'>";
-        echo "<input type='hidden' name='productName' value='" . $product['name'] . "'>";
-        echo "<input type='hidden' name='productPrice' value='" . $product['price'] . "'>";
-        echo "<button class='producto__btn'>{$buttonText}</button>";
-        echo "</form>";
-        echo "</div>";
-        echo "</div>";
-      }
-      ?>
-    </div>
-  </section>
-  <!-- Borrar la Sesión -->
-  <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-    <input type="hidden" name="borrar" value="1">
-    <button class="borrar__btn">Borrar</button>
-  </form>
+<?php include_once "./assets/header.php"; ?>
+<section class="nav__container">
+  <div class="arrow__container">
+    <a href="index.php" class="arrow__wrapper">
+      <img class="left-arrow" src="./img/arrow.svg" alt="Right Arrow">
+      <span>Previous</span>
+    </a>
+  </div>
+  <div class="title">
+    <h1>Second Plate</h1>
+  </div>
+  <div class="arrow__container">
+    <a href="extras.php" class="arrow__wrapper">
+      <span>Next</span>
+      <img class="right-arrow" src="./img/arrow.svg" alt="Right Arrow">
+    </a>
+  </div>
+</section>
+<section class="error_container">
   <?php
-  if (isset($_POST['borrar'])) {
-    if (isset($_SESSION['cart'])) {
-      session_destroy();
-    }
+  if (isset($_GET['error'])) {
+    echo $_GET['error'];
   }
   ?>
+</section>
+<section class="productos__wrapper">
+  <div class="productos__container">
+    <?php
+    foreach (products as $product) {
+      $buttonText = $_SESSION['secondSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg'/>" : "Añadir";
+      echo "<div class='producto__wrapper'>";
+      echo "<div class='producto'>";
+      echo "<img src='" . $product['image'] . "' alt='Producto'>";
+      echo "<h3>" . $product['name'] . "</h3>";
+      echo "<p class='producto__precio'>" . $product['price'] . "€</p>";
+      echo "<form action='" . $_SERVER['PHP_SELF'] . "' method='POST'>";
+      echo "<input type='hidden' name='id' value='" . $product['id'] . "'>";
+      echo "<input type='hidden' name='productName' value='" . $product['name'] . "'>";
+      echo "<input type='hidden' name='productPrice' value='" . $product['price'] . "'>";
+      echo "<button class='producto__btn'>{$buttonText}</button>";
+      echo "</form>";
+      echo "</div>";
+      echo "</div>";
+    }
+    ?>
+  </div>
+</section>
+<!-- Borrar la Sesión -->
+<form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+  <input type="hidden" name="borrar" value="1">
+  <button class="borrar__btn">Borrar</button>
+</form>
+<?php
+if (isset($_POST['borrar'])) {
+  if (isset($_SESSION['cart'])) {
+    session_destroy();
+  }
+}
+?>
 </body>
 
 </html>

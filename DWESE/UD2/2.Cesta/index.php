@@ -56,7 +56,7 @@ if (!isset($_SESSION['firstSelectedProduct'])) {
 
 // Si no existe la sesión cart la creamos e inicializamos le array vacío
 if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = array();
+  $_SESSION['cart'] = array();
 }
 
 // Si el usuario ha seleccionado un plato
@@ -74,7 +74,6 @@ if (isset($_POST['id'])) {
   $_SESSION['cart']['firstPlate'] = $producto;
 }
 ?>
-
 
 
 <!DOCTYPE html>
@@ -118,7 +117,7 @@ include_once "./assets/header.php";
     <?php
     // Iteramos todos los productos para crear sus tarjetas y sus formularios
     foreach (products as $product) {
-      $buttonText = $_SESSION['firstSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg'/>" : "Añadir";
+      $buttonText = $_SESSION['firstSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg'/> alt='Product of plate'" : "Añadir";
       echo "<div class='producto__wrapper'>";
       echo "<div class='producto'>";
       echo "<img src='" . $product['image'] . "' alt='Producto'>";
@@ -128,7 +127,7 @@ include_once "./assets/header.php";
       echo "<input type='hidden' name='id' value='" . $product['id'] . "'>";
       echo "<input type='hidden' name='productName' value='" . $product['name'] . "'>";
       echo "<input type='hidden' name='productPrice' value='" . $product['price'] . "'>";
-      echo "<button class='producto__btn'>{$buttonText}</button>";
+      echo "<button class='producto__btn'>$buttonText</button>";
       echo "</form>";
       echo "</div>";
       echo "</div>";
@@ -150,4 +149,5 @@ if (isset($_POST['borrar'])) {
 }
 ?>
 </body>
+
 </html>
