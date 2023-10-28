@@ -6,7 +6,7 @@ do {
   validData = false;
   do {
     // Pedimos el dato al usuario y removemos los espacios en blanco y convertimos a minúsculas
-    userData = prompt("Ingrese una cadena:").replaceAll(" ", "").toLowerCase(); 
+    userData = prompt("Ingrese una cadena:").replaceAll(" ", "").toLowerCase();
     if (userData == "") {
       // Si esta vacío le avisamos al usuario
       alert("No ingresaste ningún dato, por favor vuelve a intentarlo");
@@ -15,14 +15,14 @@ do {
       validData = true;
     }
   } while (!validData); // Mientras no sea un número entero repetimos el bucle
-  
+
   // Mostramos el resultado
   alert(
     "La cadena " +
-      userData +
-      " " +
-      (isPalindrome(userData) ? "es" : "no es") +
-      " un palíndromo"
+    userData +
+    " " +
+    (isPalindrome(userData) ? "es" : "no es") +
+    " un palíndromo"
   );
 
   // Preguntamos si quiere ingresar otro número
