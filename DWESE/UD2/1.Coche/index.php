@@ -9,38 +9,38 @@
 </head>
 
 <body>
-  <section class="wrapper">
-    <h1 class="title">Login</h1>
-    <hr>
-    <form action="index.php" method="post" class="form-style-5">
-      <label for="username">Username:
-        <input type="text" name="username" id="username" required>
-      </label>
-      <label for="password">Password:
-        <input type="password" name="password" id="password" required>
-      </label>
-      <input type="submit" value="Login" name="submit-login">
-    </form>
+<section class="wrapper">
+  <h1 class="title">Login</h1>
+  <hr>
+  <form action="index.php" method="post" class="form-style-5">
+    <label for="username">Username:
+      <input type="text" name="username" id="username" required>
+    </label>
+    <label for="password">Password:
+      <input type="password" name="password" id="password" required>
+    </label>
+    <input type="submit" value="Login" name="submit-login">
+  </form>
 
-    <?php
-    include_once("credenciales.php");
+  <?php
+  include_once("credenciales.php");
 
-    if (isset($_POST["submit-login"])) {
-      $username = $_POST["username"];
-      $password = $_POST["password"];
+  if (isset($_POST["submit-login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-      session_start();
-      $_SESSION["username"] = $username;
-      $_SESSION["password"] = $password;
+    session_start();
+    $_SESSION["username"] = $username;
+    $_SESSION["password"] = $password;
 
-      if ($username == USERNAME && $password == PASSWORD) {
-        header("Location: configurador.php");
-      } else {
-        echo "<p>Usuario o contraseña incorrectos</p>";
-      }
+    if ($username == USERNAME && $password == PASSWORD) {
+      header("Location: configurador.php");
+    } else {
+      echo "<p>Usuario o contraseña incorrectos</p>";
     }
-    ?>
-  </section>
+  }
+  ?>
+</section>
 </body>
 
 </html>
