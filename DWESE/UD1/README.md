@@ -7,7 +7,7 @@ In UD1 we have focused on learning:
 
 **We have done 3 Activities which are:**
 
-## Restaurant - [Demo](https://servidor.jmcampos.dev/1.TareaOnline/1.Restaurante/)
+## Restaurant - [Demo](https://servidor.jmcampos.dev/DWESE/UD1/1.Restaurante/)
 
 Create a form that shows the menu of the day in a restaurant, you will have to ask for the following data:
 1. Table number
@@ -17,7 +17,7 @@ Create a form that shows the menu of the day in a restaurant, you will have to a
 5. Three drinks to choose one of them.
 6. Extras such as bread, butter, cigars, you can choose the ones you want.
 
-## Car Shop with Financing - [Demo](https://servidor.jmcampos.dev/1.TareaOnline/2.Coche/)
+## Car Shop with Financing - [Demo](https://servidor.jmcampos.dev/DWESE/UD1/2.Coche/)
 
 Form html that calculates a budget with a PHP document, if you choose financing gives rise to another document with html + php that calculates the total of the car + the calculations of the financing.
 The form data are:
