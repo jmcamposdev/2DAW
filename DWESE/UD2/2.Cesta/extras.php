@@ -1,6 +1,11 @@
 <?php
 // Iniciar la sesión
 session_start();
+// Si no se ha seleccioando el segundo plato lo redirigimos al secondPlate.php con un error
+if (!isset($_SESSION['secondSelectedProduct']) || $_SESSION['secondSelectedProduct'] == -1) {
+  header("Location: secondPlate.php?error=You need to select one plate");
+  exit();
+}
 // Productos
 
 const products = [
@@ -148,6 +153,13 @@ include_once "./assets/header.php";
       <img class="right-arrow" src="./img/arrow.svg" alt="Right Arrow">
     </a>
   </div>
+</section>
+<section class="error_container">
+  <?php
+  if (isset($_GET['error'])) {
+    echo $_GET['error'];
+  }
+  ?>
 </section>
 <section class="productos__wrapper">
   <div class="productos__container">

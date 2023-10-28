@@ -1,4 +1,13 @@
 <?php
+// Validamos los productos
+session_start();
+
+// Si no se ha seleccioando el primer plato lo redirigimos al index.php con un error
+if (!isset($_SESSION['firstSelectedProduct']) || $_SESSION['firstSelectedProduct'] == -1) {
+  header("Location: index.php?error=You need to select one plate");
+  exit();
+}
+
 // Productos 
 const products = [
   [
@@ -38,14 +47,7 @@ const products = [
     "image" => "./img/secondPlate/producto-6.jpg"
   ]
 ];
-// Iniciar la sesión
-session_start();
 
-// Comprobamos si no existe la sesión
-if (!isset($_SESSION['secondSelectedProduct'])) {
-  // Inicializamos la variable con el valor -1
-  $_SESSION['secondSelectedProduct'] = -1;
-}
 
 // Si se ha seleccionado un producto
 if (isset($_POST['id'])) {
@@ -94,6 +96,13 @@ if (isset($_POST['id'])) {
       <img class="right-arrow" src="./img/arrow.svg" alt="Right Arrow">
     </a>
   </div>
+</section>
+<section class="error_container">
+  <?php
+  if (isset($_GET['error'])) {
+    echo $_GET['error'];
+  }
+  ?>
 </section>
 <section class="productos__wrapper">
   <div class="productos__container">
