@@ -91,6 +91,13 @@ if (isset($_POST['id'])) {
     </a>
   </div>
 </section>
+<section class="error_container">
+  <?php
+  if (isset($_GET['error'])) {
+    echo $_GET['error'];
+  }
+  ?>
+</section>
 <section class="productos__wrapper">
   <div class="productos__container">
     <?php
