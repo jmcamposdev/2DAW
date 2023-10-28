@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['clearSessionFrom'])) {
-  session_start(); // Iniciarmos la sessión para obtener los datos
-  session_destroy(); // Destruimos la sessión
-  header("Location: ../index.php"); // Redirigimos al inicio de la web
+  session_start(); // Initialize the session
+  session_destroy(); // Destroy the session
+  header("Location: ../index.php"); // Redirect to the index.php
 }
