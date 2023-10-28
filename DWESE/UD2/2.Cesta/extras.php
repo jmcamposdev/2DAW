@@ -1,5 +1,8 @@
 <?php
-// Productos 
+// Iniciar la sesión
+session_start();
+// Productos
+
 const products = [
   [
     "id" => 1,
@@ -38,8 +41,7 @@ const products = [
     "image" => "./img/extras/producto-6.jpg"
   ]
 ];
-// Iniciar la sesión
-session_start();
+
 
 // Comprobamos si no existe la sesión
 if (!isset($_SESSION['extrasSelectedProducts'])) {
@@ -66,24 +68,28 @@ if (isset($_POST['productFormSubmit'])) {
   $quantity = 1;
   // Guardar el id del producto seleccionado en la sesión
   if (!in_array($id, $_SESSION['extrasSelectedProducts'])) {
-    $_SESSION['extrasSelectedProducts'][] = $id;
+    array_push($_SESSION['extrasSelectedProducts'], $id);
   }
   // Convertirlos en un array
-  $producto = ["id" => $id, "name" => $name, "price" => $price, "quantity" => $quantity];
+  $producto = ["id" => intval($id), "name" => $name, "price" => $price, "quantity" => $quantity];
   // Añadir el producto a la cesta
   // Asignamos el primer plato a la cesta
   if (!in_array($producto['id'], array_column($_SESSION['cart']['extras'], 'id'))) {
-    echo "Añadir exta";
-    $_SESSION['cart']['extras'][] = $producto;
-  } else {
-    echo "Eliminar exta";
-    // Eliminar el producto de la cesta
-    $key = array_search($producto['id'], array_column($_SESSION['cart']['extras'], 'id'));
+    array_push($_SESSION['cart']['extras'], $producto);
+  } else { // Si ya existe lo deseccionamos
+
+    // Buscamos el indice del producto en extras
+    $key = -1;
+    // Iteramos 
+    foreach ($_SESSION['cart']['extras'] as $index => $extra) {
+      if ($extra['id'] == $producto['id']) {
+        $key = $index;
+      }
+    }
     unset($_SESSION['cart']['extras'][$key]);
     // Eliminar el producto de la sesión
     $key = array_search($id, $_SESSION['extrasSelectedProducts']);
     unset($_SESSION['extrasSelectedProducts'][$key]);
-
   }
 }
 
