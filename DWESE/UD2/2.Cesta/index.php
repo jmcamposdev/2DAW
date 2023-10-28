@@ -1,13 +1,8 @@
 <?php
-// Iniciar la sesión
+// Initialize the session
 session_start();
 
-/* Creamos los Productos con:
-    ID
-    Name
-    Price
-    Image Url
-*/
+// Products
 const products = [
   [
     "id" => 1,
@@ -47,30 +42,28 @@ const products = [
   ]
 ];
 
-// Si no existe la sesión firstSelectedProduct la creamos e inicializamos
-// Hace referencia al plato seleccionado y se almacena el ID del plato
+// If the first plate id is not set, initialize it with -1
 if (!isset($_SESSION['firstSelectedProduct'])) {
   // Inicializamos la variable con el valor -1
   $_SESSION['firstSelectedProduct'] = -1;
 }
 
-// Si no existe la sesión cart la creamos e inicializamos le array vacío
+// If the cart is not set, initialize it
 if (!isset($_SESSION['cart'])) {
   $_SESSION['cart'] = array();
 }
 
-// Si el usuario ha seleccionado un plato
+// If the user select a plate
 if (isset($_POST['id'])) {
-  // Obtener los datos del producto
+  // Get the id, name and price of the product
   $id = $_POST['id'];
   $name = $_POST['productName'];
   $price = $_POST['productPrice'];
-  // Guardar el id del producto seleccionado en la sesión
+  // Save the id of the product in the session
   $_SESSION['firstSelectedProduct'] = $id;
-  // Convertirlos el producto en un array
+  // Create the product
   $producto = ["id" => $id, "name" => $name, "price" => $price];
-
-  // Asignamos el primer plato a la cesta
+  // Add the product to the cart
   $_SESSION['cart']['firstPlate'] = $producto;
 }
 ?>
@@ -88,7 +81,7 @@ if (isset($_POST['id'])) {
 
 <body>
 <?php
-// Mostramos el Header de la web
+// Include the header
 include_once "./assets/header.php";
 ?>
 <section class="nav__container">
@@ -106,7 +99,7 @@ include_once "./assets/header.php";
 </section>
 <section class="error_container">
   <?php
-  // Si existe algún erros lo mostramos
+  // If there is an error, show it
   if (isset($_GET['error'])) {
     echo $_GET['error'];
   }
@@ -115,7 +108,7 @@ include_once "./assets/header.php";
 <section class="productos__wrapper">
   <div class="productos__container">
     <?php
-    // Iteramos todos los productos para crear sus tarjetas y sus formularios
+    // Show the products
     foreach (products as $product) {
       $buttonText = $_SESSION['firstSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg' alt='Product of plate/>'" : "Añadir";
       echo "<div class='producto__wrapper'>";
@@ -135,19 +128,5 @@ include_once "./assets/header.php";
     ?>
   </div>
 </section>
-
-<!-- Borrar la Sesión -->
-<form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-  <input type="hidden" name="borrar" value="1">
-  <button class="borrar__btn">Borrar</button>
-</form>
-<?php
-if (isset($_POST['borrar'])) {
-  if (isset($_SESSION['cart'])) {
-    session_destroy();
-  }
-}
-?>
 </body>
-
 </html>

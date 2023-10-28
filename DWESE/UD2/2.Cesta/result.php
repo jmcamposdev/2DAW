@@ -1,8 +1,13 @@
 <?php
+// Initialize the session
 session_start();
-// Si no exite el carrito redireccionar el index.php
-if (!isset($_SESSION['cart'])) {
-  header("Location: index.php");
+// If the first plate is not selected, redirect to the index.php with an error
+if (!isset($_SESSION['firstSelectedProduct']) || $_SESSION['firstSelectedProduct'] == -1) {
+  header("Location: index.php?error=You need to select one plate");
+}
+// If the second plate is not selected, redirect to the secondPlate.php with an error
+if (!isset($_SESSION['secondSelectedProduct']) || $_SESSION['secondSelectedProduct'] == -1) {
+  header("Location: secondPlate.php?error=You need to select one plate");
 }
 ?>
 
@@ -17,7 +22,9 @@ if (!isset($_SESSION['cart'])) {
 </head>
 
 <body>
-<?php include_once "./assets/header.php"; ?>
+<?php 
+// Include the header
+include_once "./assets/header.php"; ?>
 <section class="nav__container">
   <div class="arrow__container">
     <a href="extras.php" class="arrow__wrapper">
@@ -44,6 +51,7 @@ if (!isset($_SESSION['cart'])) {
     </thead>
     <tbody>
     <?php
+    // Show the Plates
     foreach ($_SESSION['cart'] as $index => $value) {
       // Si el producto no es extra
       if ($index != "extras") {
@@ -74,6 +82,7 @@ if (!isset($_SESSION['cart'])) {
     </thead>
     <tbody>
     <?php
+    // Show the Extras if there are any
     if (isset($_SESSION['cart']['extras']) && !empty($_SESSION['cart']['extras'])) {
       foreach ($_SESSION['cart']['extras'] as $value => $extra) {
         // Si el producto no es extra
@@ -86,7 +95,7 @@ if (!isset($_SESSION['cart'])) {
         echo "  <td>{$totalPrice} €</td>";
         echo "</tr>";
       }
-    } else {
+    } else { // If there are no extras
       echo "<tr><td colspan='5'>No Extras selected</td></tr>";
     }
 

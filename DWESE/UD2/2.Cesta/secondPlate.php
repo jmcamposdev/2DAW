@@ -1,19 +1,18 @@
 <?php
-// Validamos los productos
+// Initialize the session
 session_start();
 
-// Si no se ha seleccioando el primer plato lo redirigimos al index.php con un error
+// If the first plate is not selected, redirect to the index.php with an error
 if (!isset($_SESSION['firstSelectedProduct']) || $_SESSION['firstSelectedProduct'] == -1) {
   header("Location: index.php?error=You need to select one plate");
-  exit();
 }
 
-// Si no existe la sessión secondSelectedProduct la creamos e inicializamos
+// If the second plate id is not set, initialize it with -1
 if (!isset($_SESSION['secondSelectedProduct'])) {
   $_SESSION['secondSelectedProduct'] = -1;
 }
 
-// Productos 
+// Products
 const products = [
   [
     "id" => 1,
@@ -54,22 +53,17 @@ const products = [
 ];
 
 
-// Si se ha seleccionado un producto
+// If the user select a plate
 if (isset($_POST['id'])) {
-  // Obtener los datos del producto
+  // Get the id, name and price of the product
   $id = $_POST['id'];
   $name = $_POST['productName'];
   $price = $_POST['productPrice'];
-  // Guardar el id del producto seleccionado en la sesión
+  // Save the id of the product in the session
   $_SESSION['secondSelectedProduct'] = $id;
-  // Convertirlos en un array
+  // Create the product
   $producto = ["id" => $id, "name" => $name, "price" => $price];
-  // Añadir el producto a la cesta
-  if (!isset($_SESSION['cart'])) { // Si la cesta existe
-    $_SESSION['cart'] = array();
-  }
-
-  // Asignamos el primer plato a la cesta
+  // Add the product to the cart
   $_SESSION['cart']['secondPlate'] = $producto;
 }
 ?>
@@ -84,7 +78,10 @@ if (isset($_POST['id'])) {
 </head>
 
 <body>
-<?php include_once "./assets/header.php"; ?>
+<?php 
+// Include the header
+include_once "./assets/header.php"; 
+?>
 <section class="nav__container">
   <div class="arrow__container">
     <a href="index.php" class="arrow__wrapper">
@@ -104,6 +101,7 @@ if (isset($_POST['id'])) {
 </section>
 <section class="error_container">
   <?php
+  // If there is an error, show it
   if (isset($_GET['error'])) {
     echo $_GET['error'];
   }
@@ -112,6 +110,7 @@ if (isset($_POST['id'])) {
 <section class="productos__wrapper">
   <div class="productos__container">
     <?php
+    // Show the products
     foreach (products as $product) {
       $buttonText = $_SESSION['secondSelectedProduct'] == $product['id'] ? "<img src='./img/check.svg'/>" : "Añadir";
       echo "<div class='producto__wrapper'>";
@@ -131,15 +130,5 @@ if (isset($_POST['id'])) {
     ?>
   </div>
 </section>
-<!-- Borrar la Sesión -->
-<form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-  <input type="hidden" name="borrar" value="1">
-  <button class="borrar__btn"
-  ">Borrar</button>
-</form>
-<?php
-
-?>
 </body>
-
 </html>

@@ -1,13 +1,11 @@
 <?php
-// Iniciar la sesión
+// Initialize the session
 session_start();
-// Si no se ha seleccioando el segundo plato lo redirigimos al secondPlate.php con un error
+// If the second plate is not selected, redirect to the secondPlate.php with an error
 if (!isset($_SESSION['secondSelectedProduct']) || $_SESSION['secondSelectedProduct'] == -1) {
   header("Location: secondPlate.php?error=You need to select one plate");
-  exit();
 }
-// Productos
-
+// Products
 const products = [
   [
     "id" => 1,
@@ -48,72 +46,70 @@ const products = [
 ];
 
 
-// Comprobamos si no existe la sesión
+// If the extras selected products is not set, initialize it with an empty array
 if (!isset($_SESSION['extrasSelectedProducts'])) {
   // Inicializamos la variable con el valor -1
   $_SESSION['extrasSelectedProducts'] = [];
 }
 
-// Si no existe la cesta la creamos
-if (!isset($_SESSION['cart'])) { // Si la cesta existe
-  $_SESSION['cart'] = array();
-}
-
-// Si no existe los extras en la cesta lo creamos
+// If the extras cart is not set, initialize it with an empty array
 if (!isset($_SESSION['cart']['extras'])) {
   $_SESSION['cart']['extras'] = [];
 }
 
-// Si se ha seleccionado un producto
+// If the user select a extra
 if (isset($_POST['productFormSubmit'])) {
-  // Obtener los datos del producto
+  // Get the id, name and price of the product and initialize the quantity to 1
   $id = $_POST['id'];
   $name = $_POST['productName'];
   $price = $_POST['productPrice'];
   $quantity = 1;
-  // Guardar el id del producto seleccionado en la sesión
+  // Save the id of the product in the session if it is not already in the array
   if (!in_array($id, $_SESSION['extrasSelectedProducts'])) {
     array_push($_SESSION['extrasSelectedProducts'], $id);
   }
-  // Convertirlos en un array
+  // Create the product
   $producto = ["id" => intval($id), "name" => $name, "price" => $price, "quantity" => $quantity];
-  // Añadir el producto a la cesta
-  // Asignamos el primer plato a la cesta
+  // Add the product to the cart if it is not already in the array
   if (!in_array($producto['id'], array_column($_SESSION['cart']['extras'], 'id'))) {
     array_push($_SESSION['cart']['extras'], $producto);
-  } else { // Si ya existe lo deseccionamos
-
-    // Buscamos el indice del producto en extras
-    $key = -1;
-    // Iteramos 
+  } else { // If the product is already in the array, delete it 
+    $key = -1; // The key of the product in the array
+    // Get the key of the product in the array
     foreach ($_SESSION['cart']['extras'] as $index => $extra) {
       if ($extra['id'] == $producto['id']) {
         $key = $index;
       }
     }
+    // Delete the product from the extras array
     unset($_SESSION['cart']['extras'][$key]);
-    // Eliminar el producto de la sesión
+    // Delete the product from the extras selected products array
     $key = array_search($id, $_SESSION['extrasSelectedProducts']);
     unset($_SESSION['extrasSelectedProducts'][$key]);
   }
 }
 
-// Si ha enviado el formuario con la cantidad del producto
+// If the user add a quantity to the product
 if (isset($_POST['quantityFormSubmitPlus'])) {
+  // Get the id and the actual quantity of the product
   $productId = $_POST['id'];
   $quantity = $_POST['quantity'];
 
-
+  // Increase the quantity of the product
   foreach ($_SESSION['cart']['extras'] as $indice => $value) {
-    if ($value['id'] == $productId) {
+    if ($value['id'] == $productId) { // If the product is in the array
+      // Increase the quantity of the product
       $_SESSION['cart']['extras'][$indice]['quantity'] = $quantity + 1;
     }
   }
 }
-// Si ha enviado el formuario con la cantidad del producto
+
+// If the user decrease a quantity to the product
 if (isset($_POST['quantityFormSubmitMinus'])) {
+  // Get the id and the actual quantity of the product
   $productId = $_POST['id'];
   $quantity = $_POST['quantity'];
+  // Decrease the quantity of the product if it is not 1
   if ($quantity != 1) {
     foreach ($_SESSION['cart']['extras'] as $indice => $value) {
       if ($value['id'] == $productId) {
