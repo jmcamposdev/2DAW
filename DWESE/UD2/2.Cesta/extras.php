@@ -124,9 +124,6 @@ if (isset($_POST['quantityFormSubmitMinus'])) {
 
 <body>
 <?php
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
 include_once "./assets/header.php";
 ?>
 <section class="nav__container">
