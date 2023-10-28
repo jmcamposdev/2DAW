@@ -300,3 +300,25 @@ td, th {
 .total__table thead th {
   border-radius: 10px;
 }
+
+.clear__session__form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.clear__session__form button {
+  background-color: #36304a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.clear__session__form button:hover {
+  background-color: #2e2a3d;
+}
+
