@@ -1,5 +1,5 @@
 <?php
-  // Credenciales de Login
-  define('USERNAME', 'admin');
-  define('PASSWORD', 'admin');
+// Credenciales de Login
+define('USERNAME', 'admin');
+define('PASSWORD', 'admin');
 ?>
