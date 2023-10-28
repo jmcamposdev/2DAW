@@ -72,7 +72,7 @@ header .logo img {
   align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
-  width: 115px;
+  width: 166px;
 }
 
 .arrow__wrapper:hover {
@@ -97,6 +97,17 @@ header .logo img {
   cursor: pointer;
 }
 
+.cesta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.cesta span {
+  font-weight: 600;
+}
 
 /* PRODUCTOS */
 .producto {
@@ -257,6 +268,7 @@ table th:last-child {
 
 .result__wrapper .img-row img {
   width: 100px;
+  border-radius: 10px;
 }
 
 tbody tr:nth-child(even) {
