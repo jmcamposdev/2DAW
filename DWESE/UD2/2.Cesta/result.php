@@ -19,7 +19,12 @@ if (!isset($_SESSION['cart'])) {
 <body>
 <?php include_once "./assets/header.php"; ?>
 <section class="nav__container">
-  <div class="arrow__container"></div>
+  <div class="arrow__container">
+    <a href="extras.php" class="arrow__wrapper">
+      <img class="left-arrow" src="./img/arrow.svg" alt="Right Arrow">
+      <span>Previous</span>
+    </a>
+  </div>
   <div class="title">
     <h1>Result</h1>
   </div>
