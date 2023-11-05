@@ -61,15 +61,18 @@ $resultado = $consulta->get_result();
 // Obtenemos el primer registro
 $productos = $resultado->fetch_array();
 
-
+// Si hay datos, mostramos la tabla
 if ($productos != null) {
+    // Mostramos la cabecera de la tabla
     echo "<table border='1'><tr><th>Nombre Corto</th><th>Descripción</th><th>PVP</th><th>Familia</th></tr>";
     while ($productos != null) {
+        // Mostramos los datos de cada fila
         echo "<tr><td>$productos[0]</td><td>$productos[1]</td><td>$productos[2]</td><td>$productos[3]</td></tr>";
         $productos = $resultado->fetch_array();
     }
+    // Cerramos la tabla
     echo "</table>";
-} else {
+} else { // Si no hay datos, mostramos un mensaje
     echo "No hay datos en la base de datos";
 }
 
