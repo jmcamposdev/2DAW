@@ -1,0 +1,288 @@
+/* //////////////////////////////// */
+/* CHEF */
+/* //////////////////////////////// */
+.chef {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 100px;
+}
+
+.chef__title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    gap: 25px;
+}
+
+.chef__content {
+    display: flex;
+    gap: 10%;
+}
+
+.chef__content > div {
+    flex: 1;
+}
+
+.chef__paragraphs p {
+    max-width: 600px;
+}
+
+.chef__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* //////////////////////////////// */
+/* CUISINE */
+/* //////////////////////////////// */
+.cuisine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 80px;
+}
+
+.cuisine__img img {
+    filter: grayscale(1);
+}
+.cuisine__steps {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cuisine__step {
+    flex: 1 1 50%;
+    padding: 40px;
+    display: flex;
+}
+
+.cuisine__step__number {
+    font-family: 'Ogg', 'Faune', sans-serif;
+    font-size: 100px;
+    flex: 1;
+}
+
+.cuisine__step__text {
+    flex: 5;
+}
+
+
+/* //////////////////////////////// */
+/* TEAM */
+/* //////////////////////////////// */
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.team__list {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    margin-bottom: 75px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.team__list__item {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    max-width: 900px;
+}
+
+.team__list__img {
+    flex: 1;
+    max-width: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__list__text {
+    flex: 1;
+}
+
+.team__list__text h3 {
+    letter-spacing: 0.2rem;
+}
+
+.team__list__text h3 span {
+    font-size: 1.8rem;
+}
+
+
+.team__grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    gap: 75px;
+}
+
+.team__grid__item {
+    flex: 1 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__grid__item h5 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.team__grid__item h6 {
+    margin-top: 5px;
+    font-family: 'Ogg', 'Faune', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
+
+.social__list-team {
+    margin-top: 20px;
+}
+
+.social__list-team .social__icon {
+    width: 30px;
+}
+
+
+/* //////////////////////////////// */
+/* HIRE */
+/* //////////////////////////////// */
+
+.hire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0;
+}
+
+.hire__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hire__content__text {
+    flex: 1;
+}
+
+.hire__quote {
+    flex: 1 1 100%;
+}
+
+.hire__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 1.2em;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    box-sizing: border-box;
+    text-transform: uppercase;
+    margin: 50px auto 0 auto;
+    font-size: 1rem;
+}
+
+.hire__button svg {
+    margin-left: 10px;
+}
+
+
+
+/* //////////////////////////////// */
+/* MEDIA QUERIES */
+/* //////////////////////////////// */
+
+@media screen and (max-width: 992px) {
+
+    /* //////////////////////////////// */
+    /* CHEF */
+    /* //////////////////////////////// */
+    .chef__content {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* //////////////////////////////// */
+    /* CUISINE */
+    /* //////////////////////////////// */
+    .cuisine__steps {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    /* //////////////////////////////// */
+    /* MARGINS */
+    /* //////////////////////////////// */
+    .chef, .cuisine, .team, .hire {
+        margin-top: 200px;
+    }
+
+    /* //////////////////////////////// */
+    /* CUISINE */
+    /* //////////////////////////////// */
+    .cuisine__step {
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .cuisine__step__number {
+        font-size: 80px;
+    }
+
+    /* //////////////////////////////// */
+    /* TEAM */
+    /* //////////////////////////////// */
+    .cuisine__img img {
+        height: 250px;
+        object-fit: cover;
+    }
+    .team__list__item {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .team__list__img {
+        max-width: none;
+        align-self: center;
+    }
+
+    .team__list__text .title-special,
+    .team__grid__item .title-special{
+        font-size: 1.3rem;
+        letter-spacing: 0.15rem;
+        display: block;
+    }
+
+
+    .team__grid__item h5{
+        font-size: clamp(1.5rem, 1.3766rem + 0.5195vw, 2rem);
+    }
+
+
+    /* //////////////////////////////// */
+    /* HIRE */
+    /* //////////////////////////////// */
+    .hire__content {
+        flex-direction: column;
+    }
+}
+

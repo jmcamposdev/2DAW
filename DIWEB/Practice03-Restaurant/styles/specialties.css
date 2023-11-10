@@ -1,0 +1,310 @@
+/* //////////////////////////////// */
+/* DISHES */
+/* //////////////////////////////// */
+.dishes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+.dishes__content {
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.dishes__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.dishes__title {
+    text-align: left;
+    padding-left: 25%;
+    padding-bottom: 25px;
+}
+
+.dishes__item {
+    display: flex;
+    gap: 5%;
+}
+
+.dishes__img {
+    flex: 4;
+}
+
+.dishes__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 4;
+}
+
+/* //////////////////////////////// */
+/* MENU */
+/* //////////////////////////////// */
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.wine__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.wine__column {
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    align-items: baseline;
+}
+
+.wine__title {
+    transform: rotate(270deg);
+}
+
+.wine__img {
+    max-width: 85px;
+}
+
+.menu__row {
+    display: flex;
+    gap: 10%;
+}
+
+.menu__plates-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.menu__plates-list p {
+    margin: 0;
+}
+.menu__plates-list  h5 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.menu__column .sub-title {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.menu__column .price {
+    font-family: 'Ogg', sans-serif;
+    text-align: center;
+}
+
+.menu__column .price-menu{
+    margin-top: 50px;
+}   
+
+.menu__column .wine-price {
+    font-size: 1rem;
+}
+
+/* //////////////////////////////// */
+/* PLATES */
+/* //////////////////////////////// */
+
+.plates{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    min-height: 100vh;
+}
+
+.plates__container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.plates__content {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+.plates__column-1 {
+    flex: 1;
+    display: flex;
+}
+
+.plates__column-2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.plates__row {
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+.plate__img {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.plate__img-1 {
+    background-image: url(../img/specialties/plate-1.jpg);
+}
+.plate__img-2 {
+    background-image: url(../img/specialties/plate-2.jpg);
+}
+.plate__img-3 {
+    background-image: url(../img/specialties/plate-3.png);
+}
+.plate__img-4 {
+    background-image: url(../img/specialties/plate-4.jpg);
+}
+.plate__img-5 {
+    background-image: url(../img/specialties/plate-5.jpg);
+}
+
+/* //////////////////////////////// */
+/* PLATES */
+/* //////////////////////////////// */
+
+.gift{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    min-height: 100vh;
+}
+
+.gift__content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gift__texts {
+    flex: 1;
+}
+
+.gift__type {
+    flex: 1 1 50%;
+    padding: 40px;
+    display: flex;
+}
+
+.gift__number {
+    font-family: 'Ogg', 'Faune', sans-serif;
+    font-size: 100px;
+    flex: 1;
+}
+
+.gift__text {
+    flex: 5;
+}
+
+.gift__text h5 {
+    font-family: 'Ogg', 'Faune', sans-serif;
+}
+
+.gift__img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gift__img img {
+    max-width: 450px;
+}
+
+
+/* //////////////////////////////// */
+/* MEDIA QUERIES */
+/* //////////////////////////////// */
+@media screen and (max-width: 992px) {
+
+    /* //////////////////////////////// */
+    /* GIFT */
+    /* //////////////////////////////// */
+    .gift__content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* //////////////////////////////// */
+    /* PRIZE DISHES */
+    /* //////////////////////////////// */
+    .dishes__item {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .dishes__title {
+        padding-left: 0;
+    }
+
+    /* //////////////////////////////// */
+    /* MENU */
+    /* //////////////////////////////// */
+    .menu__row {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .menu__column h3 {
+        font-size: 1.8rem;
+    }
+
+    .menu__plates-list {
+        margin-top: 20px;
+    }
+
+
+    /* //////////////////////////////// */
+    /* PLATES */
+    /* //////////////////////////////// */
+    .plates__content {
+        margin: 0 15px;
+    }
+    .plates__column, .plates__content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .plates__row, .plate__img {
+        flex-direction: column;
+        min-height: 300px;
+        gap: 15px;
+    }
+
+
+    /* //////////////////////////////// */
+    /* GIFT */
+    /* //////////////////////////////// */
+    .gift__type {
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .gift__number {
+        font-size: 80px;
+    }
+}

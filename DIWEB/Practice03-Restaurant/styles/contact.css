@@ -1,0 +1,364 @@
+/* //////////////////////////////// */
+/* CONTACT */
+/* //////////////////////////////// */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.contact-subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact__container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 15%;
+    flex-flow: row wrap;
+    padding: 0 22px;
+}
+
+.contact__information {
+    flex: 2;
+}
+
+.contact__forms {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    flex: 5;
+}
+
+.information__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.information__container a {
+    display: flex;
+    align-items: center;
+}
+
+.information__container .location__link,
+.information__container .phone__link{
+    margin-bottom: 10px;
+}
+
+.contactus__form form {
+    margin-top: 2rem;
+}
+
+.contactus__form .form__group, .reservation__form .form__group {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+}
+
+.contactus__form .form__group > input,
+.reservation__form .form__group > input{
+    flex: 1 1 50%;
+    margin: 15px 15px 15px 5px;
+}
+
+.contactus__form .form__group > textarea {
+    flex: 100%;
+    margin: 15px 15px 15px 5px;
+}
+
+form input[type="text"],form input[type="email"], form textarea, form select{
+    color: var(--text-normal-color);
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    border-radius: 0;
+    padding: 1em 1em .5em 0;
+    background: transparent;
+    width: 100%;
+    box-shadow: none;
+    font-weight: 500;
+    font-family: 'Faune', 'Ogg', sans-serif;
+    font-size: 16px;
+    letter-spacing: initial;
+    display: inline-block;
+    resize: none;
+    outline: none;
+}
+
+form input[type="text"]:focus,form input[type="email"]:focus, form textarea:focus {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.new__group {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-normal-color);
+}
+
+#news {
+    position: relative;
+    flex: 0;
+    cursor: pointer;
+}
+
+.new__group label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px;
+}
+
+.new__group label::before {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    background-size: contain;
+    left: -19px;
+    border: 1px solid var(--text-color);
+}
+
+.new__group label::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--text-color);
+    display: inline-block;
+    border-radius: 10px;
+    position: absolute;
+    top: 4px;
+    left: -15px;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+}
+
+#news:checked+label::after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[type="submit"] {
+    margin-left: auto;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1rem 0.6rem 1.4rem;
+    letter-spacing: .4rem;
+}
+
+
+
+/* //////////////////////////////// */
+/* RESERVATION */
+/* //////////////////////////////// */
+
+
+.reservation-subtitle {
+    letter-spacing: 0.2rem;
+    line-height: 1.60;
+    font-family: 'Faune', 'Ogg', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.reservation__form .sub-title {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+}
+
+.reservation__form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5%;
+}
+
+.reservation__form .guest__container {
+    margin-top: 24px;
+}
+
+.reservation__form .type__container {
+    margin-top: 10px;
+}
+
+.reservation__form .price__container .sub-title {
+    text-align: center;
+}
+
+.reservation__form form .sub-title {
+    margin-bottom: 2rem;
+}
+.reservation__form form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation__form > div {
+    flex: 1;
+}
+
+.guest-counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.guest-counter svg {
+    cursor: pointer;
+}
+
+.price__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.price__container p {
+    font-family: 'Ogg', 'Faune', sans-serif;
+}
+
+.price__container input[type="submit"] {
+    margin: 0;
+    align-self: normal;
+}
+
+.location__icon, .phone__icon, .email__icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+
+/* //////////////////////////////// */
+/* CALENDAR */
+/* //////////////////////////////// */
+.calendar {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 4px;
+}
+.mes-container img{
+    width: 12px;
+    cursor: pointer;
+}
+
+.mes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.mes-container .reverse-icon {
+    transform: rotate(180deg);
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.dia-inicial {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.day {
+    font-size: 0.9rem;
+    line-height: 41px;
+    color: var(--text-normal-color);
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.day-next-month {
+    color: #a0a0a0;
+}
+
+.reserved-day {
+    background-color: #b6b6b687;
+}
+
+/* //////////////////////////////// */
+/* Location */
+/* //////////////////////////////// */
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.location__container {
+    flex: 1;
+}
+
+.location .title-small {
+    margin-bottom: 50px ;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 200px;
+}
+
+
+
+
+
+/* //////////////////////////////// */
+/* MEDIA QUERIES */
+/* //////////////////////////////// */
+@media screen and (max-width: 992px) {
+    .reservation__form form, .reservation__form .calendar {
+        flex: 1 1 100%;
+    }
+
+    .reservation__form form {
+        order: 2;
+    }
+
+    .reservation__form .calendar {
+        order: 1;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact__container {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .new__group {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .new__group input[type="submit"] {
+        margin-top: 25px;
+        flex: 1 1 100%;
+    }
+}
