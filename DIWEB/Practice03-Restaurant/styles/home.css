@@ -105,10 +105,11 @@
 /* //////////////////////////////// */
 
 .accolades {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 200px 0;
+
 }
 .accolades-container {
     width: 100%;
