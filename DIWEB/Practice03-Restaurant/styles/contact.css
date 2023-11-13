@@ -31,7 +31,6 @@
 .contact__forms {
     display: flex;
     flex-direction: column;
-    gap: 75px;
     flex: 5;
 }
 
@@ -92,7 +91,7 @@ form input[type="text"],form input[type="email"], form textarea, form select{
 }
 
 form input[type="text"]:focus,form input[type="email"]:focus, form textarea:focus {
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 2px solid var(--text-color-darker);
 }
 
 .new__group {
@@ -180,8 +179,10 @@ input[type="submit"] {
 
 .reservation__form {
     display: flex;
+    padding-top: 75px;
     flex-flow: row wrap;
     gap: 5%;
+    
 }
 
 .reservation__form .guest__container {
