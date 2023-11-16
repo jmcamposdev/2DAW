@@ -154,6 +154,11 @@ input[type="submit"] {
     cursor: pointer;
     padding: 0.6rem 1rem 0.6rem 1.4rem;
     letter-spacing: .4rem;
+    transition: background-color .2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--text-color-darker);
 }
 
 
@@ -283,6 +288,7 @@ table {
     line-height: 41px;
     color: var(--text-normal-color);
     cursor: pointer;
+    transition: all .3s ease;
 }
 
 .day:hover {
