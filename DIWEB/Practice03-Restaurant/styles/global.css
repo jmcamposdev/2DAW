@@ -358,6 +358,7 @@ h5 {
 
 .nav__item {
     padding: 12px;
+    position: relative;
 }
 
 
@@ -368,7 +369,24 @@ h5 {
     font-size: 0.7rem;
     line-height: 1;
     letter-spacing: 0.1rem;
+    position: relative;
 }
+
+.nav__item a::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: -3px;
+    background-color: var(--text-color-darker);
+    transition: all .3s ease;
+}
+
+.nav__item a:hover::before{
+    visibility: visible;
+    width: 100%;
+}
+
 
 
 .nav__list .header__button {
@@ -379,6 +397,10 @@ h5 {
     padding: 0.6em 1.2em 0.6em;
     background-color: var(--text-color);
     transition: background-color 0.3s ease;
+}
+
+.nav__list .header__button::before {
+    content: none;
 }
 
 .nav__list .header__button:hover {
