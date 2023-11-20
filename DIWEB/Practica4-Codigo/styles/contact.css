@@ -1,0 +1,138 @@
+/* //////////////////////////////// */
+/* HERO */
+/* //////////////////////////////// */
+.section__hero {
+    background-image: url("../img/contactUs/hero.jpg");
+}
+
+/* //////////////////////////////// */
+/* OFFICES */
+/* //////////////////////////////// */
+
+.contact-image-icon{
+    height: 15px;
+    margin-right: 10px;
+}
+
+.email-icon {
+    width: 15px;
+}
+
+.featured__item .featured__text p {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: baseline;
+}
+.featured__item .featured__text p span,
+.contact ul li p{
+    display: flex;
+    align-items: center;
+}
+
+.offices iframe {
+    width: 100%;
+    margin-top: 50px;
+    height: 600px;
+}
+
+/* //////////////////////////////// */
+/* OFFICES */
+/* //////////////////////////////// */
+.contact .section-title {
+    margin-bottom: 50px;
+}
+.contact .section-subtitle {
+    font-size: 1.2rem;
+}
+
+
+.contact__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+
+.contact__wrapper ul {
+
+    list-style: none;
+    margin-top: 15px;
+}
+
+
+.contact__column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    gap: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-2-column {
+    display: flex;
+    gap: 15px;
+}
+.form__row input,
+.form__row textarea{
+    color: var(--text-normal-color);
+    border: none;
+    border-bottom: 1px solid #9d9d9d;
+    border-radius: 0;
+    padding: 1em 0 0.5em 0;
+    background: transparent;
+    width: 100%;
+    box-shadow: none;
+    font-weight: 400;
+    font-family: 'Kamerik', sans-serif;
+    font-size: 16px;
+    letter-spacing: initial;
+    display: inline-block;
+    resize: none;
+    outline: none;
+    margin: 15px 0 15px;
+    transition: all .2s ease;
+
+}
+
+.form__row input:focus,
+.form__row textarea:focus {
+    border-color: #000;
+}
+
+.form__row input:valid,
+.form__row textarea:valid {
+    border-color: #000;
+
+}
+form button[type="submit"] {
+    width: 100%;
+}
+
+/* //////////////////////////////// */
+/* HOTELS */
+/* //////////////////////////////// */
+.featured__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured__title .price {
+    font-size: 1.1rem;
+    color: #545454;
+}
+
+.featured__title .price span {
+    font-size: .9rem;
+}
+
+.featured__text a {
+    margin: 0 auto;
+}

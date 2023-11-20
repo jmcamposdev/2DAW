@@ -13,7 +13,6 @@
     background-size: cover;
     background-attachment: fixed;
     padding-top: 120px;
-
 }
 
 .hero__container {
@@ -39,178 +38,15 @@
     letter-spacing: .1rem;
 }
 
-.line {
-    display: inline-block;
-    width: 10%;
-    height: 1px;
-    background-color: var(--text-color)
-}
-
-
-.scroll__container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    align-self: end;
-}
-
-.scroll__container p {
-    transform: rotate(-90deg) translate(60px);
-    padding-right: 30px;
-    width: 123px;
-    line-height: normal;
-    margin: 0;
-    font-size: 1rem;
-}
-
-.scroll__container p::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: var(--text-color);
-    left: 100%;
-    top: 8px;
-    -webkit-animation: scrollDown 3s ease-in-out infinite;
-    animation: scrollDown 3s ease-in-out infinite;
-}
-
-@keyframes scrollDown {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-.socials__row {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 100px;
-}
-
-.social__container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    width: 128px;
-}
-
-
-.social__icon {
-    width: 32px;
-    transition: all .2s ease;
-}
-
-.social__icon:hover {
-    transform: scale(1.1);
-}
-
 
 
 /* //////////////////////////////// */
-/* NATURE*/
+/* TEXTUAL HIGHLIGHTS*/
 /* //////////////////////////////// */
-.nature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.nature__row {
-    display: flex;
-}
-
-.nature__row .image__container {
-    flex: 6;
-}
-
-.nature__row .nature__text {
-    flex: 7;
-    padding: 75px 0 75px 75px;
-}
-
-.nature .image__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.textual-highlights .image__container {
     background-image: url("../img/home/green.jpg");
-    background-size: cover;
-    background-position: center;
 }
-
-.nature__text {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    row-gap: 25px;
-    column-gap: 25px;
-    padding: 75px;
-}
-
-.nature__text p {
-    margin: 0;
-}
-
-.nature__text p:nth-child(3){
-    width: 100%;
-    font-weight: 500;
-}
-.nature__text .big-text {
-    font-size: 6.3rem;
-    letter-spacing: 2px;
-    line-height: normal;
-}
-
-.nature__text .small-text {
-    line-height: 1.8rem;
-    font-size: 18px;
-}
-
-.nature .image__information,
-.nature .image__location {
-    padding: 50px;
-}
-
-.nature .image__information .image__title {
-    font-size: 2rem;
-}
-
-.nature .image__information .image__title .percentage {
-    font-size: 3.5rem;
-    font-weight: 500;
-    padding-right: 5px;
-}
-
-.nature .image__information p {
-    margin-top: 15px;
-    line-height: 1.5rem;
-}
-.nature .image__location {
-    padding: 30px;
-}
-.nature .image__location p {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    color: white;
-    text-shadow: black 1px 1px 1px;
-    margin: 0;
-
-}
-
-.nature .image__location .location-icon {
-    border:  none;
-    padding-right: 15px;
-    margin-right: 10px;
-}
-
-
 /* //////////////////////////////// */
 /* WELCOME */
 /* //////////////////////////////// */
@@ -242,56 +78,17 @@
 }
 
 /* //////////////////////////////// */
-/* HISTORY */
+/* FULL WIDTH SECTION */
 /* //////////////////////////////// */
-
-.history {
-    display: flex;
-}
-
-.history__container {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-}
-
-
-.history__text {
-    display: flex;
-    flex-direction: column;
-    flex: 9;
-    text-align: justify;
-    padding: 75px 0;
-}
-
-.history__image {
-    flex: 14;
-    background-position: center;
-    background-size: cover;
-}
-
-.history__row {
-    display: flex;
-    /*padding: 50px 0;*/
-    gap: 5%;
-}
-
-
-.history__row-1 {
-    align-self: end;
-}
-
-
-
-.history__row-1 .history__image {
+.full-width__row-1 .full-width__image {
     background-image: url("../img/home/maori.jpeg");
 }
 
-.history__row-2 .history__image {
+.full-width__row-2 .full-width__image {
     background-image: url("../img/home/treaty.jpg");
 }
 
-.history__row-3 .history__image {
+.full-width__row-3 .full-width__image {
     background-image: url("../img/home/otago.jpg");
 }
 
@@ -413,65 +210,6 @@
     background-image: url("../img/home/abel-tasman-national-park.jpg");
 }
 
-/* //////////////////////////////// */
-/* CITIES */
-/* //////////////////////////////// */
-
-.featured__grid {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.featured__item {
-    flex: 1 1 450px;
-    padding: 15px;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-
-.featured__item .section-subtitle{
-    text-align: center;
-}
-
-.featured__image {
-    overflow: hidden;
-}
-.featured__image img {
-    width: 100%;
-    transition: all .3s ease;
-}
-
-.featured__text {
-    transition: all .3s ease;
-    padding: 50px 25px 0 25px;
-    margin-bottom: -85px;
-    margin-inline: 15px;
-}
-
-.featured__text p {
-    transition: all .3s ease;
-    opacity: 0;
-    font-size: 15px;
-    line-height: 1.3rem;
-    transform: translateY(10px);
-}
-
-.separator {
-    border: 1px solid #333333;
-}
-
-.featured__item:hover  .featured__text{
-    background-color: white;
-    transform: translateY(-100px);
-}
-.featured__item:hover  .featured__text p {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-.featured__item:hover .featured__image img {
-    transform: scale(1.02);
-}
 
 /* //////////////////////////////// */
 /* HASHTAG */

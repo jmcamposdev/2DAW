@@ -1,0 +1,160 @@
+/* //////////////////////////////// */
+/* HERO */
+/* //////////////////////////////// */
+.section__hero {
+    background-image: url("../img/routes/hero.jpg");
+}
+
+
+/* //////////////////////////////// */
+/* TEXTUAL HIGHLIGHTS*/
+/* //////////////////////////////// */
+
+.textual-highlights .image__container {
+    background-image: url("../img/routes/textHighlights.jpg");
+    background-position-x: left;
+}
+
+/* //////////////////////////////// */
+/* FULL WIDTH SECTION */
+/* //////////////////////////////// */
+.full-width__text {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.full-width__row-1 .full-width__image {
+    background-image: url("../img/routes/intro.jpg");
+}
+
+/* //////////////////////////////// */
+/* SLIDER ROUTES */
+/* //////////////////////////////// */
+.routes {
+    --routes-light-text-color: #bbbbbb;
+    margin-bottom: 400px;
+}
+.routes .section-title {
+    margin-bottom: 50px;
+}
+.routes .section-subtitle {
+    margin-bottom: 15px;
+}
+.routes .section-smalltitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: .1rem;
+}
+.splide__slide  {
+    display: flex;
+}
+
+.slider__content {
+    padding: 45px 50px 50px 70px;
+    flex: 4;
+    height: 100%;
+    background-color: var(--text-color);
+    color: white;
+}
+
+.slider__content .section-subtitle {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+.slider__content .tags__text {
+    font-size: 13px;
+    color: var(--routes-light-text-color);
+    line-height: 2rem;
+    margin: 0;
+}
+
+.slider__content .tags__text .divider--grey {
+    color: #727272;
+}
+
+.route__kilometer p {
+    color: var(--routes-light-text-color);
+    font-size: 1.5rem;
+    line-height: normal;
+}
+
+.route__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.route__location p {
+    font-size: 1rem;
+    color: var(--routes-light-text-color);
+}
+
+.route__map img {
+    width: 85px;
+}
+
+.route__content  {
+    margin-top: 25px;
+}
+.route__description {
+    font-size: 1rem;
+}
+
+
+
+.slider__image {
+    flex: 7;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.alpine {
+    margin-bottom: 100px;
+}
+
+.alpine .slider-1 .slider__image {
+    background-image: url("../img/routes/alpineLakesItinerary-Hero.jpg");
+}
+.alpine .slider-2 .slider__image {
+    background-image: url("../img/routes/christchurch-slider1.jpg");
+}
+.alpine .slider-3 .slider__image {
+    background-image: url("../img/routes/lakeTekapo-slider1.jpg");
+}
+.alpine .slider-4 .slider__image {
+    background-image: url("../img/routes/mountCook-slider1.jpg");
+}
+.alpine .slider-5 .slider__image {
+    background-image: url("../img/routes/wanaka-slider1.jpg");
+}
+.alpine .slider-6 .slider__image {
+    background-image: url("../img/routes/queenstown-slider1.jpg");
+}
+.alpine .slider-7 .slider__image {
+    background-image: url("../img/routes/hobbiton-slider1.jpg");
+}
+
+.thermal .slider-1 .slider__image {
+    background-image: url("../img/routes/thermal-slider2.jpg");
+}
+.thermal .slider-2 .slider__image {
+    background-image: url("../img/routes/bridalVeilFalls-slider2.jpg");
+}
+.thermal .slider-3 .slider__image {
+    background-image: url("../img/routes/whakarewarewaForest-slider2.jpg");
+}
+.thermal .slider-4 .slider__image {
+    background-image: url("../img/routes/lakeTapu-slider2.jpg");
+}
+.thermal .slider-5 .slider__image {
+    background-image: url("../img/routes/napier-slider2.jpg");
+}
+
+
+
+
+
