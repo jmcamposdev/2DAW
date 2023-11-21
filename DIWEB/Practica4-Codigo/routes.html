@@ -9,6 +9,8 @@
     <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 " rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
     <link rel="stylesheet" href="styles/resetStyles.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/routes.css">
@@ -110,11 +112,19 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </section>
     <section class="routes separate-section-top">
         <div class="routes__container container-large">
-            <h2 class="section-title uppercase"><span class="outline-text">Explore All</span><br> Our Routes</h2>
-            <div class="splide alpine" aria-label="Alpine Lakes Itinerary" data-splide='{"type":"loop","perPage":1}'>
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide slider-1">
+            <h2 class="section-title uppercase"><span class="outline-text">Auckland City </span><br>to Coast Explorer</h2>
+            <div class="alpine glide">
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+                    </button>
+                </div>
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide slider-1">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">Alpine Lakes Itinerary</h3>
                                 <div class="tag__container">
@@ -141,7 +151,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-2">
+                        <li class="glide__slide slider-2">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 1</h3>
                                 <h4 class="section-smalltitle">Christchurch</h4>
@@ -153,7 +163,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-3">
+                        <li class="glide__slide slider-3">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 2</h3>
                                 <h4 class="section-smalltitle">Lake Tekapo</h4>
@@ -166,7 +176,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-4">
+                        <li class="glide__slide slider-4">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 3</h3>
                                 <h4 class="section-smalltitle">Lake Tekapo - Aoraki/Mount Cook</h4>
@@ -180,7 +190,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-5">
+                        <li class="glide__slide slider-5">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 4</h3>
                                 <h4 class="section-smalltitle">Aoraki/Mount Cook - Wanaka</h4>
@@ -193,7 +203,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-6">
+                        <li class="glide__slide slider-6">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 5</h3>
                                 <h4 class="section-smalltitle">Wanaka - Queenstown</h4>
@@ -207,7 +217,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-7">
+                        <li class="glide__slide slider-7">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 6 - 7</h3>
                                 <h4 class="section-smalltitle">Explore Queenstown</h4>
@@ -222,13 +232,31 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
+
                     </ul>
                 </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                    <button class="glide__bullet" data-glide-dir="=5"></button>
+                    <button class="glide__bullet" data-glide-dir="=6"></button>
+                </div>
             </div>
-            <div class="splide thermal" aria-label="Alpine Lakes Itinerary" data-splide='{"type":"loop","perPage":1}'>
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide slider-1">
+            <div class="thermal glide">
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+                    </button>
+                </div>
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide slider-1">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">Thermal Explorer Highway</h3>
                                 <div class="tag__container">
@@ -255,7 +283,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-2">
+                        <li class="glide__slide slider-2">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 1</h3>
                                 <h4 class="section-smalltitle">Auckland to Hamilton via Raglan</h4>
@@ -268,7 +296,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-3">
+                        <li class="glide__slide slider-3">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 2</h3>
                                 <h4 class="section-smalltitle">Hamilton to Rotorua</h4>
@@ -281,7 +309,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-4">
+                        <li class="glide__slide slider-4">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 3</h3>
                                 <h4 class="section-smalltitle">Rotorua to Taupō</h4>
@@ -295,7 +323,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-                        <li class="splide__slide slider-5">
+                        <li class="glide__slide slider-5">
                             <div class="slider__content">
                                 <h3 class="section-subtitle">DAY 4</h3>
                                 <h4 class="section-smalltitle">Taupō to Napier</h4>
@@ -309,25 +337,141 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                             <div class="slider__image"></div>
                         </li>
-
                     </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                </div>
+            </div>
+            <div class="coast glide">
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>
+                    </button>
+                </div>
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide slider-1">
+                            <div class="slider__content">
+                                <h3 class="section-subtitle">Thermal Explorer Highway</h3>
+                                <div class="tag__container">
+                                    <p class="tags__text">Food &amp; wine&nbsp;&nbsp;<span class="divider--grey">—</span>&nbsp;&nbsp;Naturae & Wildlife&nbsp;&nbsp;<span class="divider--grey">—</span>&nbsp;&nbsp;Walking & Hiking&nbsp;&nbsp;<span class="divider--grey">—</span>&nbsp;&nbsp;Water Activities</p>
+                                </div>
+
+                                <div class="route__info">
+                                    <div class="route__length">
+                                        <div class="route__kilometer">
+                                            <p class="featured-comparison__meta__length">
+                                                3 DAYS <span class="divider--grey">—</span> <span>100 km</span>
+                                            </p>
+                                        </div>
+                                        <div class="route__location">
+                                            <p>Auckland > Waiheke Island</p>
+                                        </div>
+                                    </div>
+                                    <div class="route__map">
+                                        <img src="./img/routes/map3.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="route__description">Travel from the 'Island of Wine' to the wild west coast beaches and discover in three days why Auckland’s lifestyle is rated so highly.</p>
+
+                            </div>
+                            <div class="slider__image"></div>
+                        </li>
+                        <li class="glide__slide slider-2">
+                            <div class="slider__content">
+                                <h3 class="section-subtitle">DAY 1</h3>
+                                <h4 class="section-smalltitle">Auckland to Hamilton via Raglan</h4>
+
+                                <div class="route__content">
+                                    <p class="route__description">Starting from <span class="bold">Tāmaki Makaurau/Auckland</span>, travel south through <span class="bold">suburban scenery</span> towards the <span class="bold">laid-back beach</span> town of <span class="bold">Whāingaroa/Raglan</span> - home to one of the longest left-hand surf breaks in the world.</p>
+                                    <p class="route__description">Spend the day learning to <span class="bold">surf</span> or explore the town with its <span class="bold">many cafes</span>, surf shops and <span class="bold">galleries</span>. Raglan is also home to <span class="bold">Wairēinga/Bridal Veil Falls</span>- a 55-metre-high <span class="bold">waterfall</span> which looks like a brides vail. </p>
+                                    <p class="route__description">Continue onto <span class="bold">Hamilton</span>, where a myriad of <span class="bold">attractions await</span>.</p>
+                                </div>
+                            </div>
+                            <div class="slider__image"></div>
+                        </li>
+                        <li class="glide__slide slider-3">
+                            <div class="slider__content">
+                                <h3 class="section-subtitle">DAY 2</h3>
+                                <h4 class="section-smalltitle">Hamilton to Rotorua</h4>
+
+                                <div class="route__content">
+                                    <p class="route__description"><span class="bold">Rotorua</span> sits squarely on the <span class="bold">Pacific Ring</span> of <span class="bold">Fire</span> and <span class="bold">geothermal activity</span> breathes through every part of the region. </p>
+                                    <p class="route__description">The Rotorua region is home to <span class="bold">eighteen lakes</span>, all with <span class="bold">historical Māori</span> culture signifigence and <span class="bold">frequented</span> by local <span class="bold">swimmers</span>, anglers and boats.</p>
+                                    <p class="route__description">This area is also a <span class="bold">hub</span> for <span class="bold">adrenaline junkies</span>. Get your <span class="bold">heart pumping</span> with the luge, OGO and shweeb. </p>
+                                </div>
+                            </div>
+                            <div class="slider__image"></div>
+                        </li>
+                        <li class="glide__slide slider-4">
+                            <div class="slider__content">
+                                <h3 class="section-subtitle">DAY 3</h3>
+                                <h4 class="section-smalltitle">Rotorua to Taupō</h4>
+
+                                <div class="route__content">
+                                    <p class="route__description">As you journey towards <span class="bold">Taupō</span>, take time to visit the magnificent <span class="bold">Orakei Korako Cave</span> & <span class="bold">Geothermal Park</span> home to some of the country's most remarkable geothermal features.</p>
+                                    <p class="route__description">The <span class="bold">largest freshwater</span> lake in <span class="bold">Australasia</span>, <span class="bold">Lake Taupō</span> is a great place for a guided <span class="bold">boat cruise</span> to giant <span class="bold">Ngatoroirangi</span> Mine <span class="bold">Bay Māori rock</span> carvings or hire a kayak and discover the lake at your own pace.
+                                    </p>
+                                    <p class="route__description">At <span class="bold">Huka Prawn Park</span>, you can treat yourself to <span class="bold">delicious prawns</span> at the restaurants and fun walk around the <span class="bold">prawn park</span>.</p>
+                                </div>
+                            </div>
+                            <div class="slider__image"></div>
+                        </li>
+                        <li class="glide__slide slider-5">
+                            <div class="slider__content">
+                                <h3 class="section-subtitle">DAY 4</h3>
+                                <h4 class="section-smalltitle">Taupō to Napier</h4>
+
+                                <div class="route__content">
+                                    <p class="route__description">The road from <span class="bold">Taupō</span> to <span class="bold">Napier</span> takes you through <span class="bold">fantastic scenery</span> with <span class="bold">rugged hills</span>, <span class="bold">beautiful valleys</span>, gentle plains and <span class="bold">huge vistas</span>. </p>
+                                    <p class="route__description">Once in the <span class="bold">Hawke’s Bay</span> you will <span class="bold">discover</span> a fertile <span class="bold">wine-growing</span> region that <span class="bold">boasts</span> one of the world’s best collections of <span class="bold">Art Deco architecture</span>.
+                                    </p>
+                                    <p class="route__description">Nearby <span class="bold">Cape Kidnappers</span> is home to the <span class="bold">world’s largest gannet colony</span> which can be reached on foot, by <span class="bold">kayak</span> or on a <span class="bold">tractor</span>. The <span class="bold">Cape</span> also happens to have one of the <span class="bold">country’s best golf courses</span>.</p>
+                                </div>
+                            </div>
+                            <div class="slider__image"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
                 </div>
             </div>
         </div>
     </section>
-
 
 </main>
 
 <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>
-<script>
-    var elms = document.getElementsByClassName( 'splide' );
+<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
-    for ( var i = 0; i < elms.length; i++ ) {
-        new Splide( elms[ i ] ).mount();
+<script>
+    let glides = document.getElementsByClassName( 'glide' );
+    for (let i = 0; i < glides.length; i++) {
+        new Glide(glides[i], {
+            slidesToShow: 1,
+            dots: '.glider-dots',
+        }).mount()
     }
+    new Glide('.glide', {
+        slidesToShow: 1,
+        dots: '.glider-dots',
+    }).mount()
 </script>
+
 </body>
 </html>
