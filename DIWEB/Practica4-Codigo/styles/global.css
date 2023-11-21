@@ -257,19 +257,29 @@ li::marker {
     height: 100%;
     top: 0;
     left: -100%;
-    opacity: 0;
     background-color: white;
     z-index: -1;
     transition: all ease-out 0.2s;
-
 }
 
 .standard-button:hover {
     color: var(--text-color);
 }
 .standard-button:hover::before{
-    opacity: 1;
     left: 0;
+}
+
+
+.white-button {
+    background-color: white;
+    border: 1px solid white;
+    color: var(--text-color);
+}
+.white-button::before {
+    background-color: var(--text-color);
+}
+.white-button:hover {
+    color: white;
 }
 /* //////////////////////////////// */
 /* HEADER */
@@ -548,7 +558,7 @@ li::marker {
     font-weight: 500;
 }
 .textual-highlights__text .big-text {
-    font-size: 6.3rem;
+    font-size: clamp(3rem, 2.1857rem + 3.4286vw, 6.3rem); /*Max: 6.3rem Min: 3rem*/
     letter-spacing: 2px;
     line-height: normal;
 }
@@ -964,4 +974,22 @@ footer .line {
     justify-content: end;
     padding-bottom: 50px;
     flex: 1 1 100%;
+}
+
+/* //////////////////////////////// */
+/* BANNER */
+/* //////////////////////////////// */
+.banner-separator {
+    padding: 4%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 7;
+}
+.banner-separator h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 4rem;
 }

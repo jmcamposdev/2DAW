@@ -82,6 +82,12 @@
     background-image: url("../img/howTo/christchurchAirport.jpg");
 }
 
+/* //////////////////////////////// */
+/* BANNER */
+/* //////////////////////////////// */
+.banner-separator {
+    background-image: url("../img/howTo/banner-separator.jpg");
+}
 
 /* //////////////////////////////// */
 /* HOTELS */

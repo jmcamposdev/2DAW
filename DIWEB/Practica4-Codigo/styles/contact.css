@@ -136,3 +136,17 @@ form button[type="submit"] {
 .featured__text a {
     margin: 0 auto;
 }
+
+/* //////////////////////////////// */
+/* BANNER */
+/* //////////////////////////////// */
+.banner-separator {
+    background-image: url("../img/contactUs/banner-separator.jpg");
+}
+
+.banner-separator h3 {
+    text-align: center;
+}
+
+.banner-separator h3 .outline-text {
+}

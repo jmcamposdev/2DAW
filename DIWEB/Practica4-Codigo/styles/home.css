@@ -24,7 +24,7 @@
     height: 100%;
 }
 .hero__container h1 {
-    font-size: 10rem;
+    font-size: clamp(3rem, 1.2727rem + 7.2727vw, 10rem);
     font-weight: 600;
     flex: 10;
     text-align: center;
@@ -52,9 +52,8 @@
 /* //////////////////////////////// */
 
 .welcome {
-    margin-left: 25px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .welcome__container {
@@ -118,7 +117,7 @@
 }
 
 .banner__wrapper .banner__column .banner__icon {
-    height: 80px;
+    height: 55px;
     margin-bottom: 50px;
 }
 
@@ -131,7 +130,6 @@
     gap: 20px;
     flex-direction: column;
     height: 1600px;
-    background: beige;
 }
 
 .grid__row {
@@ -151,7 +149,6 @@
 .grid__image {
     background-position: center;
     background-size: cover;
-    background-color: aqua;
     overflow: hidden;
 }
 
@@ -160,8 +157,10 @@
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 25px;
     background-color: rgba(0,0,0,.8);
     transition: all .3s ease;
 }
@@ -268,3 +267,98 @@
 .image-gallery li:hover .image-gallery-picture {
     transform: scale(1.02);
 }
+
+
+/* //////////////////////////////// */
+/* MEDIA QUERIES */
+/* //////////////////////////////// */
+
+@media screen and (max-width: 1200px) {
+    .scroll__container {
+        display: none;
+    }
+
+
+    .welcome__container {
+        flex-direction: column;
+    }
+
+    .welcome__container > div {
+        flex: none;
+    }
+    
+    .welcome__container .welcome__image {
+        margin-top: 50px;
+        height: 500px;
+    }
+
+    .full-width__row {
+        flex-direction: column;
+    }
+    .full-width__row > div {
+        flex: none;
+    }
+    .full-width__row .full-width__image {
+        height: 400px;
+    }
+    .full-width__text {
+        padding: 50px 5%;
+    }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    .social__container {
+        width: auto;
+        margin-left: 5%;
+    }
+
+    .textual-highlights__row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .textual-highlights__row .image__container {
+        width: 100%;
+    }
+    .textual-highlights__row .textual-highlights__text {
+        max-width: 585px;
+        padding: 75px 0 0 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner__wrapper {
+        flex-direction: column;
+        gap: 50px;
+        padding: 0 5%;
+    }
+    
+    .nature-parks__grid {
+        height: auto;
+    }
+    .grid__row {
+        flex-direction: column;
+        flex: none;
+    }
+    .grid__column {
+        flex: none;
+    }
+    .grid__image {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 402px) {
+    .hero .title__row h2 {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .hero .title__row .line {
+        display: none;
+    }
+
+}
+
+
