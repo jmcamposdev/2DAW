@@ -2,285 +2,317 @@
 /* HERO */
 /* //////////////////////////////// */
 .section__hero {
-    background-image: url("../img/routes/hero.jpg");
+  background-image: url("../img/routes/hero.jpg");
 }
-
 
 /* //////////////////////////////// */
 /* TEXTUAL HIGHLIGHTS*/
 /* //////////////////////////////// */
 
 .textual-highlights .image__container {
-    background-image: url("../img/routes/textHighlights.jpg");
-    background-position-x: left;
+  background-image: url("../img/routes/textHighlights.jpg");
+  background-position-x: left;
 }
 
 /* //////////////////////////////// */
 /* FULL WIDTH SECTION */
 /* //////////////////////////////// */
 .full-width__text {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
+
 .full-width__row-1 .full-width__image {
-    background-image: url("../img/routes/intro.jpg");
+  background-image: url("../img/routes/intro.jpg");
 }
 
 /* //////////////////////////////// */
 /* SLIDER ROUTES */
 /* //////////////////////////////// */
 .routes {
-    --routes-light-text-color: #bbbbbb;
-    margin-bottom: 400px;
+  --routes-light-text-color: #bbbbbb;
+  margin-bottom: 400px;
 }
+
 .routes .section-title {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
+
 .routes .section-subtitle {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
+
 .routes .section-smalltitle {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-top: 20px;
-    letter-spacing: .1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 0.1rem;
 }
-.splide__slide, .glide__slide  {
-    display: flex;
+
+.splide__slide,
+.glide__slide {
+  display: flex;
 }
 
 .slider__content {
-    padding: 45px 50px 100px 70px;
-    flex:0 680px;
-    height: 100%;
-    background-color: var(--text-color);
-    color: white;
+  padding: 45px 50px 100px 70px;
+  flex: 0 680px;
+  height: 100%;
+  background-color: var(--text-color);
+  color: white;
 }
 
 .slider__content .section-subtitle {
-    line-height: 2.5rem;
-    font-size: 2rem;
-    letter-spacing: .3rem;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
 }
 
 .slider__content .tags__text {
-    font-size: 13px;
-    color: var(--routes-light-text-color);
-    line-height: 2rem;
-    margin: 0;
+  font-size: 13px;
+  color: var(--routes-light-text-color);
+  line-height: 2rem;
+  margin: 0;
 }
 
 .slider__content .tags__text .divider--grey {
-    color: #727272;
+  color: #727272;
 }
 
 .route__kilometer p {
-    color: var(--routes-light-text-color);
-    font-size: 1.5rem;
-    line-height: normal;
+  color: var(--routes-light-text-color);
+  font-size: 1.5rem;
+  line-height: normal;
 }
 
 .route__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
 }
 
 .route__location p {
-    font-size: 1rem;
-    color: var(--routes-light-text-color);
+  font-size: 1rem;
+  color: var(--routes-light-text-color);
 }
 
 .route__map img {
-    width: 85px;
+  width: 85px;
 }
 
-.route__content  {
-    margin-top: 25px;
+.route__content {
+  margin-top: 25px;
 }
+
 .route__description {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-
-
 
 .slider__image {
-    flex: 7;
-    background-position: center;
-    -webkit-background-size: cover;
-    background-size: cover;
+  flex: 7;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
-.alpine, .thermal {
-    margin-bottom: 100px;
+
+.alpine,
+.thermal {
+  margin-bottom: 100px;
 }
 
 .alpine .slider-1 .slider__image {
-    background-image: url("../img/routes/alpineLakesItinerary-Hero.jpg");
+  background-image: url("../img/routes/alpineLakesItinerary-Hero.jpg");
 }
+
 .alpine .slider-2 .slider__image {
-    background-image: url("../img/routes/christchurch-slider1.jpg");
+  background-image: url("../img/routes/christchurch-slider1.jpg");
 }
+
 .alpine .slider-3 .slider__image {
-    background-image: url("../img/routes/lakeTekapo-slider1.jpg");
+  background-image: url("../img/routes/lakeTekapo-slider1.jpg");
 }
+
 .alpine .slider-4 .slider__image {
-    background-image: url("../img/routes/mountCook-slider1.jpg");
+  background-image: url("../img/routes/mountCook-slider1.jpg");
 }
+
 .alpine .slider-5 .slider__image {
-    background-image: url("../img/routes/wanaka-slider1.jpg");
+  background-image: url("../img/routes/wanaka-slider1.jpg");
 }
+
 .alpine .slider-6 .slider__image {
-    background-image: url("../img/routes/queenstown-slider1.jpg");
+  background-image: url("../img/routes/queenstown-slider1.jpg");
 }
+
 .alpine .slider-7 .slider__image {
-    background-image: url("../img/routes/hobbiton-slider1.jpg");
+  background-image: url("../img/routes/hobbiton-slider1.jpg");
 }
 
 .thermal .slider-1 .slider__image {
-    background-image: url("../img/routes/thermal-slider2.jpg");
+  background-image: url("../img/routes/thermal-slider2.jpg");
 }
+
 .thermal .slider-2 .slider__image {
-    background-image: url("../img/routes/bridalVeilFalls-slider2.jpg");
+  background-image: url("../img/routes/bridalVeilFalls-slider2.jpg");
 }
+
 .thermal .slider-3 .slider__image {
-    background-image: url("../img/routes/whakarewarewaForest-slider2.jpg");
+  background-image: url("../img/routes/whakarewarewaForest-slider2.jpg");
 }
+
 .thermal .slider-4 .slider__image {
-    background-image: url("../img/routes/lakeTapu-slider2.jpg");
+  background-image: url("../img/routes/lakeTapu-slider2.jpg");
 }
+
 .thermal .slider-5 .slider__image {
-    background-image: url("../img/routes/napier-slider2.jpg");
+  background-image: url("../img/routes/napier-slider2.jpg");
 }
 
 .coast .slider-1 .slider__image {
-    background-image: url("../img/routes/waihekeIsland-slider3.jpg");
+  background-image: url("../img/routes/waihekeIsland-slider3.jpg");
 }
-
+.coast .slider-2 .slider__image {
+  background-image: url("../img/routes/waihekeIsland2-slider3.jpg");
+}
+.coast .slider-3 .slider__image {
+  background-image: url("../img/routes/auckland-slider3.jpg");
+}
+.coast .slider-4 .slider__image {
+  background-image: url("../img/routes/aucklandWestCoast-slider3.jpg");
+}
 
 /* //////////////////////////////// */
 /* GLIDE ROUTES */
 /* //////////////////////////////// */
 
 .glide__arrow {
-    -ms-flex-align: center;
-    align-items: center;
-    background: #ccc;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    display: -ms-flexbox;
-    display: flex;
-    height: 2em;
-    -ms-flex-pack: center;
-    justify-content: center;
-    opacity: .7;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2em;
-    z-index: 1;
-
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
 }
+
 .glide__arrow--left svg {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .glide__arrow svg {
-    fill: #000;
-    height: 1.2em;
-    width: 1.2em;
+  fill: #000;
+  height: 1.2em;
+  width: 1.2em;
 }
-
 
 .glide__arrow--left {
-    left: 1rem;
-}
-.glide__arrow--right{
-    right: 1em;
+  left: 1rem;
 }
 
-
-.glide__bullets {
-    user-select: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0;
+.glide__arrow--right {
+  right: 1em;
 }
 
 .glide__bullets {
-    position: absolute;
-    width: 450px;
-    bottom: 75px;
-    left: 115px;
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
 }
+
+.glide__bullets {
+  position: absolute;
+  width: 450px;
+  bottom: 75px;
+  left: 115px;
+}
+
 .glide__bullet {
-    position: relative;
-    border: 0;
-    padding: 0;
-    user-select: none;
-    outline: none;
-    display: block;
-    cursor: pointer;
-    color: white;
-    border-radius: 50%;
-    background: white;
-    width: 10px;
-    height: 10px;
-    /* margin: 0 20px; */
-    z-index: 9999;
-    transition: all .3s ease;
+  position: relative;
+  border: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  background: white;
+  width: 10px;
+  height: 10px;
+  /* margin: 0 20px; */
+  z-index: 9999;
+  transition: all 0.3s ease;
 }
+
 .glide__bullets::before {
-    content: "";
-    display: block;
-    width: 99%;
-    border-bottom: 1px solid white;
-    position: absolute;
-    top: 5px;
+  content: "";
+  display: block;
+  width: 99%;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 5px;
 }
 
 .glide__bullet::after {
-    left: -12px;
-    position: absolute;
-    bottom: -35px;
-    width: 36px;
+  left: -12px;
+  position: absolute;
+  bottom: -35px;
+  width: 36px;
 }
+
 .glide__bullet:first-child::after {
-    content: 'Intro';
+  content: "Intro";
 }
+
 .glide__bullet:nth-child(2)::after {
-    content: 'Day 1';
+  content: "Day 1";
 }
+
 .glide__bullet:nth-child(3)::after {
-    content: 'Day 2';
+  content: "Day 2";
 }
+
 .glide__bullet:nth-child(4)::after {
-    content: 'Day 3';
+  content: "Day 3";
 }
+
 .glide__bullet:nth-child(5)::after {
-    content: 'Day 4';
+  content: "Day 4";
 }
+
 .glide__bullet:nth-child(6)::after {
-    content: 'Day 5';
+  content: "Day 5";
 }
+
 .glide__bullet:nth-child(7)::after {
-    content: 'Day 6';
+  content: "Day 6";
 }
+
 .glide__bullet:nth-child(8)::after {
-    content: 'Day 7';
+  content: "Day 7";
 }
 
-.glide__bullet:hover, .glide__bullet:focus, .glide__bullet.glide__bullet--active {
-    background: #C51AE8;
+.glide__bullet:hover,
+.glide__bullet:focus,
+.glide__bullet.glide__bullet--active {
+  background: #c51ae8;
 }
-
 
 .glide__slide {
-    height: auto;
+  height: auto;
 }
-
-
