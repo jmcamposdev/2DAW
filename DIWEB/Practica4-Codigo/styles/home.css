@@ -3,122 +3,122 @@
 /* //////////////////////////////// */
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    background-image: url("../img/home/hero.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../img/home/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 120px;
 }
 
 .hero__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
 }
 .hero__container h1 {
-    font-size: clamp(3rem, 1.2727rem + 7.2727vw, 10rem);
-    font-weight: 600;
-    flex: 10;
-    text-align: center;
-    color: #333333e8;
+  font-size: clamp(3rem, 1.2727rem + 7.2727vw, 10rem);
+  font-weight: 600;
+  flex: 10;
+  text-align: center;
+  color: #333333e8;
 }
 
 .hero__container h2 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    letter-spacing: .1rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: 0.1rem;
 }
-
-
 
 /* //////////////////////////////// */
 /* TEXTUAL HIGHLIGHTS*/
 /* //////////////////////////////// */
 
 .textual-highlights .image__container {
-    background-image: url("../img/home/green.jpg");
+  background-image: url("../img/home/green.jpg");
 }
 /* //////////////////////////////// */
 /* WELCOME */
 /* //////////////////////////////// */
 
 .welcome {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .welcome__container {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5%;
 }
 
 .welcome__text {
-    display: flex;
-    flex-direction: column;
-    flex: 5;
-    text-align: justify;
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  text-align: justify;
 }
 
 .welcome__image {
-    flex: 8;
-    background-image: url("../img/home/welcome.jpg");
-    background-position: center;
-    background-size: cover;
+  flex: 8;
+  background-image: url("../img/home/welcome.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* //////////////////////////////// */
 /* FULL WIDTH SECTION */
 /* //////////////////////////////// */
 .full-width__row-1 .full-width__image {
-    background-image: url("../img/home/maori.jpeg");
+  background-image: url("../img/home/maori.jpeg");
 }
 
 .full-width__row-2 .full-width__image {
-    background-image: url("../img/home/treaty.jpg");
+  background-image: url("../img/home/treaty.jpg");
 }
 
 .full-width__row-3 .full-width__image {
-    background-image: url("../img/home/otago.jpg");
+  background-image: url("../img/home/otago.jpg");
 }
 
 /* //////////////////////////////// */
 /* BANNER */
 /* //////////////////////////////// */
 .banner {
-    padding: 150px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../img/home/banner1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+  padding: 150px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/home/banner1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .banner__wrapper {
-    display: flex;
-    color: white;
+  display: flex;
+  color: white;
 }
 
 .banner__wrapper .banner__column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
 }
 
 .banner__wrapper .banner__column .banner__icon {
-    height: 55px;
-    margin-bottom: 50px;
+  height: 55px;
+  margin-bottom: 50px;
 }
 
 /* //////////////////////////////// */
@@ -126,239 +126,252 @@
 /* //////////////////////////////// */
 
 .nature-parks__grid {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    height: 1600px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  height: 1600px;
 }
 
 .grid__row {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    flex: 1;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex: 1;
 }
 
 .grid__column {
-    flex: 1;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .grid__image {
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .grid__image .overlay {
-    color: white;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    background-color: rgba(0,0,0,.8);
-    transition: all .3s ease;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
 }
 
 .grid__image .horizontal-overlay {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .grid__image:hover .horizontal-overlay {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
-
 
 .grid__image .vertical-overlay {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .grid__image:hover .vertical-overlay {
-    transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid__image-1 {
-    background-image: url("../img/home/egmont.jpg");
+  background-image: url("../img/home/egmont.jpg");
 }
 
 .grid__image-2 {
-    background-image: url("../img/home/fiordland-national-park.jpg");
+  background-image: url("../img/home/fiordland-national-park.jpg");
 }
 
 .grid__image-3 {
-    background-image: url("../img/home/mount–aspiring-national-park.jpg");
+  background-image: url("../img/home/mount–aspiring-national-park.jpg");
 }
 
 .grid__image-4 {
-    background-image: url("../img/home/kahurangi-national-park.jpg");
+  background-image: url("../img/home/kahurangi-national-park.jpg");
 }
 
 .grid__image-5 {
-    background-image: url("../img/home/tongariro-national-park.jpg");
+  background-image: url("../img/home/tongariro-national-park.jpg");
 }
 
 .grid__image-6 {
-    background-image: url("../img/home/abel-tasman-national-park.jpg");
+  background-image: url("../img/home/abel-tasman-national-park.jpg");
 }
-
 
 /* //////////////////////////////// */
 /* HASHTAG */
 /* //////////////////////////////// */
 
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
 }
 .image-gallery > li {
-    flex: 1 1 auto;
-    height: 300px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  flex: 1 1 auto;
+  height: 300px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .image-gallery li img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-    transition: all .3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
 }
 .image-gallery .instagram-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgb(0 0 0 / 50%);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: all 0.2s 0.1s ease-in-out;
-    color: #fff;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 5px 0 0 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 50%);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s 0.1s ease-in-out;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px 0 0 10px;
 }
 
 .image-gallery .instagram__container img {
-    width: 15px;
-    margin-right: 5px;
+  width: 15px;
+  margin-right: 5px;
 }
 .image-gallery .instagram__container p {
-    line-height: normal;
-    font-size: 14px;
+  line-height: normal;
+  font-size: 14px;
 }
 
 .image-gallery li:hover .instagram-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .image-gallery li:hover .image-gallery-picture {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 
 /* //////////////////////////////// */
 /* MEDIA QUERIES */
 /* //////////////////////////////// */
 
 @media screen and (max-width: 1200px) {
-    .scroll__container {
-        display: none;
-    }
+  .scroll__container {
+    display: none;
+  }
 
+  .welcome__container {
+    flex-direction: column;
+  }
 
-    .welcome__container {
-        flex-direction: column;
-    }
+  .welcome__container > div {
+    flex: none;
+  }
 
-    .welcome__container > div {
-        flex: none;
-    }
-    
-    .welcome__container .welcome__image {
-        margin-top: 50px;
-        height: 500px;
-    }
+  .welcome__container .welcome__image {
+    margin-top: 50px;
+    height: 500px;
+  }
 
-    .full-width__row {
-        flex-direction: column;
-    }
-    .full-width__row > div {
-        flex: none;
-    }
-    .full-width__row .full-width__image {
-        height: 400px;
-    }
-    .full-width__text {
-        padding: 50px 5%;
-    }
-
-
+  .full-width__row {
+    flex-direction: column;
+  }
+  .full-width__row > div {
+    flex: none;
+  }
+  .full-width__row .full-width__image {
+    height: 400px;
+    background-position: top;
+  }
+  .full-width__text {
+    padding: 50px 5%;
+  }
 }
 
 @media screen and (max-width: 992px) {
-    .social__container {
-        width: auto;
-        margin-left: 5%;
-    }
+  .hero .social__container {
+    width: auto;
+    margin-left: 5%;
+  }
 
-    .textual-highlights__row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .textual-highlights__row .image__container {
-        width: 100%;
-    }
-    .textual-highlights__row .textual-highlights__text {
-        max-width: 585px;
-        padding: 75px 0 0 0;
-    }
-
+  .textual-highlights__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .textual-highlights__row .image__container {
+    width: 100%;
+  }
+  .textual-highlights__row .textual-highlights__text {
+    max-width: 585px;
+    padding: 75px 0 0 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .banner__wrapper {
-        flex-direction: column;
-        gap: 50px;
-        padding: 0 5%;
-    }
-    
-    .nature-parks__grid {
-        height: auto;
-    }
-    .grid__row {
-        flex-direction: column;
-        flex: none;
-    }
-    .grid__column {
-        flex: none;
-    }
-    .grid__image {
-        height: 300px;
-    }
+  .banner__wrapper {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 5%;
+  }
+  .banner, .hero {
+    background-attachment: unset;
+  }
+
+
+  .nature-parks__grid {
+    height: auto;
+  }
+  .grid__row {
+    flex-direction: column;
+    flex: none;
+  }
+  .grid__column {
+    flex: none;
+  }
+  .grid__image {
+    height: 300px;
+  }
+
+
+  /* //////////////////////////////// */
+  /* WELCOME */
+  /* //////////////////////////////// */
+  .welcome .section-title {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .textual-highlights__text .small-text {
+    font-size: 15px;
+  }
+
+  .textual-highlights__row .textual-highlights__text {
+    column-gap: 12px;
+  }
 }
 
 @media screen and (max-width: 402px) {
-    .hero .title__row h2 {
-        justify-content: center;
-        margin-top: 15px;
-    }
-    .hero .title__row .line {
-        display: none;
-    }
-
+  .hero .title__row h2 {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .hero .title__row .line {
+    display: none;
+  }
 }
-
-
