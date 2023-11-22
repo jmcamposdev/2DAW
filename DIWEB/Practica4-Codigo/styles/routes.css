@@ -17,11 +17,6 @@
 /* //////////////////////////////// */
 /* FULL WIDTH SECTION */
 /* //////////////////////////////// */
-.full-width__text {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .full-width__row-1 .full-width__image {
   background-image: url("../img/routes/intro.jpg");
 }
@@ -30,8 +25,7 @@
 /* SLIDER ROUTES */
 /* //////////////////////////////// */
 .routes {
-  --routes-light-text-color: #bbbbbb;
-  margin-bottom: 400px;
+  --routes-light-text-color: #bbbbbb; 
 }
 
 .routes .section-title {
@@ -49,7 +43,6 @@
   letter-spacing: 0.1rem;
 }
 
-.splide__slide,
 .glide__slide {
   display: flex;
 }
@@ -310,9 +303,49 @@
 .glide__bullet:hover,
 .glide__bullet:focus,
 .glide__bullet.glide__bullet--active {
-  background: #c51ae8;
+  background: #0193DE;
 }
 
 .glide__slide {
   height: auto;
+}
+
+
+/* //////////////////////////////// */
+/* MEDIA QUERIES */
+/* //////////////////////////////// */
+
+@media screen and (max-width: 1200px) {
+  .glide__slide {
+    flex-direction: column-reverse;
+  }
+
+  .slider__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .slider__content {
+    height: auto;
+    flex: none;
+  }
+
+  .glide__bullets {
+    left: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .routes {
+    padding-inline: 0;
+  }
+  .routes .section-title {
+    padding-inline: 5%;
+  }
+  .glide__bullets {
+    width: 80%;
+  }
+  .slider__content { 
+    padding-inline: 20px;
+  }
 }
