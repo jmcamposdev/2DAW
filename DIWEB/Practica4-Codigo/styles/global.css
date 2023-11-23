@@ -237,6 +237,7 @@ li::marker {
   letter-spacing: 0.2rem;
   line-height: 3.1rem;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .section-subtitle {
@@ -499,7 +500,7 @@ li::marker {
     gap: 32px;
   }
 
-  .nav__item a {
+  .nav__item .nav__link {
     font-size: 2rem;
   }
 
@@ -511,6 +512,10 @@ li::marker {
     width: 56px;
     height: 56px;
     stroke-width: 0.5;
+  }
+
+  .nav__list .header__button {
+    display: none;
   }
 }
 
@@ -828,7 +833,7 @@ footer .line {
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.1rem;
 }
@@ -1052,6 +1057,13 @@ footer .line {
     padding: 75px 0 0 0;
   }
 
+  .featured__item {
+    padding: 0;
+  }
+  .featured__title {
+    flex-direction: column;
+    gap: 15px;
+  }
   /* //////////////////////////////// */
   /* FOOTER */
   /* //////////////////////////////// */
