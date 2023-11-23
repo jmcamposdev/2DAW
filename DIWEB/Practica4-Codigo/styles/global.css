@@ -304,11 +304,15 @@ li::marker {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
   transition: background 0.3s ease;
   backdrop-filter: blur(10px);
   background-color: transparent;
   padding: 0 25px;
+}
+
+.header--active {
+  background-color: white;
 }
 
 .header__container {
@@ -970,6 +974,7 @@ footer .line {
   align-items: center;
   gap: 20px;
   letter-spacing: 0.1rem;
+  font-size: clamp(0.8rem, 0.7506rem + 0.2078vw, 1rem);
 }
 
 .section__hero .section__hero__container .title__row {
