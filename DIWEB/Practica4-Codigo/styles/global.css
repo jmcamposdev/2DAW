@@ -338,8 +338,8 @@ li::marker {
   position: relative;
 }
 
-.nav__item a {
-  font-family: "Faune", sans-serif;
+.nav__item .nav__link {
+  font-family: "Kamerik", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   color: var(--text-color);
@@ -350,7 +350,7 @@ li::marker {
   position: relative;
 }
 
-.nav__item a::before {
+.nav__item .nav__link::before {
   content: "";
   width: 0;
   height: 1px;
@@ -360,7 +360,7 @@ li::marker {
   transition: all 0.3s ease;
 }
 
-.nav__item a:hover::before {
+.nav__item .nav__link:hover::before {
   visibility: visible;
   width: 100%;
 }
@@ -373,15 +373,13 @@ li::marker {
   padding: 0.6em 1.2em 0.6em;
   background-color: var(--text-color);
   transition: background-color 0.3s ease;
-}
-
-.nav__list .header__button::before {
-  content: none;
+  text-transform: uppercase;
 }
 
 .nav__list .header__button:hover {
-  background-color: var(--text-color-darker);
+  background-color: #272727;
 }
+
 .header__button p {
   color: var(--background-color);
   box-sizing: border-box;
@@ -1104,6 +1102,7 @@ footer .line {
 
   .footer__copy p {
     font-size: .8rem;
+    text-align: center;
   }
 }
 
