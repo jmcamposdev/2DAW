@@ -1,6 +1,6 @@
 // Get the scroll button
 const scrollBtn = document.querySelector('.scrollBtn');
-
+const header = document.querySelector('.header');
 // When the user scrolls down 200px from the top of the document, show the button
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) { // 200px from top
@@ -10,11 +10,17 @@ window.addEventListener('scroll', () => {
         scrollBtn.classList.remove('scrollBtn--inactive');
         // Set aria-hidden to false
         scrollBtn.setAttribute('aria-hidden', 'false');
+        // Change the background color of the header
+        header.classList.add('header--active');
     } else {
         // Add the class inactive to the scroll button
         scrollBtn.classList.add('scrollBtn--inactive');
-        //
+        // Remove the class active from the scroll button
         scrollBtn.classList.remove('scrollBtn--active');
+        // Set aria-hidden to true
+        scrollBtn.setAttribute('aria-hidden', 'true');
+        // Change the background color of the header
+        header.classList.remove('header--active');
     }
 
     // When the animation ends, toggle aria-hidden
