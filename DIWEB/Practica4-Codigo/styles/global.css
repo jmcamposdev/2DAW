@@ -836,6 +836,11 @@ footer .line {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.1rem;
+  transition: all .3s ease;
+}
+
+.links__container .links__list a:hover {
+  transform: translateX(10px);
 }
 
 .footer__copy {
