@@ -321,17 +321,19 @@
   }
 
   .slider__image {
-    aspect-ratio: 16 / 9;
+    height: 500px;
+    flex: none;
   }
 
   .slider__content {
-    height: auto;
+    height: 50%;
     flex: none;
   }
 
   .glide__bullets {
     left: 0;
     right: 0;
+    bottom: 55px; 
   }
 }
 
@@ -347,5 +349,11 @@
   }
   .slider__content { 
     padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .slider__content {
+    padding-bottom: 220px;
   }
 }
