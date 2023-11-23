@@ -998,7 +998,7 @@ footer .line {
 .banner-separator h3 {
   margin: 0;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 1.5039rem + 1.2468vw, 3rem);
   text-transform: uppercase;
   line-height: 4rem;
 }
@@ -1073,6 +1073,10 @@ footer .line {
   .mobile-hidden {
     display: none;
   }
+
+  .banner-separator h3 {
+    font-size: 1.8rem;
+}
 
  /* //////////////////////////////// */
   /* HERO GLOBAL PAGES*/
