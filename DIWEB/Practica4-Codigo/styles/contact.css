@@ -24,10 +24,11 @@
     flex-direction: column;
     align-items: baseline;
 }
-.featured__item .featured__text p span,
-.contact ul li p{
+.featured__item .featured__text p a,
+.contact ul li a{
     display: flex;
     align-items: center;
+    margin-left: 0;
     color: var(--text-normal-color);
 }
 
