@@ -231,6 +231,12 @@ li::marker {
   padding: 0 5%;
 }
 
+.two-column {
+  column-count: 2;
+  column-gap: 50px;
+  text-align: justify;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 600;
@@ -448,7 +454,6 @@ li::marker {
 .burger {
   display: none;
 }
-
 /* //////////////////////////////// */
 /* MEDIA QUERIES */
 /* //////////////////////////////// */
@@ -1074,6 +1079,10 @@ footer .line {
   transform: scale(1.02);
 }
 
+.pc-hidden {
+  display: none;
+}
+
 /* //////////////////////////////// */
 /* MEDIA QUERIES */
 /* //////////////////////////////// */
@@ -1110,6 +1119,14 @@ footer .line {
 }
 
 @media screen and (max-width: 992px) {
+
+  .pc-hidden {
+    display: block;
+  }
+
+  .two-column {
+    column-count: 1;
+  }
   /* //////////////////////////////// */
   /* FEATURED HIGHLIGHTS*/
   /* //////////////////////////////// */
@@ -1144,7 +1161,6 @@ footer .line {
     padding-top: 0;
   }
 }
-
 
 @media screen and (max-width: 768px) {
 
