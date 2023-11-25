@@ -2,7 +2,7 @@
 /* HERO */
 /* //////////////////////////////// */
 .section__hero {
-  background-image: url("../img/howTo/hero2.jpg");
+  background-image: url("../img/howTo/hero.jpg");
 }
 
 /* //////////////////////////////// */
@@ -17,7 +17,7 @@
 /* FULL WIDTH SECTION */
 /* //////////////////////////////// */
 .full-width__row-1 .full-width__image {
-  background-image: url("../img/howTo/airTravel2.jpg");
+  background-image: url("../img/howTo/airTravel.jpg");
 }
 
 .full-width__row-2 .full-width__image {

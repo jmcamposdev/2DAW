@@ -19,6 +19,7 @@
 /* //////////////////////////////// */
 .full-width__row-1 .full-width__image {
   background-image: url("../img/routes/intro.jpg");
+  background-position: left;
 }
 
 /* //////////////////////////////// */
