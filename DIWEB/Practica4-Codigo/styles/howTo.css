@@ -95,6 +95,12 @@
 
 @media screen and (max-width: 768px) {
   /* //////////////////////////////// */
+  /* ARRIVING */
+  /* //////////////////////////////// */
+  .full-width__row {
+    flex-direction: column-reverse;
+  }
+  /* //////////////////////////////// */
   /* AIRPORT */
   /* //////////////////////////////// */
   .airport__container {
