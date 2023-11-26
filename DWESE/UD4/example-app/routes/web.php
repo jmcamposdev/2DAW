@@ -37,6 +37,10 @@ Route::middleware('auth')->group(function () {
             'message' => request('message'),
             'user_id' => auth()->id()
         ]);
+
+        // Create a session that will be available on the next request only
+        session()->flash('success', 'Chirp published successfully');
+        return to_route('chirps.index');
     });
 
 });
