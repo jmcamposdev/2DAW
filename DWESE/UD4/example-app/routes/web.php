@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Chirp;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,20 +28,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Chirps Routes
-    Route::get('/chirps', function () {
-        return view('chirps.index');
-    })->name('chirps.index');
+    Route::get('/chirps', [ChirpController::class, 'index'])
+        ->name('chirps.index');
 
-    Route::post('/chirps', function () {
-        Chirp::create([
-            'message' => request('message'),
-            'user_id' => auth()->id()
-        ]);
-
-        // Create a session that will be available on the next request only
-        session()->flash('success', 'Chirp published successfully');
-        return to_route('chirps.index');
-    });
+    Route::post('/chirps', [ChirpController::class, 'store'])
+        ->name('chirps.store');
 
 });
 
