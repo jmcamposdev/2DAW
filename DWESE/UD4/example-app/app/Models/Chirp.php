@@ -17,4 +17,12 @@ class Chirp extends Model
     protected $fillable = [
         'message',
     ];
+
+    /**
+     * Get the user that owns the chirp.
+     */
+    public function user() : \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }
