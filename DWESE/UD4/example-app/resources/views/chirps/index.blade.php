@@ -11,6 +11,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("Chirps Form") }}
                     <form method="POST">
+                        @csrf
                         <textarea class="bg-transparent"  name="message" id="message" cols="30" rows="10"></textarea>
                         <input type="submit" value="Send">
                     </form>
