@@ -34,7 +34,7 @@ class ChirpController extends Controller
             'message' => ['required', 'min:5', 'max:255']
         ]);
 
-        auth()->user()->chirps()->create($validated);
+        $request->user()->chirps()->create($validated);
         
         // Create a session that will be available on the next request only
         session()->flash('success', __('Chirp published successfully'));
