@@ -1,0 +1,44 @@
+tr {
+  cursor: pointer;
+}
+
+.selectedRow td {
+  background-color: #ececec;
+}
+
+.alert {
+  animation: shake 0.5s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.close-error {
+  animation: fadeOut 1s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
