@@ -22,12 +22,20 @@ Route::get('/chirps', function () {
 
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
-    Route::get('/chirps', function () {
-        return view('chirps.index');
-    })->name('chirps.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Chirps Routes
+    Route::get('/chirps', function () {
+        return view('chirps.index');
+    })->name('chirps.index');
+
+    Route::post('/chirps', function () {
+        $message =  request('message');
+        // Insert to DB
+    });
+
 });
 
 require __DIR__.'/auth.php';
