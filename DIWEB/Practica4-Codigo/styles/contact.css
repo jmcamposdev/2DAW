@@ -199,7 +199,27 @@ form button[type="submit"] {
     text-align: center;
 }
 
+@media screen and (max-width: 992px) {
+    .news__container label::before {
+        left: -15px;
+        top: 7px;
+    }
+    .news__container label::after {
+        top: 11px;
+        left: -11px;
+    }
+}
 @media screen and (max-width: 768px) { 
+
+    .news__container label::before {
+        left: -16px;
+        top: -1px;
+    }
+    .news__container label::after {
+        top: 3px;
+        left: -12px;
+    }
+
     .banner-separator {
         height: 500px;
         aspect-ratio: auto;
