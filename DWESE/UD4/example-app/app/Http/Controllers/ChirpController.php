@@ -31,7 +31,6 @@ class ChirpController extends Controller
     public function store(Request $request)
     {
         // Validate the request
-
         $validated =  $request->validate([
             'message' => ['required', 'min:5', 'max:255']
         ]);
@@ -56,7 +55,9 @@ class ChirpController extends Controller
      */
     public function edit(Chirp $chirp)
     {
-        //
+        return view('chirps.edit', [
+            'chirp' => $chirp
+        ]);
     }
 
     /**
@@ -64,7 +65,16 @@ class ChirpController extends Controller
      */
     public function update(Request $request, Chirp $chirp)
     {
-        //
+        // Validate the request
+        $validated =  $request->validate([
+            'message' => ['required', 'min:5', 'max:255']
+        ]);
+
+        // Update the chirp
+        $chirp->update($validated);
+
+        return to_route('chirps.index')
+            ->with('success', __('Chirp updated successfully'));
     }
 
     /**
