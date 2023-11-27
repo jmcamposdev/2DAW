@@ -55,6 +55,12 @@ class ChirpController extends Controller
      */
     public function edit(Chirp $chirp)
     {
+        // Check if the user is the owner of the chirp
+        if (auth()->user()->id !== $chirp->user_id) {
+            abort(403);
+        }
+
+        // Show the edit form
         return view('chirps.edit', [
             'chirp' => $chirp
         ]);
@@ -65,6 +71,10 @@ class ChirpController extends Controller
      */
     public function update(Request $request, Chirp $chirp)
     {
+        // Check if the user is the owner of the chirp 
+        if (auth()->user()->id !== $chirp->user_id) {
+            abort(403);
+        }
         // Validate the request
         $validated =  $request->validate([
             'message' => ['required', 'min:5', 'max:255']
