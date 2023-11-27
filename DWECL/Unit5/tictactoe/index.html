@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe by jmcamposdev 🎯</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Tic Tac Toe <span class="title-x">✘ </span></h1>
+    </header>
+    <main>
+        <div class="modal active">
+            <div class="modal-content">
+                    <!-- Ask for the Two User Name-->
+                    <h3>First of all what are your names</h3>
+                    <form action="" id="form-new-players">
+                        <label for="player1">Player 1 Name X:</label>
+                        <input required type="text" id="player1-name-input" name="player1" placeholder="Ej: Paco">
+                        <label for="player2">Player 2 Name O:</label>
+                        <input required type="text" id="player2-name-input" name="player2" placeholder="Ej: Alex">
+                        <button type="submit" id="submit">START</button>
+                    </form>
+            </div>
+        </div>
+        <div class="board">
+            <div class="tab top" data-index="0"></div>
+            <div class="tab top right" data-index="1"></div>
+            <div class="tab top right" data-index="2"></div>
+            <div class="tab top" data-index="3"></div>
+            <div class="tab top right" data-index="4"></div>
+            <div class="tab top right" data-index="5"></div>
+            <div class="tab" data-index="6"></div>
+            <div class="tab right" data-index="7"></div>
+            <div class="tab right" data-index="8"></div>
+        </div>
+        <div class="game-controls">
+            <div class="restart-container">
+                <button id="restart">
+                    <span class="material-symbols-outlined">refresh</span>   
+                </button>  
+                <hr>               
+            </div>
+            <div class="j1-container">
+                <h3 id="player1-name">J1</h3>
+                <p id="player1-points">0</p>
+            </div>
+            <div class="round-container">
+                <h3>Round</h3>
+                <p id="round-counter">0</p>
+            </div>
+            <div class="j2-container">
+                <h3 id="player2-name">J2</h3>
+                <p id="player2-points">0</p>
+            </div>
+        </div>
+    </main>
+    <div class="result-container">
+        <div>
+            <p class="result-text"></p>
+        </div>
+    <footer class="footer">
+        <p class="footer-text">Made with ❤️ by <a href="https://jmcampos.dev" target="_blank">jmcamposdev</a></p>
+    </footer>
+</body>
+<script type="module" src="js/player.js"></script>
+<script type="module" src="js/tictactoe.js"></script>
+<script type="module" src="js/main.js"></script>
+</html>
