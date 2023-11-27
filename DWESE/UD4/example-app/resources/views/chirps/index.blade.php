@@ -45,6 +45,7 @@
                             </div>
                             <p class="mt-4 text-lg text-gray-900 dark:text-gray-100">{{ $chirp->message }}</p>
                         </div>
+                        @if (auth()->user()->id === $chirp->user_id)
                         <x-dropdown>
                             <x-slot name="trigger">
                                 <button>
@@ -59,6 +60,8 @@
                                 </x-dropdown-link>
                             </x-slot>
                         </x-dropdown>
+                        @endif
+                        
                         
 
                     </div>
