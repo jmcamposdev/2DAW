@@ -150,6 +150,7 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  cursor: crosshair;
 }
 
 .grid__image .overlay {
