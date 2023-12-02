@@ -1,0 +1,33 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  /*user-select: none;*/
+}
+
+.slider-slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+
+.slider__arrow--left {
+  left: 1rem;
+}
+.slider__arrow--left img {
+  transform: rotate(180deg);
+}
+
+.slider__arrow--right {
+  right: 1em;
+}
