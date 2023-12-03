@@ -84,6 +84,7 @@
 
 .full-width__row-2 .full-width__image {
   background-image: url("../img/home/treaty.jpg");
+  background-position: right;
 }
 
 .full-width__row-3 .full-width__image {
