@@ -229,6 +229,10 @@ form button[type="submit"] {
         flex-direction: column;
         gap: 50px;
     }
+
+    .contact__wrapper ul {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 456px) {
