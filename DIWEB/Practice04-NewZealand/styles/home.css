@@ -44,6 +44,7 @@
 
 .textual-highlights .image__container {
   background-image: url("../img/home/green.jpg");
+  background-repeat: no-repeat;
 }
 /* //////////////////////////////// */
 /* WELCOME */
