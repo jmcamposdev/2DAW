@@ -230,3 +230,12 @@ form button[type="submit"] {
         gap: 50px;
     }
 }
+
+@media screen and (max-width: 456px) {
+    .news__container label::before {
+        top: 7px;
+    }
+    .news__container label::after {
+        top: 11px;
+    }
+}
