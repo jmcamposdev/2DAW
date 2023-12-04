@@ -226,6 +226,13 @@
   background-position: center;
 }
 
+.ceo__image .wrap-socials {
+  height: 100%;
+  justify-content: end;
+  align-items: end;
+  padding: 25px;
+}
+
 .members__title  {
   display: flex;
   justify-content: space-between;
