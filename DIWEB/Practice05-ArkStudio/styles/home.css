@@ -472,10 +472,7 @@
 
 footer {
   background-color: var(--dark);
-  background-image: url(../img/logo-white.svg);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 55%;
+  background-image: url(../img/axiom-pattern.png);
   color: var(--light);
 }
 
@@ -674,13 +671,7 @@ footer a {
   /* ///////////////////////////////// */
   /* FOOTER */
   /* ///////////////////////////////// */
-  .footer {
-    background-image: none;
-  }
-  .footer::before {
-    content: "";
-    background-image: url(../img/logo-white.svg);
-  }
+  
   .footer__row {
     flex-direction: column;
     gap: 15px;
