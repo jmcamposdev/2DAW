@@ -486,8 +486,11 @@ footer {
 footer a {
   display: flex;
   align-items: center;
-  gap: 10px;
   color: var(--light);
+}
+
+footer .socials__container a {
+  gap: 10px;
 }
 
 footer a img {
@@ -506,6 +509,18 @@ footer a img {
 
 .footer__row {
   display: flex;
+}
+
+.copyright {
+  justify-content: space-between;
+}
+.policy {
+  display: flex;
+  gap: 15px;
+}
+
+.policy .vertical-line {
+  background-color: var(--light);
 }
 
 .footer__column {
@@ -690,6 +705,10 @@ footer a img {
   .footer__row {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .policy {
+    justify-content: center;
   }
 
   .footer .socials__container {
