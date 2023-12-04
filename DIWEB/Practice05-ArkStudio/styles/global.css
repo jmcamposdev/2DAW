@@ -261,6 +261,25 @@ header {
   padding-right: 20px;
 }
 
+.nav__item a {
+  position: relative;
+}
+
+.nav__item a::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: -3px;
+  background-color: var(--dark);
+  transition: all .3s ease;
+}
+
+.nav__item a:hover::before{
+  visibility: visible;
+  width: 100%;
+}
+
 .nav__button,
 .navigation {
   display: flex;
