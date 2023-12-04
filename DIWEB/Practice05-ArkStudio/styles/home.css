@@ -477,7 +477,10 @@ footer {
   background-repeat: no-repeat;
   background-size: 55%;
   color: var(--light);
+}
 
+footer a {
+  color: var(--light);
 }
 
 .footer__container {
@@ -580,8 +583,6 @@ footer {
 
   #service__tabs {
     flex-direction: column;
-    max-width: 650px;
-    margin: 0 auto;
   }
 
   /* ///////////////////////////////// */
