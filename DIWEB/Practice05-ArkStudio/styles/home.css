@@ -477,7 +477,15 @@ footer {
 }
 
 footer a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--light);
+}
+
+footer a img {
+  width: 20px;
+  height: 20px;
 }
 
 .footer__container {
