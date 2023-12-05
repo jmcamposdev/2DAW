@@ -296,6 +296,23 @@
   line-height: 115%;
 }
 
+.testimonial-image {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.testimonial-person-name {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-person-name .horizontal-line {
+  margin: 0;
+  width: 30px;
+}
+
 .slider-slide {
   grid-row-gap: 24px;
   flex-direction: column;
