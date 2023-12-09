@@ -272,10 +272,10 @@ header {
   position: absolute;
   bottom: -3px;
   background-color: var(--dark);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-.nav__item a:hover::before{
+.nav__item a:hover::before {
   visibility: visible;
   width: 100%;
 }
@@ -308,7 +308,7 @@ header .button {
   display: none;
 }
 
-.cross-icon svg{
+.cross-icon svg {
   display: flex;
   position: absolute;
   top: 20px;
