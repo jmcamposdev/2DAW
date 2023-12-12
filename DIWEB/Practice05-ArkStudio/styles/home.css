@@ -857,6 +857,27 @@ footer a img {
   }
 
   /* ///////////////////////////////// */
+  /* FAQ */
+  /* ///////////////////////////////// */
+
+  .faq__title span {
+    flex: 5;
+  }
+
+  .faq__text {
+    flex: 1;
+  }
+
+  .faq__separator {
+    flex: none;
+  }
+
+  .faq-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* ///////////////////////////////// */
   /* FOOTER */
   /* ///////////////////////////////// */
   
