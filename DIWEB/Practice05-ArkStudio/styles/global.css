@@ -280,6 +280,11 @@ header {
   width: 100%;
 }
 
+.nav__item--active a::before {
+  visibility: visible;
+  width: 100%;
+}
+
 .nav__button,
 .navigation {
   display: flex;
