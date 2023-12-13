@@ -132,7 +132,8 @@ h2 {
 }
 
 .form-style-5 input[type="submit"],
-.form-style-5 input[type="button"] {
+.form-style-5 input[type="button"], 
+.send {
   position: relative;
   display: block;
   padding: 19px 39px 18px 39px;
@@ -163,4 +164,10 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.remove-padding {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
