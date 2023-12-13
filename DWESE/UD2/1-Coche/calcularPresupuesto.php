@@ -92,7 +92,7 @@ if (!isset($_SESSION["username"]) || !isset($_SESSION["password"]) || !($_SESSIO
               <label for='financiar'>Deseas Financiar:</label> <br>
               <input type='radio' name='financiar' id='financiar' value='si' require> Si <br>
               <input type='radio' name='financiar' id='' value='no' require> No <br>
-              <input type='submit' value='Enviar'>
+              <input class='send' type='submit' value='Enviar'>
             </form>";
       
       // Si se ha enviado el formulario y se ha seleccionado financiar
@@ -100,20 +100,20 @@ if (!isset($_SESSION["username"]) || !isset($_SESSION["password"]) || !($_SESSIO
     } elseif ($_SESSION["isFinanciado"] == true && isset($_POST["financiar"])) { 
       echo "<p>Financiar</p>";
       echo '
-      <form action="calcularPresupuesto.php" method="post">
-      <label for="entrada">Entrada:</label>
-      <select name="entrada" >
-        <option value="1000">1000</option>
-        <option value="5000">5000</option>
-        <option value="10000">10000</option>
-      </select>
-      <br>
-      <label for="financiacionAños">A cuanto deseas financiar</label>
-      <select name="financiacionAños">
-        <option name="financiacionAños" value="8">12 meses - 8%</option>
-        <option name="financiacionAños" value="16">36 meses - 16%</option>
-      </select>
-      <br>
+      <form action="calcularPresupuesto.php" method="post" class="form-style-5 remove-padding">
+      <label for="entrada">Entrada:
+        <select name="entrada" >
+          <option value="1000">1000</option>
+          <option value="5000">5000</option>
+          <option value="10000">10000</option>
+        </select>
+      </label>
+      <label for="financiacionAños">A cuanto deseas financiar
+        <select name="financiacionAños">
+          <option name="financiacionAños" value="8">12 meses - 8%</option>
+          <option name="financiacionAños" value="16">36 meses - 16%</option>
+        </select>
+      </label>
       <input type="submit" name="submit-financiacion" value="Enviar">
     </form>
       ';
