@@ -203,4 +203,8 @@ form .update__button {
   margin-top: 25px;
 }
 
-
+.create__container form {
+  display: flex;
+  justify-content: end;
+  padding-top: 25px;
+}

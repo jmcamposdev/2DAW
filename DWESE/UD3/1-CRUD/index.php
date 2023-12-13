@@ -50,6 +50,11 @@ session_start();
         }
         ?>
         <div class="books__action__container">
+        <div class="create__container">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+              <input type="submit" name="submitCreateBook" value="Create New Book">
+            </form>
+          </div>
           <div class="filter__container">
             <h3>Filter</h3>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
@@ -69,11 +74,6 @@ session_start();
                 ?>
               </select>
               <input type="submit" name="submitBooksCategories" value="Filter">
-            </form>
-          </div>
-          <div class="create__container">
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-              <input type="submit" name="submitCreateBook" value="Create New Book">
             </form>
           </div>
         </div>
