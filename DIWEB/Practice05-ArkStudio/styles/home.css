@@ -861,6 +861,18 @@ footer a img {
 }
 
 @media (max-width: 768px) {
+
+  /* ///////////////////////////////// */
+  /* Last Project */
+  /* ///////////////////////////////// */
+  .main-project__grid {
+    grid-template-columns: none;
+    grid-auto-columns: none;
+  }
+
+   /* ///////////////////////////////// */
+  /* Our Team */
+  /* ///////////////////////////////// */
   .members__grid {
     grid-template-columns: none;
     grid-row-gap: 64px;
