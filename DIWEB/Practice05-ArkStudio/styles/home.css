@@ -805,6 +805,10 @@ footer a img {
     max-width: 100%;
   }
 
+  .projects .tabs__panels {
+    margin-top: 50px;
+  }
+
   /* ///////////////////////////////// */
   /* OUR TEAM */
   /* ///////////////////////////////// */
