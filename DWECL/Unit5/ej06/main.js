@@ -47,6 +47,8 @@ window.addEventListener("load", () => {
         });
         // Reset the verification input to false
         document.querySelector(".form-check-input").checked = false;
+        // Disable the submit button
+        document.querySelector("#form button[type=submit]").setAttribute("disabled", "disabled");
         // Generate a new verification input
         generateVerificationInput();
     });
