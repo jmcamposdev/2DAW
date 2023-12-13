@@ -2,6 +2,7 @@ import Input from "./input.class.js";
 
 window.addEventListener("load", () => {
     const inputs = [];
+    // Create a new Input instance for each input
     inputs.push(new Input("name", isValidName));
     inputs.push(new Input("age", isValidAge));
     inputs.push(new Input("genre", isValidGenre));
@@ -11,13 +12,17 @@ window.addEventListener("load", () => {
     inputs.push(new Input("email", isValidEmail));
     inputs.push(new Input("password", isValidPassword))
     inputs.push(new Input("repeatPassword", isValidRepeatPassword));
+    // Generate the verification input
     generateVerificationInput();
+    // Add the verification input to the inputs array
     inputs.push(new Input("verification", isValidVerificationCode));
 
+    // Add event listener to the form
     const form = document.getElementById("form");
     form.addEventListener("submit", (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the form to be submitted
         let isValidForm = true;
+        // Validate each input
         inputs.forEach(input => {
             if (!input.isValid()) {
                 input.setIsInvalid();
@@ -27,24 +32,31 @@ window.addEventListener("load", () => {
             }
         });
 
+        // If the form is valid, show an alert
         if (isValidForm) {
             alert("Form is valid")
         }
     });
 
+    // Add event listener to the reset button
     const resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", () => {
+        // Reset each input
         inputs.forEach(input => {
             input.reset();
         });
+        // Reset the verification input to false
+        document.querySelector(".form-check-input").checked = false;
+        // Generate a new verification input
         generateVerificationInput();
     });
 
+    // Add event listener to the terms checkbox
     const termsRadio = document.getElementById("terms");
     termsRadio.addEventListener("change", () => {
-        if (termsRadio.checked) {
+        if (termsRadio.checked) { // If the checkbox is checked, enable the submit button
             document.querySelector("#form button[type=submit]").removeAttribute("disabled");
-        } else {
+        } else { // If the checkbox is not checked, disable the submit button
             document.querySelector("#form button[type=submit]").setAttribute("disabled", "disabled");
         }
     });
@@ -53,6 +65,10 @@ window.addEventListener("load", () => {
 
 
 
+/**
+ * Generate a random verification input
+ * The verification input is the sum of two random numbers between 0 and 9
+ */
 function generateVerificationInput() {
     const code1 = generateRandomNumber(0, 9);
     const code2 = generateRandomNumber(0, 9);
@@ -63,12 +79,23 @@ function generateVerificationInput() {
     code2Element.textContent = code2;
 }
 
+/**
+ * Validate the verification input
+ * @param {Number} result The result of the verification input to validate
+ * @returns {boolean} true if the verification input is valid, false otherwise
+ */
 function isValidVerificationCode(result) {
     const code1 = Number(document.getElementById("code1").textContent);
     const code2 = Number(document.getElementById("code2").textContent);
     return code1 + code2 === Number(result);
 }
 
+/**
+ *  Generate a random number between min and max
+ * @param {Number} min The minimum number
+ * @param {Number} max The maximum number
+ * @returns {Number} A random number between min and max
+ */
 function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -143,6 +170,11 @@ function isValidPassword(password) {
     return isValid;
 }
 
+/**
+ * Validate repeat password is equal to password
+ * @param {String} repeatPassword The repeat password to validate
+ * @returns {boolean} true if repeat password is valid, false otherwise
+ */
 function isValidRepeatPassword(repeatPassword) {
     const password = document.getElementById("password").value;
     return password === repeatPassword && password.trim() !== "";
