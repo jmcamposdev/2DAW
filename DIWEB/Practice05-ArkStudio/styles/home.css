@@ -220,6 +220,7 @@
 }
 
 .ceo__image {
+  border-radius: 3px;
   background-image: url("../img/team/ceo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -374,6 +375,7 @@
 }
 
 .contact__image {
+  border-radius: 3px;
   background-image: url(../img/contact/contact-main.jpeg);
   background-position: center;
   background-size: cover;
@@ -536,7 +538,6 @@
 
 .image-item img {
   width: 100%;
-  border-radius: 5px;
   height: 100%;
   object-fit: cover;
 }
@@ -553,6 +554,7 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  border-radius: 3px;
 }
 
 .overlay {
@@ -570,7 +572,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .overlay span {
