@@ -119,10 +119,6 @@ header .logo img {
 }
 
 /* PRODUCTOS */
-.producto {
-  background: rebeccapurple;
-}
-
 .productos__container {
   display: flex;
   gap: 25px;
@@ -134,11 +130,12 @@ header .logo img {
 .producto__wrapper {
   flex: 1 1 25%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .producto {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: var(--background-box);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -146,6 +143,10 @@ header .logo img {
   max-width: 350px;
   flex: 1;
   text-align: center;
+}
+
+.producto form {
+  margin-top: auto;
 }
 
 .producto__info {
