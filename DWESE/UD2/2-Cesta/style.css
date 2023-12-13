@@ -130,6 +130,7 @@ header .logo img {
 .producto__wrapper {
   flex: 1 1 25%;
   display: flex;
+  justify-content: center;
 }
 
 .producto {
@@ -323,3 +324,8 @@ td, th {
   background-color: #2e2a3d;
 }
 
+@media screen and (max-width: 768px) {
+  .producto__wrapper {
+    flex: 1 1 48%;
+  }
+}
