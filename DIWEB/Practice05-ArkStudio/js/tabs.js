@@ -42,7 +42,6 @@ function removeActiveContent(containerId) {
 
 function addActiveContent(tab, containerId) {
   const tabId = tab.dataset.id;
-  console.log(tabId);
   const tabContent = document.querySelector(`#${containerId} .tab__panel[data-id="${tabId}"]`);
   
   tabContent.classList.add('tab__content--selected');
