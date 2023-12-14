@@ -50,7 +50,7 @@ h1 {
 }
 
 .image__form .button {
-  margin-top: 25px;
+  margin: 25px 0;
 }
 
 .image-gallery {
@@ -69,4 +69,27 @@ h1 {
 .image-gallery .column img {
   width: 100%;
   border-radius: 3px;
+}
+
+.alert {
+  background-color: #f7f2e2;
+  color: #272621;
+  border: 1px solid #272621;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.alert-danger {
+  background-color: #f7f2e2;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+}
+
+.alert-success {
+  background-color: #f7f2e2;
+  color: #4f8a10;
+  border: 1px solid #4f8a10;
 }
