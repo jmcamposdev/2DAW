@@ -93,3 +93,18 @@ h1 {
   color: #4f8a10;
   border: 1px solid #4f8a10;
 }
+
+.image__container {
+  position: relative;
+}
+
+.download__button {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  transition: all 0.2s ease-in-out;
+}
+
+.download__button:hover {
+  transform: scale(1.15);
+}
