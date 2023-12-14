@@ -48,10 +48,10 @@ class ImageController extends Controller
     $request->validate([
       'image_src' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
     ], [ // Custom error messages
-      'image.required' => 'Please select an image.',
-      'image.image' => 'The file must be an image.',
-      'image.mimes' => 'The file must be of type JPEG, PNG, JPG or GIF.',
-      'image.max' => 'The maximum size allowed is 2 MB.',
+      'image_src.required' => 'Please select an image.',
+      'image_src.image' => 'The file must be an image.',
+      'image_src.mimes' => 'The file must be of type JPEG, PNG, JPG or GIF.',
+      'image_src.max' => 'The maximum size allowed is 2 MB.',
     ]);
 
     // Get the file and rename it
