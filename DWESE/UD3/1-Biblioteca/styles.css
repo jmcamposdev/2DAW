@@ -28,6 +28,38 @@ body {
   padding: 25px;
 }
 
+/* Login */
+.container   {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  
+  min-height: 100vh;
+}
+
+.container h1   {
+  font-size: 50px;
+  font-family: "Moirai One", cursive;
+  text-align: center;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  background-color: var(--background-box);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+}
 /* HEADER */
 .header {
   display: flex;
