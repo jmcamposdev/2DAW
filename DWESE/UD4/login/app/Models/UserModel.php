@@ -13,8 +13,11 @@ class UserModel extends Model
     {
         // Search the user in the file
         $users = file(storage_path('app/users.txt'), FILE_IGNORE_NEW_LINES);
+        // Iterate the users (Each line is a user)
         foreach ($users as $user) {
+            // Split the line in username and password
             [$storedUsername, $storedPassword] = explode(';', $user);
+            // Verify if the credentials match
             if ($username === $storedUsername && $password === $storedPassword) {
                 // Iniciar sesión
                 session()->put('username', $username);
