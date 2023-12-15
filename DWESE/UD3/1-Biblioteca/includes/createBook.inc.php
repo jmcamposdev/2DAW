@@ -18,27 +18,27 @@ if (isset($_POST['submitCreateBook'])) {
   $authorContrObj = new AuthorContr();
 
   if (!$authorContrObj->existsAuthor($authorId)) {
-    header("location: ../index.php?error=authornotexists");
+    header("location: ../dashboard.php?error=authornotexists");
     exit();
   } else if (empty($title) || empty($category)|| empty($description) || empty($authorId)) {
-    header("location: ../index.php?error=emptyinput");
+    header("location: ../dashboard.php?error=emptyinput");
     exit();
   } else {
     // Create an object from the BooksContr class
     $booksContrObj = new BooksContr();
     // Try to edit the book
     if ($booksContrObj->createBook($title, $category, $authorId, $description)) {
-      // If the book is edited successfully, we redirect to the index.php file with the error=none parameter
-      header("location: ../index.php?error=none");
+      // If the book is edited successfully, we redirect to the dashboard.php file with the error=none parameter
+      header("location: ../dashboard.php?error=none");
       exit();
     } else {
-      // If the book is not edited successfully, we redirect to the index.php file with the error=stmtfailed parameter
-      header("location: ../index.php?error=stmtfailed");
+      // If the book is not edited successfully, we redirect to the dashboard.php file with the error=stmtfailed parameter
+      header("location: ../dashboard.php?error=stmtfailed");
       exit();
     }
   
   }
 } else {
-  header("location: ../index.php");
+  header("location: ../dashboard.php");
   exit();
 }

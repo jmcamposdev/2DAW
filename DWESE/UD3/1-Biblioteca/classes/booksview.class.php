@@ -46,7 +46,7 @@ class BooksView extends Books {
                   </td>";
         // We send the id of the book to the editBook.inc.php file
         $html .= "<td>
-                      <form action='index.php' method='post'>
+                      <form action='dashboard.php' method='post'>
                         <input type='hidden' name='id' value='" . $row['id_libro'] . "'>
                         <input class='edit__button' type='submit' name='submitEditBook' value='Edit'>
                       </form>

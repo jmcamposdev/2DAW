@@ -10,13 +10,13 @@ if (isset($_POST['submitDeleteBook'])) {
 
   $booksContrObj = new BooksContr();
   if ($booksContrObj->removeBook($id)) {
-    header("location: ../index.php?error=none");
+    header("location: ../dashboard.php?error=none");
     exit();
   } else {
-    header("location: ../index.php?error=stmtfailed");
+    header("location: ../dashboard.php?error=stmtfailed");
     exit();
   }
 } else {
-  header("location: ../index.php");
+  header("location: ../dashboard.php");
   exit();
 }
