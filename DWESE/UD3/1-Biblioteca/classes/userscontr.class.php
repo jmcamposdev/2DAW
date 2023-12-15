@@ -8,5 +8,27 @@ class UsersContr extends Users {
   public function createUser($name, $pass, $phone, $date) {
     $this->setUser($name, $pass, $phone, $date);
   }
+
+  public function loginUser($name, $pass) {
+    session_start();
+    $_SESSION['username'] = $name;
+    $_SESSION['password'] = $pass;
+
+    if ($this->getUser($name, $pass)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function validateUser($name, $pass) {
+    if ($this->getUser($name, $pass)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 }
 ?>

@@ -1,6 +1,21 @@
 <?php
 include "includes/class-autoload.inc.php";
 session_start();
+
+// Validate if the user is logged in and is a valid user
+if (!isset($_SESSION['username'])) {
+  header("location: index.php");
+  exit();
+} else {
+  $username = $_SESSION['username'];
+  $password = $_SESSION['password'];
+  $userContrObj = new UsersContr();
+  if (!$userContrObj->validateUser($username, $password)) {
+    header("location: index.php");
+    exit();
+  }
+}
+
 ?>
 
 <!DOCTYPE html>

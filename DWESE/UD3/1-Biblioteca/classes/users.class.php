@@ -6,10 +6,10 @@
    */
   class Users extends Dbh{
     
-    protected function getUser($name) {
-      $sql = "SELECT * FROM USUARIOS WHERE nombreusuario = ?";
+    protected function getUser($name, $pass) {
+      $sql = "SELECT * FROM USUARIOS WHERE nombreusuario = ? AND password = ?";
       $stmt = $this->connect()->prepare($sql);
-      $stmt->execute([$name]);  
+      $stmt->execute([$name, $pass]);  
 
       $result = $stmt->fetchAll();
       return $result;
