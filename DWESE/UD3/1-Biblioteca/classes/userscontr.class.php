@@ -21,6 +21,14 @@ class UsersContr extends Users {
     }
   }
 
+  public function logoutUser() {
+    session_start();
+    session_unset();
+    session_destroy();
+
+    header("location: ../index.php");
+  }
+
   public function validateUser($name, $pass) {
     if ($this->getUser($name, $pass)) {
       return true;

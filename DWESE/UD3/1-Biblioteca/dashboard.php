@@ -34,6 +34,10 @@ if (!isset($_SESSION['username'])) {
       <div class="logo">
         <h1>LIBRARY/&gt;</h1>
       </div>
+      <!-- LogOut -->
+      <form action="includes/logout.inc.php" method="post">
+          <input type="submit" name="submitLogout" value="LogOut">
+        </form>
     </header>
 
     <section class="content">

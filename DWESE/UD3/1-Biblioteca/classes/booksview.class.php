@@ -112,7 +112,7 @@ class BooksView extends Books {
       $html .= "<input type='hidden' name='id' value='" . $book['id_libro'] . "'>";
     }
     $html .= "<label for='title'>Title</label>";
-    $html .= "<input type='text' name='title' id='title' value='" . ($book['titulo'] ?? '') . "'>";
+    $html .= "<input type='text' name='title' id='title' value='" . ($book['titulo'] ?? '') . "'  required>";
     $html .= "<label for='category'>Category</label>";
     $html .= "<select name='category' id='category'>";
     foreach (self::$categories as $category) {
@@ -124,11 +124,11 @@ class BooksView extends Books {
     }
     $html .= "</select>";
     $html .= "<label for='authorId'>Author</label>";
-    $html .= "<select name='authorId' id='author'>";
+    $html .= "<select name='authorId' id='author'  required>";
     $html .= $authorObj->showAuthorsSelectOptions($book['nombreAutor'] ?? NULL, $book['apellidosAutor'] ?? NULL);
     $html .= "</select>";
     $html .= "<label for='description'>Description</label>";
-    $html .= "<textarea name='description' id='description' cols='30' rows='10'>" . ($book['descripcion'] ?? '') . "</textarea>";
+    $html .= "<textarea name='description' id='description' cols='30' rows='10' required>" . ($book['descripcion'] ?? '') . "</textarea>";
     $html .= "<input type='submit' name='" . ($title == 'Create Book' ? 'submitCreateBook' : 'submitEditBook') . "' value='" . ($title == 'Create Book' ? 'Create Book' : 'Edit Book') . "'>";
     $html .= "</form>";
     $html .= "</div>";
