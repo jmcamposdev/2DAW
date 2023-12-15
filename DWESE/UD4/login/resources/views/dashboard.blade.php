@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 <body>
-    <h1>Welcome to the Dashboard</h1>
+    <div class="container">
+        <h1>Welcome to the Dashboard</h1>
 
-    <p>Hello, {{ session('username') }}!</p>
-    <!-- Aquí puedes mostrar contenido específico para usuarios logueados -->
-    <p>This is your dashboard content.</p>
-    <a href="{{ url('/logout') }}">Logout</a>
+        <p>Hello, {{ session('username') }}!</p>
+        <!-- Aquí puedes mostrar contenido específico para usuarios logueados -->
+        <p>This is your dashboard content.</p>
+        <a class="button" href="{{ url('/logout') }}">Logout</a>
+    </div>
 </body>
 </html>

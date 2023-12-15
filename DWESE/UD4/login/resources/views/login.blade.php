@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <h1>Login</h1>
-
-    @if(session('error'))
-        <p>{{ session('error') }}</p>
-    @endif
-
+    <div class="container">
     <form method="POST" action="{{ url('/login') }}">
         @csrf
-
+        <h1>Login</h1>
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username"><br>
 
@@ -22,5 +18,9 @@
 
         <input type="submit" value="Login">
     </form>
+    @if(session('error'))
+        <p class="error">{{ session('error') }}</p>
+    @endif
+    </div>
 </body>
 </html>
