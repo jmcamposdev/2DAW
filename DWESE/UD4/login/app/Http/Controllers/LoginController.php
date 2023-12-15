@@ -63,6 +63,10 @@ class LoginController extends Controller
      */
     public function logout(Request $request)
     {
+        if (!UserModel::isLogged()) {
+            // If the user is not logged in, redirect to the login form
+            return redirect()->route('login');
+        }
         // Logout the user
         UserModel::logout();
         // Redirect to the logout view
