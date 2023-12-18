@@ -33,6 +33,18 @@ html, body {
     transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
 
+.slider-slide {
+    position: relative;
+}
+
+.slider-slide p {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    font-size: 28px;
+    font-weight: 500;
+}
+
 .slider__arrow {
     -ms-flex-align: center;
     align-items: center;
