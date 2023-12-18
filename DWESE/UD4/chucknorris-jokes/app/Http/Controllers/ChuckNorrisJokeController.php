@@ -26,7 +26,7 @@ class ChuckNorrisJokeController extends Controller
         $response = $client->request('GET', 'https://api.chucknorris.io/jokes/random');
         // Get the response and extract the joke
         $joke = json_decode($response->getBody()->getContents())->value;
-        // Return the joke in JSON format
+        // Return the joke in JSON format  tienda, alsa con alquiler y reserva, galería y mongo db, 
         return response()->json(['joke' => $joke]);
     }
 }
