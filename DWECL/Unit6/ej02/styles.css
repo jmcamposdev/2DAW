@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  gap: 1rem;
+}
+
+table {
+  width: 100%;
+  max-width: 400px;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.table__cell--color-hover {
+  background-color: #dfdfdf;
+}
