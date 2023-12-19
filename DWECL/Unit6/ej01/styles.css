@@ -18,6 +18,14 @@
   gap: 1rem;
 }
 
+.row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
 .btn {
   padding: 0.5rem 1rem;
   border: none;
