@@ -4,7 +4,11 @@
 
 window.addEventListener('load', main);
 
+/**
+ * Main function.
+ */
 function main() {
+  // Add event listener to the button.
   const btnShowTodos = document.querySelector('#btn-show-todos');
   btnShowTodos.addEventListener('click', showTodosCompleted);
 }
