@@ -1,14 +1,24 @@
 export default function navActive() {
+  // Get all sections
   let section = document.querySelectorAll("section");
+  // Get all list items
   let lists = document.querySelectorAll(".nav__item");
+  /**
+   * Add active class to the list item
+   * @param {HTMLLIElement} li The list item to be active
+   */
   function activeLink(li) {
+    // Remove active class from all list items
     lists.forEach((item) => item.classList.remove("nav__item--active"));
+    // Add active class to the list item
     if (li) {
       li.classList.add("nav__item--active");
     }
   }
 
+  // Add click event to all list items
   lists.forEach((item) =>
+    // Call to activeLink function
     item.addEventListener("click", function () {
       activeLink(this);
     })
