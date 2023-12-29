@@ -24,18 +24,26 @@ export default function navActive() {
     })
   );
 
+  /**
+   * Add active class to the list item when the section is in the viewport
+   */
   window.onscroll = () => {
+    // Get the current scroll position
     section.forEach((sec) => {
+      // Get the top offset of the section
       let top = window.scrollY;
       let offset = sec.offsetTop;
       let height = sec.offsetHeight;
       let id = sec.dataset.id;
 
+      // Check if the section is in the viewport
       if (top >= offset && top < offset + height) {
         const target = document.querySelector(`a[href='#${id}']`);
         if (target) {
+          // Call to activeLink function
           activeLink(target.parentElement);
         } else {
+          // Call to activeLink function
           activeLink();
         }
       }
