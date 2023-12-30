@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'Seawave';
+  src: url('../fonts/ntseawave/NTSEAWAVE.eot');
+  src: url('../fonts/ntseawave/NTSEAWAVE.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ntseawave/NTSEAWAVE.woff2') format('woff2'),
+    url('../fonts/ntseawave/NTSEAWAVE.woff') format('woff'),
+    url('../fonts/ntseawave/NTSEAWAVE.ttf') format('truetype'),
+    url('../fonts/ntseawave/NTSEAWAVE.svg#NTSEAWAVE') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url('../fonts/hauora/Hauora-Regular.eot');
+  src: url('../fonts/hauora/Hauora-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/hauora/Hauora-Regular.woff2') format('woff2'),
+    url('../fonts/hauora/Hauora-Regular.woff') format('woff'),
+    url('../fonts/hauora/Hauora-Regular.ttf') format('truetype'),
+    url('../fonts/hauora/Hauora-Regular.svg#Hauora-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url('../fonts/hauora/Hauora-Light.eot');
+  src: url('../fonts/hauora/Hauora-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/hauora/Hauora-Light.woff2') format('woff2'),
+    url('../fonts/hauora/Hauora-Light.woff') format('woff'),
+    url('../fonts/hauora/Hauora-Light.ttf') format('truetype'),
+    url('../fonts/hauora/Hauora-Light.svg#Hauora-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url('../fonts/hauora/Hauora-ExtraLight.eot');
+  src: url('../fonts/hauora/Hauora-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/hauora/Hauora-ExtraLight.woff2') format('woff2'),
+    url('../fonts/hauora/Hauora-ExtraLight.woff') format('woff'),
+    url('../fonts/hauora/Hauora-ExtraLight.ttf') format('truetype'),
+    url('../fonts/hauora/Hauora-ExtraLight.svg#Hauora-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url('../fonts/hauora/Hauora-Bold.eot');
+  src: url('../fonts/hauora/Hauora-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/hauora/Hauora-Bold.woff2') format('woff2'),
+    url('../fonts/hauora/Hauora-Bold.woff') format('woff'),
+    url('../fonts/hauora/Hauora-Bold.ttf') format('truetype'),
+    url('../fonts/hauora/Hauora-Bold.svg#Hauora-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+:root {
+  --light: #FCFCFC;
+  --dark: #0A0A0A;
+  --bg-dark: #0A0A0A;
+  --bg-light: #FCFCFC;
+}
+
+
+body, html {
+  font-family: Hauora, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--light);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--bg-light);
+  color: var(--dark);
+  border-radius: 3px;
+  border: 1px solid var(--light);
+  transition: all .3s ease-in-out;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Hauora, sans-serif;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 150%;
+  transition: all .3s ease-in-out;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+.link::before {
+  content: '';
+  background-image: url(../img/white-large-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 20px;
+  transition: all .3s ease-in-out;
+}
+
+.link:hover::before {
+  transform: translateX(10px);
+}
+
+/* ///////////////////////////////// */
+/* HEADING */
+/* ///////////////////////////////// */
+h2 {
+  font-size: clamp(2.5rem, 1.9498rem + 1.7606vw, 4.0625rem); /* 40px - 65px */
+  line-height: 115%;
+}
+
+h2 span {
+  padding-left: 10%;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h3::before {
+  content: '';
+  display: block;
+  width: 30px;
+  margin-right: 20px;
+  height: 1px;
+  background-color: var(--light);
+}
+
+h4 {
+  font-size: 55px;
+  font-weight: 200;
+  font-family: 'Seawave';
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  line-height: 115%;
+  margin-bottom: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.special-font {
+  font-family: Seawave, sans-serif;
+}
+
+.ft-light {
+  font-weight: 300;
+}
+
+.ft-extra-light {
+  font-weight: 200;
+}
+
+img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.list {
+  padding-top: 25px;
+}
+
+.list li { 
+  font-size: 18px;
+  background: url(../img/horizontalLine.svg) no-repeat left top;
+  padding: 0px 0 25px 24px;
+  background-position: left 4px;
+}
+
+.list .list-title {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-size: 22px;
+  font-weight: 100;
+  margin-bottom: 5px;
+
+}
+
+
+.list li::marker {
+  margin-top: 10px;
+}
+
+/* ///////////////////////////////// */
+/* PARAGRAPH  */
+/* ///////////////////////////////// */
+p {
+  font-size: 18px;
+  line-height: 170%;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.paragraph-mega {
+  font-size: clamp(1.375rem, 1.2917rem + 0.2778vw, 1.625rem); /* 22px - 26px */
+  line-height: 140%;
+}
+
+.paragraph-big {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.big-text {
+  font-size: clamp(1.5rem, 1.3333rem + 0.5556vw, 2rem); /* 24px - 32px */
+  line-height: 140%;
+}
+
+.mega-text {
+  font-size: clamp(3.125rem, 2.0246rem + 3.5211vw, 6.25rem); /* 50px - 100px*/
+  line-height: 115%;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+
+.vertical-line {
+  width: 1px;
+  height: 30px;
+  background-color: var(--light);
+  margin: 20px auto 20px auto;
+}
+
+/* ///////////////////////////////// */
+/* CONTAINERS */
+/* ///////////////////////////////// */
+.main-container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.content__container {
+  display: flex;
+  gap: 12%;
+}
+
+.content__container .column {
+  flex: 1;
+}
+
+.content__container .image__column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__title {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 130px;
+}
+
+.section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.left-container--small {
+  width: 100%;
+  max-width: 660px;
+  margin-left: 115px;
+}
+
+.container-navbar {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  height: 86px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+}
+
+.top-section-separator {
+  margin-top: 200px;
+}
+
+.horizontal-padding {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.horizontal-padding--left {
+  padding-left: 24px;
+}
+
+.horizontal-padding--right {
+  padding-right: 24px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.w-500 {
+  max-width: 500px;
+}
+
+
+.w-600 {
+  max-width: 600px;
+}
+
+/* ///////////////////////////////// */
+/* SOCIAL LINKS */
+/* ///////////////////////////////// */
+.wrap-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.link-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3b3b3b;
+  border-radius: 50%;
+  transition: background-color .2s ease-in-out;
+}
+
+.link-social:hover {
+  background-color: #0a0a0a;
+}
+
+.link-social img {
+  width: 18px;
+}
