@@ -209,6 +209,7 @@ img {
   background: url(../img/horizontalLine.svg) no-repeat left top;
   padding: 0px 0 25px 24px;
   background-position: left 4px;
+  line-height: 170%;
 }
 
 .list .list-title {
@@ -216,8 +217,7 @@ img {
   letter-spacing: .1rem;
   font-size: 22px;
   font-weight: 100;
-  margin-bottom: 5px;
-
+  margin-bottom: 10px;
 }
 
 
@@ -255,9 +255,6 @@ p {
   line-height: 115%;
 }
 
-.bold {
-  font-weight: 500;
-}
 
 .text-center {
   text-align: center;

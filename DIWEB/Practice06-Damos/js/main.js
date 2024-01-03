@@ -7,11 +7,7 @@ window.addEventListener('load', function() {
   gridInit();
 });
 
-/**
- * Initialize Isotope grid
- */
 function gridInit() {
-  // Init Isotope
   const items = document.querySelector('.articles__items');
   const itemsGrid = new Isotope(items, {
     itemSelector: '.article',
@@ -24,7 +20,6 @@ function gridInit() {
   // Add event listener for filter
   const filters = document.querySelectorAll('.filter-articles__item');
 
-  // Add event listener for each filter
   filters.forEach(filter => {
     filter.addEventListener('click', function() {
       const filterActiveItem = document.querySelector('.filter-articles__item.active');
