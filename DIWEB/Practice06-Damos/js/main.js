@@ -7,13 +7,20 @@ window.addEventListener('load', function() {
   gridInit();
 });
 
+/**
+ * Initialize Isotope grid
+ * @see https://isotope.metafizzy.co/
+ * @see https://isotope.metafizzy.co/filtering.html
+ */
 function gridInit() {
+  // Get items
   const items = document.querySelector('.articles__items');
+  // Create grid
   const itemsGrid = new Isotope(items, {
     itemSelector: '.article',
-    masonry: {
-      fitWidth: true,
-      gutter: 20
+    masonry: { // Set masonry layout
+      fitWidth: true, // Set width to container
+      gutter: 20 // Set gutter between items
     }
   })
 
