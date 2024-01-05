@@ -40,7 +40,6 @@ function gridInit() {
         this.getAttribute('data-filter') === "*" ?
         '' :
         `[data-filter="${this.getAttribute('data-filter')}"]`;
-      console.log(filterValue);
       itemsGrid.arrange({ filter:  filterValue});
     });
   });
