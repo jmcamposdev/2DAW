@@ -1,8 +1,12 @@
+// Charge the accordion when the page is loaded
 window.addEventListener('load', function() {
   accordion();
 });
 
 
+/**
+ * Add event listener to all accordion items
+ */
 function accordion() {
   const accordionItems = document.querySelectorAll('.faq__item');
   accordionItems.forEach(item => {
