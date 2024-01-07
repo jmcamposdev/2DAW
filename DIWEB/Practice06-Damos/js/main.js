@@ -47,13 +47,23 @@ function gridInit() {
 
 }
 
+/**
+ * Initialize all Masonry images
+ */
 function imagesInit() {
+  // Get all images
   const images = document.querySelectorAll('.article__image');
+  // If there are images
   if (images.length) {
+    // Set padding bottom to images
     images.forEach(image => {
+      // Get image
       const imageItem = image.querySelector('img');
+      // Calculate padding bottom
       const padding = imageItem.naturalHeight / imageItem.naturalWidth * 100;
+      // Set padding bottom
       image.style.paddingBottom = `${padding}%`;
+      // Add init class
       imageItem.classList.add('init');
     });
   }
