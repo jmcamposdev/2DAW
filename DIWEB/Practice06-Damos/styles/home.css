@@ -134,7 +134,7 @@ header .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero/hero-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero/hero-bg.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -337,7 +337,7 @@ h1 {
   background-image: url(../img/collection/mug.jpg);
 }
 #collection-vase .collection__image {
-  background-image: url(../img/collection/vase.jpeg);
+  background-image: url(../img/collection/vase.jpg);
 }
 #collection-decor .collection__image {
   background-image: url(../img/collection/decor.jpg);
