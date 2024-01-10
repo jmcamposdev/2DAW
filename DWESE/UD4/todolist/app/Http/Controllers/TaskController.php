@@ -45,6 +45,13 @@ class TaskController extends Controller
         return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
     }
 
+    public function toggleCompleted(Request $request, Task $task) {
+        $task->completed = !$task->completed;
+        $task->save();
+
+        return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
+    }
+
     /**
      * Remove the specified resource from storage.
      */
