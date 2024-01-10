@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[TaskController::class, 'index'])
+Route::get('/', [TaskController::class, 'index'])
         ->name('tasks.index');
 
 Route::post('/tasks', [TaskController::class, 'store'])
@@ -22,3 +22,10 @@ Route::post('/tasks', [TaskController::class, 'store'])
 
 Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])
         ->name('tasks.destroy');
+
+// Toggle Task Check
+Route::put('/tasks/{task}', [TaskController::class, 'update'])
+        ->name('tasks.update');
+
+Route::patch('/tasks/{task}/toggle', [TaskController::class, 'toggleCompleted'])
+        ->name('tasks.toggle');
