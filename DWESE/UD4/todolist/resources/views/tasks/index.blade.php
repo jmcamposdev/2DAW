@@ -36,47 +36,48 @@
                             </form>
 
                             <ul class="list-group mb-0">
-                                @foreach ($tasks as $task)
-                                    <li
-                                        class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <form class="completeTaskForm" action="">
-                                                <input class="form-check-input me-2" type="checkbox" value=""
-                                                    aria-label="..." />
-                                                {{ $task->message }}
-                                            </form>
+                                @if ($tasks->isEmpty())
+                                    <p>No Tasks</p>
+                                @else
+                                    @foreach ($tasks as $task)
+                                        <li
+                                            class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <form method="POST" class="toggleCompletedForm"
+                                                    action="{{ route('tasks.toggle', $task->id) }}">
+                                                    @csrf
+                                                    @method('PATCH')
+                                                    <input class="form-check-input me-2" type="checkbox" value=""
+                                                        {{ $task->completed ? 'checked' : '' }} aria-label="..." />
 
-                                        </div>
+                                                    @if ($task->completed)
+                                                        <s>{{ $task->message }}</s>
+                                                    @else
+                                                        {{ $task->message }}
+                                                    @endif
+                                                </form>
 
-                                        <form method="POST" action="{{ route('tasks.destroy', $task->id) }}"
-                                            onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta tarea?')">
-                                            @csrf
-                                            @method('DELETE')
+                                            </div>
 
-                                            <button type="submit"
-                                                style="
+                                            <form method="POST" action="{{ route('tasks.destroy', $task->id) }}"
+                                                onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta tarea?')">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="submit"
+                                                    style="
                                             background: transparent;
                                             border: none;
                                             padding: 0;
                                             ">
-                                                <i class="fas fa-times text-primary"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <!-- Otros campos de la tarea que quieras mostrar -->
-                                @endforeach
+                                                    <i class="fas fa-times text-primary"></i>
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <!-- Otros campos de la tarea que quieras mostrar -->
+                                    @endforeach
+                                @endif
 
-                                <li
-                                    class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" value=""
-                                            aria-label="..." checked />
-                                        <s>Dapibus ac facilisis in</s>
-                                    </div>
-                                    <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                                        <i class="fas fa-times text-primary"></i>
-                                    </a>
-                                </li>
                             </ul>
 
                         </div>
@@ -90,6 +91,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <script>
+        const completeTaskInput = document.querySelectorAll('.form-check-input');
+
+        completeTaskInput.forEach((input) => {
+            input.addEventListener('click', (e) => {
+                const form = e.target.parentElement;
+                form.submit();
+            });
+        });
     </script>
 </body>
 
