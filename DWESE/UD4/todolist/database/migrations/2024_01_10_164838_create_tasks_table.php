@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('message', 255);
+            $table->boolean('completed')->default(false);
         });
     }
 
