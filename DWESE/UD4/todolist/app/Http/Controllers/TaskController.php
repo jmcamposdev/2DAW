@@ -13,9 +13,11 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::orderBy('created_at', 'desc')->get(); // Get all tasks ordered by creation date
+        // Get all tasks ordered by creation date
+        $tasks = Task::orderBy('created_at', 'desc')->get(); 
 
-        return view('tasks.index', compact('tasks')); // Pass tasks to view
+        // Pass tasks to view
+        return view('tasks.index', compact('tasks')); 
     }
 
     /**
@@ -23,12 +25,15 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
+        // Validate message field
         $validatedData = $request->validate([
             'message' => 'required|max:255', // Validate message field
         ]);
 
+        // Create the task if validation is ok
         Task::create($validatedData);
 
+        // Redirect to tasks.index view with a success message
         return redirect()->route('tasks.index')->with('success', 'Task created successfully.');
     }
 
@@ -36,19 +41,26 @@ class TaskController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, Task $task) {
+        // Validate message field
         $validatedData = $request->validate([
             'message' => 'required|max:255', // Validate message field
         ]);
 
+        // Update the task if validation is ok
         $task->update($validatedData);
 
+        // Redirect to tasks.index view with a success message
         return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
     }
 
     public function toggleCompleted(Request $request, Task $task) {
+        // Toggle completed field
         $task->completed = !$task->completed;
+
+        // Save the task
         $task->save();
 
+        // Redirect to tasks.index view with a success message
         return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
     }
 
@@ -56,8 +68,10 @@ class TaskController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(Task $task) {
+        // Delete the task
         $task->delete();
-
+        
+        // Redirect to tasks.index view with a success message
         return redirect()->route('tasks.index')->with('success', 'Task deleted successfully.');
     }
 }
