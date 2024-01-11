@@ -37,9 +37,7 @@
                     @endif
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
-
                             <h6 class="mb-3">Awesome Todo List</h6>
-
                             <form method="POST" action="{{ route('tasks.store') }}"
                                 class="d-flex justify-content-center align-items-center mb-4">
                                 @csrf
@@ -51,7 +49,7 @@
 
                             <ul class="list-group mb-0">
                                 @if ($tasks->isEmpty())
-                                    <p>No Tasks</p>
+                                    <p class="text-center">No Tasks</p>
                                 @else
                                     @foreach ($tasks as $task)
                                         <li
@@ -74,7 +72,7 @@
                                             </div>
 
                                             <form method="POST" action="{{ route('tasks.destroy', $task->id) }}"
-                                                onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta tarea?')">
+                                                onsubmit="return confirm('Are you sure to remove the task?')">
                                                 @csrf
                                                 @method('DELETE')
 
