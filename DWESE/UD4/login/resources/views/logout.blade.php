@@ -9,7 +9,7 @@
     <div class="container">
         <h1>Logged Out Successfully</h1>
         <p>You have been logged out.</p>
-        <a class="button" href="{{ route('login') }}">Login again</a>
+        <a class="button" href="{{ route('login') }}">Login again!</a>
     </div>
 </body>
 </html>
