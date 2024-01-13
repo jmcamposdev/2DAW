@@ -1,0 +1,1 @@
+hola<?php /**PATH /Users/josemaria/Developer/2DAW/Servidor/Laravel/library-app/resources/views/authors/create.blade.php ENDPATH**/ ?>
