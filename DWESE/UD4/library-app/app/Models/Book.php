@@ -25,4 +25,10 @@ class Book extends Model
         return $this->belongsTo(Author::class, 'author_id', 'id');
     }
 
+    // Relación con el modelo Rental
+    public function rentals()
+    {
+        return $this->hasMany(Rental::class);
+    }
+
 }
