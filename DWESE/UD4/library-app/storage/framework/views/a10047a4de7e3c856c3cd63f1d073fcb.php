@@ -10,7 +10,7 @@
 <?php $component->withAttributes([]); ?>
    <?php $__env->slot('header', null, []); ?> 
     <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-      <?php echo e(__('Create Author')); ?>
+      <?php echo e(__('Edit Author')); ?>
 
     </h2>
    <?php $__env->endSlot(); ?>
@@ -32,43 +32,45 @@
             </div>
           <?php endif; ?>
 
-          <!-- Formulario para crear un nuevo autor -->
-          <form action="<?php echo e(route('authors.store')); ?>" method="POST" class="mb-4">
+          <!-- Formulario para editar un autor -->
+          <form action="<?php echo e(route('authors.update', $author->id)); ?>" method="POST" class="mb-4">
             <?php echo csrf_field(); ?>
+            <?php echo method_field('PUT'); ?> <!-- Utiliza el método PUT para actualizar el registro -->
+
             <div class="grid grid-cols-2 gap-4">
               <div class="mb-4">
                 <label for="first_name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">First Name</label>
-                <input type="text" name="first_name" id="first_name" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" value="<?php echo e(old('first_name')); ?>">
+                <input type="text" name="first_name" id="first_name" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" value="<?php echo e(old('first_name', $author->first_name)); ?>">
               </div>
               <div class="mb-4">
                 <label for="last_name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Last Name</label>
-                <input type="text" name="last_name" id="last_name" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" value="<?php echo e(old('last_name')); ?>">
+                <input type="text" name="last_name" id="last_name" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" value="<?php echo e(old('last_name', $author->last_name)); ?>">
               </div>
               <!-- Agrega más campos según tu estructura de datos -->
             </div>
 
             <div class="mb-4">
               <label for="nationality" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nationality</label>
-              <input type="text" name="nationality" id="nationality" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" value="<?php echo e(old('nationality')); ?>">
+              <input type="text" name="nationality" id="nationality" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" value="<?php echo e(old('nationality', $author->nationality)); ?>">
             </div>
 
             <div class="grid grid-cols-2 gap-4">
               <div class="mb-4">
                 <label for="gender" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Gender</label>
                 <select name="gender" id="gender" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200">
-                    <option value="M" <?php echo e(old('gender') == 'M' ? 'selected' : ''); ?>>Male</option>
-                    <option value="F" <?php echo e(old('gender') == 'F' ? 'selected' : ''); ?>>Female</option>
+                    <option value="M" <?php echo e(old('gender', $author->gender) == 'M' ? 'selected' : ''); ?>>Male</option>
+                    <option value="F" <?php echo e(old('gender', $author->gender) == 'F' ? 'selected' : ''); ?>>Female</option>
                 </select>
-            </div>
-            <div class="mb-4">
-              <label for="age" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Age</label>
-              <input type="number" name="age" id="age" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" min="18" max="100" value="<?php echo e(old('age')); ?>">
-            </div>
+              </div>
+              <div class="mb-4">
+                <label for="age" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Age</label>
+                <input type="number" name="age" id="age" class="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-gray-200" min="18" max="100" value="<?php echo e(old('age', $author->age)); ?>">
+              </div>
               <!-- Agrega más campos según tu estructura de datos -->
             </div>
 
             <div>
-              <button type="submit" class="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Create Author</button>
+              <button type="submit" class="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Update Author</button>
             </div>
           </form>
         </div>
@@ -85,4 +87,4 @@
 <?php $component = $__componentOriginal9ac128a9029c0e4701924bd2d73d7f54; ?>
 <?php unset($__componentOriginal9ac128a9029c0e4701924bd2d73d7f54); ?>
 <?php endif; ?>
-<?php /**PATH /Users/josemaria/Developer/2DAW/Servidor/Laravel/library-app/resources/views/authors/create.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/josemaria/Developer/2DAW/Servidor/Laravel/library-app/resources/views/authors/edit.blade.php ENDPATH**/ ?>

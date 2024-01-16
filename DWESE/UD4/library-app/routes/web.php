@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\RentalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,12 +29,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Dashboard
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [RentalController::class, 'index'])->name('dashboard');
+
+    // Rentals
+    Route::resource('rentals', RentalController::class);
+    Route::put('/rentals/{rental}/return', [RentalController::class, 'returnBook'])->name('rentals.returnBook');
 
     // Authors
     Route::resource('authors', AuthorController::class);
+    Route::get('/authors/{author}/has-books', [AuthorController::class, 'hasBooks'])->name('authors.hasBooks');
+
 
     // Books
     Route::resource('books', BookController::class);
