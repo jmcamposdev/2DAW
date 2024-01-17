@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DAMOS</title>
   <link rel="stylesheet" href="styles/reset.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/home.css">
 </head>
 
 <body>
-  <header id="header">
+  <header id="header" class="wow animate__animated animate__fadeIn" data-wow-delay=".3s">
     <div class="container-navbar">
       <a href="index.html" class="brand-link-navbar" aria-label="home">
         DAMOS
@@ -21,22 +25,28 @@
         <nav class="navigation">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html">Home</a>
+              <a href="#">Home</a>
             </li>
             <li class="nav__item">
-              <a href="index.html">About</a>
+              <a href="#about">About</a>
             </li>
             <li class="nav__item">
-              <a href="index.html">Projects</a>
+              <a href="#ourCollection">Collection</a>
             </li>
             <li class="nav__item">
-              <a href="index.html">Contact</a>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="nav__item">
+              <a href="#ourTeam">Our Team</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
         <div class="nav__button mobile-hidden">
           <div class="divider-nav"></div>
-          <a href="#contactus" class="button">Contact Us</a>
+          <a href="#contact" class="button">Contact Us</a>
         </div>
         <div class="cross-icon" id="cross-nav-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x icon"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -53,13 +63,13 @@
     <!-- Hero -->
     <section class="hero">
       <div class="title">
-        <h1>
+        <h1 class="wow animate__animated animate__fadeIn" data-wow-delay=".1s">
           Crafting <br>
           <span class="special-font">Dreams</span> <br>
           In Clay
         </h1>
       </div>
-      <div class="mouse">
+      <div class="mouse wow animate__animated animate__fadeIn" data-wow-delay=".4s">
         <span class="mouse-icon">
           <span class="mouse-wheel"></span>
         </span>
@@ -70,18 +80,18 @@
     <section class="welcome horizontal-padding top-section-separator">
       <div class="welcome-container main-container">
         <div class="section__title">
-          <h2 class="special-font">
+          <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-duration="1s">
             <span>Welcome to Damos Studio <br> </span>
             your premier destination for exquisite ceramics and pottery creations!
           </h2>
         </div>
         <div class="welcome__info">
-          <div class="column">
-            <p class="w-600 big-text">Welcome to Damos Studio! Immerse yourself in the fascinating world of ceramics
+          <div class="column ">
+            <p class="w-600 big-text wow animate__animated animate__fadeInLeft" data-wow-duration="1s">Welcome to Damos Studio! Immerse yourself in the fascinating world of ceramics
               where creativity comes to life. In our studio, we fuse passion for art with craftsmanship to bring you
               unique and exquisite ceramic creations.</p>
           </div>
-          <div class="column">
+          <div class="column wow animate__animated animate__fadeInRight" data-wow-duration="1s">
             <img src="./img/welcome/welcome.jpg" alt="">
           </div>
         </div>
@@ -89,20 +99,20 @@
     </section>
 
     <!-- About -->
-    <section class="about horizontal-padding top-section-separator">
+    <section id="about" class="about horizontal-padding top-section-separator">
       <div class="about-container main-container">
         <div class="section__title">
-          <h3>About Us</h3>
-          <h2 class="special-font">
+          <h3 class="wow animate__animated animate__fadeIn" data-wow-duration="1s">About Us</h3>
+          <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".15s">
             <span>Discover our passion <br></span>
             for ceramics at Damos Studio. Since our founding, we are committed to fuse creativity.
           </h2>
         </div>
         <div class="about__content">
-          <img src="./img/aboutUs/ahout-us-hero.jpg" alt="">
+          <img class="wow animate__animated animate__fadeIn" data-wow-duration="1s" src="./img/aboutUs/ahout-us-hero.jpg" alt="">
 
           <div class="categories">
-            <div class="category">
+            <div class="category wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".2s">
               <div class="category__title">
                 <h5>Sustainability</h5>
                 <h5 class="category__number ft-extra-light">01</h5>
@@ -111,7 +121,7 @@
                 from <span class="bold">100% recycled materials</span>.</p>
             </div>
 
-            <div class="category">
+            <div class="category wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".35s">
               <div class="category__title">
                 <h5>Our Creative Philosophy</h5>
                 <h5 class="category__number ft-extra-light">02</h5>
@@ -120,7 +130,7 @@
               new ways to <span class="bold">express</span> our <span class="bold">creativity</span>.</p>
             </div>
 
-            <div class="category">
+            <div class="category wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".45s">
               <div class="category__title">
                 <h5>Commitment to Excellence:</h5>
                 <h5 class="category__number ft-extra-light">02</h5>
@@ -133,37 +143,43 @@
           </div>
 
           <div class="content__container">
-            <div class="column">
-              <h4>Conscious &<br> ethical work</h4>
-              <p>At <span class="bold">Damos Studio</span>, our work goes <span class="bold">beyond</span> <span class="bold">creating</span> exceptional <span class="bold">ceramic pieces</span>. We are committed to a
+            <div class="column" >
+              <h4 class="wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+                Conscious &<br> ethical work
+              </h4>
+              <p class="wow animate__animated animate__fadeIn"  data-wow-delay=".2s">
+                At <span class="bold">Damos Studio</span>, our work goes <span class="bold">beyond</span> <span class="bold">creating</span> exceptional <span class="bold">ceramic pieces</span>. We are committed to a
               <span class="bold">conscious</span> work ethic that <span class="bold">respects</span> both <span class="bold">people</span> and the <span class="bold">planet</span>. Our commitment is based on the following
-                <span class="bold">principles</span>:</p>
+                <span class="bold">principles</span> :
+              </p>
+
               <ul class="list">
-                <li>
+                <li class="wow animate__animated animate__fadeIn"  data-wow-delay=".05s">
                   <div class="list-title">Environmental Responsibility</div>
+                  
                   We use <span class="bold">local raw materials</span> and <span class="bold">sustainable</span> production methods to <span class="bold">minimize</span> our <span class="bold">impact</span> on the
                   <span class="bold">environment</span>. From <span class="bold">recycling waste</span> to reducing energy <span class="bold">consumption</span>, we are dedicated to <span class="bold">preserving
                   natural resources</span>.
                 </li>
-                <li>
+                <li class="wow animate__animated animate__fadeIn"  data-wow-delay=".10s">
                   <div class="list-title">Work Ethic</div>
                   We <span class="bold">value</span> every <span class="bold">individual involved</span> in our <span class="bold">creative process</span>. We ensure that <span class="bold">everyone</span> in our supply
                   <span class="bold">chain works</span> under fair and safe <span class="bold">conditions</span>, promoting <span class="bold">equality</span> and <span class="bold">respect</span> at every <span class="bold">step</span>.
                 </li>
-                <li>
+                <li class="wow animate__animated animate__fadeIn"  data-wow-delay=".15s">
                   <div class="list-title">Transparency and Accountability</div>
                   We <span class="bold">strive</span> to <span class="bold">maintain</span> open and <span class="bold">transparent communication</span> with our <span class="bold">community</span>. From our suppliers to our
                   <span class="bold">customers</span>, we seek to share our <span class="bold">philosophy</span> and <span class="bold">practices</span>, fostering <span class="bold">trust</span> and <span class="bold">commitment</span>.
                 </li>
-                <li>
+                <li class="wow animate__animated animate__fadeIn"  data-wow-delay=".20s">
                   <div class="list-title">Community Support</div>
                   We <span class="bold">believe</span> in <span class="bold">giving back</span> to the <span class="bold">community around us</span>. We collaborate with <span class="bold">local projects</span> and <span class="bold">charities</span>
                   to contribute to the <span class="bold">growth</span> and <span class="bold">well-being</span> of the <span class="bold">communities</span> in which we <span class="bold">operate</span>.
                 </li>
               </ul>
             </div>
-            <div class="image__column">
-              <img src="./img/aboutUs/about-us-lateral.jpg" alt="">
+            <div class="image__column wow animate__animated animate__fadeInRight">
+              <img data-wow-duration="1s" src="./img/aboutUs/about-us-lateral.jpg" alt="">
             </div>
           </div>
         </div>
@@ -171,7 +187,7 @@
     </section>
 
     <!-- BlockQuote -->
-    <section class="blockquote horizontal-padding top-section-separator">
+    <section class="blockquote horizontal-padding top-section-separator wow animate__animated animate__fadeIn">
       <div class="blockquote-container main-container">
         <div class="blockquote__content">
           <div class="blockquote__text">
@@ -180,18 +196,18 @@
             </h2>
           </div>
           <div class="vertical-line"></div>
-          <p class="text-center uppercase">Madison Turner</p>
+          <p class="text-center uppercase">Claire Fraser</p>
         </div>
       </div>
     </section>
 
     <!-- OUR COLLECTION -->
-    <section class="our-collection top-section-separator">
+    <section id="ourCollection" class="our-collection top-section-separator">
       <div class="our-collection-container">
         <div class="horizontal-padding">
           <div class="section__title main-container">
-            <h3>Our Collection</h3>
-            <h2 class="special-font">
+            <h3 class="wow animate__animated animate__fadeIn">Our Collection</h3>
+            <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-delay=".15s">
               <span>Explore Handcrafted Elegance <br></span>
               Discover ceramic pieces that fuse beauty and functionality with masterful craftsmanship.
             </h2>
@@ -200,33 +216,34 @@
         <div class="section__content">
           <div class="collection__wrapper">
             <div id="collection-mug" class="collection__item horizontal-padding--right">
-              <div class="collection__image"></div>
+              <div class="collection__image wow animate__animated animate__fadeInLeft"></div>
               <div class="collection__description">
-                <h4 class="mega-text">MUGS</h4>
-                <p class="w-500">Our <span class="bold">mugs</span> are the <span class="bold">perfect companion</span> for your <span class="bold">morning coffee or tea</span>. Made from
+                <h4 class="mega-text wow animate__animated animate__fadeInLeft">MUGS</h4>
+                <p class="w-500 wow animate__animated animate__fadeInLeft">Our <span class="bold">mugs</span> are the <span class="bold">perfect companion</span> for your <span class="bold">morning coffee or tea</span>. Made from
                   <span class="bold">high-quality ceramic</span>, they are <span class="bold">durable</span> and <span class="bold">easy to clean</span>. Choose from a variety of <span class="bold">colors</span> and <span class="bold">designs</span>
-                  to find the <span class="bold">perfect match</span> for your <span class="bold">style</span>.</p>
-                <a href="#" class="link">See More</a>
+                  to find the <span class="bold">perfect match</span> for your <span class="bold">style</span>.
+                </p>
+                <a href="#" class="link wow animate__animated animate__fadeInLeft" data-wow-delay="">See More</a>
               </div>
             </div>
             <div id="collection-vase" class="collection__item collection__item--reverse horizontal-padding--left">
-              <div class="collection__image"></div>
+              <div class="collection__image wow animate__animated animate__fadeInRight"></div>
               <div class="collection__description">
-                <h4 class="mega-text">VASES</h4>
-                <p class="w-500"> Our <span class="bold">Glasses</span> Elevate Every Sip. Crafted from <span class="bold">premium glass</span>, our collection offers
+                <h4 class="mega-text wow animate__animated animate__fadeInRight">VASES</h4>
+                <p class="w-500 wow animate__animated animate__fadeInRight"> Our <span class="bold">Glasses</span> Elevate Every Sip. Crafted from <span class="bold">premium glass</span>, our collection offers
                   <span class="bold">durability</span> and <span class="bold">easy maintenance</span>. <span class="bold">Explore</span> a range of styles and hues to complement your <span class="bold">drinking
                   experience</span>,</p>
-                <a href="#" class="link">See More</a>
+                <a href="#" class="link wow animate__animated animate__fadeInRight">See More</a>
               </div>
             </div>
             <div id="collection-decor" class="collection__item horizontal-padding--right">
-              <div class="collection__image"></div>
+              <div class="collection__image wow animate__animated animate__fadeInLeft"></div>
               <div class="collection__description">
-                <h4 class="mega-text">DECOR</h4>
-                <p class="w-500">Our <span class="bold">Ceramic Decor</span> Pieces Elevate Your Space. <span class="bold">Purposefully designed</span> for plant
+                <h4 class="mega-text wow animate__animated animate__fadeInLeft">DECOR</h4>
+                <p class="w-500 wow animate__animated animate__fadeInLeft">Our <span class="bold">Ceramic Decor</span> Pieces Elevate Your Space. <span class="bold">Purposefully designed</span> for plant
                   enthusiasts or home decorators, our <span class="bold">ceramic creations</span> offer a harmonious blend of <span class="bold">functionality</span> and
                   <span class="bold">aesthetics</span>. Elevate your <span class="bold">home</span> with our diverse <span class="bold">collection</span>.</p>
-                <a href="#" class="link">See More</a>
+                <a href="#" class="link wow animate__animated animate__fadeInLeft">See More</a>
               </div>
             </div>
           </div>
@@ -235,24 +252,24 @@
     </section>
 
     <!-- GALLERY -->
-    <section class="gallery top-section-separator horizontal-padding">
+    <section id="gallery" class="gallery top-section-separator horizontal-padding">
       <div class="gallery-container  main-container">
         <div class="section__title">
-          <h3>Gallery</h3>
-          <h2 class="special-font">
+          <h3 class="wow animate__animated animate__fadeIn">Gallery</h3>
+          <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-delay=".15s">
             <span>Journey Through Our Masterpieces <br></span>
             Experience our gallery showcasing an array of unique, handcrafted ceramic pieces.
           </h2>
         </div>
         <div class="gallery__container">
           <div class="gallery__filter filter-articles">
-            <button data-filter="*" class="button filter-articles__item active" type="button">All Products</button>
-            <button data-filter="mugs" class="button filter-articles__item" type="button">Mugs</button>
-            <button data-filter="vases" class="button filter-articles__item" type="button">Vases</button>
-            <button data-filter="decor" class="button filter-articles__item" type="button">Decor</button>
+            <button data-filter="*" class="button filter-articles__item active wow animate__animated animate__fadeInLeft" type="button" >All Products</button>
+            <button data-filter="mugs" class="button filter-articles__item wow animate__animated animate__fadeInLeft" type="button" data-wow-delay=".2s">Mugs</button>
+            <button data-filter="vases" class="button filter-articles__item wow animate__animated animate__fadeInLeft" type="button" data-wow-delay=".3s">Vases</button>
+            <button data-filter="decor" class="button filter-articles__item wow animate__animated animate__fadeInLeft" type="button" data-wow-delay=".4s">Decor</button>
           </div>
 
-          <div class="articles__items">
+          <div class="articles__items  wow animate__animated animate__fadeIn">
             <article data-filter="mugs" class="articles__item article">
               <a href="#" class="article__image">
                 <img src="./img/gallery/item-1.jpg" alt="Image">
@@ -413,28 +430,28 @@
     </section>
 
     <!-- OUR TEAM -->
-    <section class="ourTeam horizontal-padding top-section-separator">
+    <section id="ourTeam" class="ourTeam horizontal-padding top-section-separator">
       <div class="ourTeam-container main-container">
         <div class="section__title">
-          <h3>Our Team</h3>
-          <h2 class="special-font">
+          <h3 class="wow animate__animated animate__fadeIn">Our Team</h3>
+          <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-delay=".15s">
             <span>Discover the Soul of Damos Studio <br></span>
             Meet the dedicated artisans who infuse passion and skill into each piece.
           </h2>
         </div>
         <div class="ourTeam__content">
           <div class="founder__container">
-            <img class="team__image" src="./img/ourTeam/ourTeam.jpg" alt="">
-            <h4 class="text-center">Claire Fraser</h4>
-            <h5 class="article__image__overlay__subtitle text-center">BASED IN FRANCE</h5>
-            <img class="founder__image" src="./img/ourTeam/founder.jpg" alt="">
+            <img class="team__image wow animate__animated animate__fadeIn" src="./img/ourTeam/ourTeam.jpg" alt="">
+            <h4 class="text-center wow animate__animated animate__fadeIn">Claire Fraser</h4>
+            <h5 class="article__image__overlay__subtitle text-center wow animate__animated animate__fadeIn" data-wow-delay=".1s">BASED IN FRANCE</h5>
+            <img class="founder__image wow animate__animated animate__fadeIn" src="./img/ourTeam/founder.jpg" alt="">
 
             <div class="founder__content">
-              <p class="special-font big-text text-center">Claire Fraser is a French ceramicist whose work is inspired
+              <p class="special-font big-text text-center wow animate__animated animate__fadeIn">Claire Fraser is a French ceramicist whose work is inspired
                 by the nature</p>
 
               <div class="founder__description">
-                <p class="w-500">
+                <p class="w-500 wow animate__animated animate__fadeIn" data-wow-delay=".1s">
                   <span class="bold">French ceramicist</span> whose work is <span class="bold">inspired</span> by
                   the <span class="bold">nature</span> of her <span class="bold">childhood in Burgundy</span>
                   region where she lives <span class="bold">today</span>. Her work has
@@ -442,7 +459,7 @@
                   throws each <span class="bold">piece</span>, and you can <span class="bold">really
                   sense</span> the <span class="bold">craft</span> and long study of the <span class="bold">lines</span>.
                 </p>
-                <p class="w-500">
+                <p class="w-500 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
                   <span class="bold">Elegant yet rustic</span>, rough and pure, her
                   <span class="bold">pieces</span> add a <span class="bold">very rich visual</span> and <span class="bold">tactile</span>
                   experience to their <span class="bold">usage</span>. Born in <span class="bold">1978</span>,
@@ -456,11 +473,11 @@
           </div>
 
           <div class="team__container">
-            <h4 class="text-center">Meet Our Team</h4>
-            <h5 class="article__image__overlay__subtitle uppercase text-center">The talent behind each work</h5>
+            <h4 class="text-center wow animate__animated animate__fadeIn">Meet Our Team</h4>
+            <h5 class="article__image__overlay__subtitle uppercase text-center wow animate__animated animate__fadeIn"  data-wow-delay=".1s">The talent behind each work</h5>
 
             <div class="team__grid">
-              <div class="team__item">
+              <div class="team__item wow animate__animated animate__fadeIn">
                 <img class="team__item__thumbnail" src="./img/ourTeam/team-1.jpg" alt="">
                 <p class="special-font big-text">Liam Wilson</p>
                 <h5 class="article__image__overlay__subtitle uppercase">Clay Modeling Artisan</h5>
@@ -476,7 +493,7 @@
                   </a>
                 </div>
               </div>
-              <div class="team__item team__bottom">
+              <div class="team__item team__bottom wow animate__animated animate__fadeIn" data-wow-delay=".1s">
                 <img class="team__item__thumbnail" src="./img/ourTeam/team-2.jpg" alt="">
                 <p class="special-font big-text">Sophia Lee</p>
                 <h5 class="article__image__overlay__subtitle uppercase">Enameling Technique</h5>
@@ -492,7 +509,7 @@
                   </a>
                 </div>
               </div>
-              <div class="team__item">
+              <div class="team__item wow animate__animated animate__fadeIn">
                 <img class="team__item__thumbnail" src="./img/ourTeam/team-3.jpg" alt="">
                 <p class="special-font big-text">Olivia Johnson</p>
                 <h5 class="article__image__overlay__subtitle uppercase">Events and Workshops Coordinator</h5>
@@ -508,7 +525,7 @@
                   </a>
                 </div>
               </div>
-              <div class="team__item team__top">
+              <div class="team__item team__top wow animate__animated animate__fadeIn">
                 <img class="team__item__thumbnail" src="./img/ourTeam/team-4.jpg" alt="">
                 <p class="special-font big-text">Isabella Martinez</p>
                 <h5 class="article__image__overlay__subtitle uppercase">Ceramic Pattern Designer</h5>
@@ -524,7 +541,7 @@
                   </a>
                 </div>
               </div>
-              <div class="team__item team__bottom">
+              <div class="team__item team__bottom wow animate__animated animate__fadeIn" data-wow-delay=".1s">
                 <img class="team__item__thumbnail" src="./img/ourTeam/team-5.jpg" alt="">
                 <p class="special-font big-text">Amelia Adams </p>
                 <h5 class="article__image__overlay__subtitle uppercase">Packing and Shipping Clerk</h5>
@@ -540,7 +557,7 @@
                   </a>
                 </div>
               </div>
-              <div class="team__item team__top">
+              <div class="team__item team__top wow animate__animated animate__fadeIn">
                 <img class="team__item__thumbnail" src="./img/ourTeam/team-6.jpg" alt="">
                 <p class="special-font big-text">Ethan Garcia</p>
                 <h5 class="article__image__overlay__subtitle uppercase">Expert in Burning and Furnaces</h5>
@@ -565,17 +582,17 @@
 
     <!-- DECORATION TEXT -->
     <section class="decorText horizontal-padding top-section-separator main-container">
-      <p class="mega-text special-font uppercase text-right">When</p>
-      <p class="mega-text special-font uppercase decorText__special">You Receive a piece <span>From Damos</span></p>
-      <p class="mega-text special-font uppercase text-right">You Own</p>
-      <p class="mega-text special-font uppercase text-right">Something unique</p>
+      <p class="mega-text special-font uppercase text-right wow animate__animated animate__fadeIn" data-wow-delay=".2s">When</p>
+      <p class="mega-text special-font uppercase decorText__special wow animate__animated animate__fadeIn"  data-wow-delay=".2s">You Receive a piece <span>From Damos</span></p>
+      <p class="mega-text special-font uppercase text-right wow animate__animated animate__fadeIn"  data-wow-delay=".2s">You Own</p>
+      <p class="mega-text special-font uppercase text-right wow animate__animated animate__fadeIn"  data-wow-delay=".2s">Something unique</p>
     </section>
 
     <!-- REVIEWS -->
     <section class="reviews top-section-separator horizontal-padding">
       <div class="main-container">
         <div class="reviews__container">
-          <div class="review__info">
+          <div class="review__info wow animate__animated animate__fadeInLeft">
             <h2 class="uppercase mega-text special-font">Reviews</h2>
             <div class="reviews__rating">
               <div class="rating__stars">
@@ -586,7 +603,7 @@
               <a class="button uppercase" href="#">READ THEM HERE</a>
             </div>
           </div>
-          <div class="review__list">
+          <div class="review__list wow animate__animated animate__fadeInRight" data-wow-delay=".2s">
             <div class="review__item">
               <div class="client__info">
                 <div class="client__wrapper">
@@ -628,11 +645,11 @@
     </section> 
 
     <!-- CONTACT US -->
-    <section class="contact horizontal-padding top-section-separator">
+    <section id="contact" class="contact horizontal-padding top-section-separator">
       <div class="contact-container main-container">
         <div class="section__title">
-          <h3>Contact Us</h3>
-          <h2 class="special-font">
+          <h3 class="wow animate__animated animate__fadeIn">Contact Us</h3>
+          <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-delay=".15s">
             <span>Looking for a unique piece? <br></span>
             We're here for you. Contact us for custom orders or any other inquiries.
           </h2>
@@ -640,42 +657,45 @@
         <div class="section__content">
           <div class="content__container">
             <div class="column">
-              <h4>Let's Talk</h4>
+              <h4 class="wow animate__animated animate__fadeIn" data-wow-delay=".05s">Let's Talk</h4>
               <form class="form">
-                <input type="text" class="text-field" maxlength="256" name="name" data-name="Name" placeholder="Name"
+                  <input type="text" class="text-field wow animate__animated animate__fadeIn" data-wow-delay=".10s" maxlength="256" name="name" data-name="Name" placeholder="Name"
                   id="name" aria-label="Name" required>
-                  <input type="email" class="text-field" maxlength="256" name="Email"
+
+                  <input type="email" class="text-field wow animate__animated animate__fadeIn" data-wow-delay=".15s" maxlength="256" name="Email"
                   data-name="Email" placeholder="Email" id="Email" aria-label="Email" required>
+
                   <input type="tel"
-                  class="text-field" maxlength="256" name="Telephone" data-name="Telephone" placeholder="Telephone"
+                  class="text-field wow animate__animated animate__fadeIn" data-wow-delay=".20s" maxlength="256" name="Telephone" data-name="Telephone" placeholder="Telephone"
                   id="Telephone" aria-label="Telephone" required>
+
                   <textarea placeholder="I have a question..." maxlength="5000"
-                  id="Message" name="Message" data-name="Message" class="text-area w-input"
+                  id="Message" name="Message" data-name="Message" class="text-area w-input wow animate__animated animate__fadeIn" data-wow-delay=".25s"
                   aria-label="Message"></textarea>
 
-                <div class="flex-submit-button">
+                <div class="flex-submit-button wow animate__animated animate__fadeIn" data-wow-delay=".30s">
                   <input type="submit" value="Submit" data-wait="Please wait..." class="button w-button">
                 </div>
               </form>
 
               <div class="contact__info">
                 <div>
-                  <h3>Email</h3>
-                  <a href="mailto:info@damos.com">info@damos.com</a>
+                  <h3 class="wow animate__animated animate__fadeIn">Email</h3>
+                  <a class="wow animate__animated animate__fadeIn" data-wow-delay=".05s" href="mailto:info@damos.com">info@damos.com</a>
                 </div>
                 <div>
-                  <h3>Telephone</h3>
-                  <a href="">+34 623493849</a>
+                  <h3 class="wow animate__animated animate__fadeIn" data-wow-delay=".10s">Telephone</h3>
+                  <a class="wow animate__animated animate__fadeIn" data-wow-delay=".15s" href="">+34 623493849</a>
                 </div>
                 <div>
-                  <h3>Location</h3>
-                  <a href="https://www.google.es/maps/search/36+Henry+Lane+Brooklyn,+NY+11219/@40.6502626,-74.0004134,17z/data=!3m1!4b1?entry=ttu">36 Henry Lane
+                  <h3 class="wow animate__animated animate__fadeIn" data-wow-delay=".20s">Location</h3>
+                  <a class="wow animate__animated animate__fadeIn" data-wow-delay=".25s" href="https://www.google.es/maps/search/36+Henry+Lane+Brooklyn,+NY+11219/@40.6502626,-74.0004134,17z/data=!3m1!4b1?entry=ttu">36 Henry Lane
                     Brooklyn, NY 11219</a>
                 </div>
               </div>
               
             </div>
-            <div class="image__column">
+            <div class="image__column wow animate__animated animate__fadeInRight">
               <img src="./img/contactUs/sidebar.jpg" alt="">
             </div>
           </div>
@@ -684,7 +704,7 @@
     </section>
 
     <!-- MAP -->
-    <section class="map">
+    <section class="map wow animate__animated animate__fadeIn">
       <iframe class="googleMap top-section-separator" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.0756596964225!2d-74.00270940905145!3d40.65026256766714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ac6d7407875%3A0x3cbeba302209e44d!2s36th%20St%2C%20Brooklyn%2C%20NY%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1703585572861!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
@@ -692,15 +712,15 @@
     <section class="faq top-section-separator horizontal-padding">
       <div class="faq-container main-container">
         <div class="section__title">
-          <h3>FAQ</h3>
-          <h2 class="special-font">
+          <h3 class="wow animate__animated animate__fadeIn" data-wow-delay=".05s">FAQ</h3>
+          <h2 class="special-font wow animate__animated animate__fadeIn" data-wow-delay=".10s">
             <span>Find answers <br></span>
             to your frequently asked questions about our products, manufacturing process and more.
           </h2>
         </div>
         <div class="section__content">
           <ul class="faq__list">
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".05s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">01</div>
                 <span class="paragraph-big">
@@ -715,7 +735,7 @@
                 </div>
               </div>
             </li>
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".10s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">03</div>
                 <span class="paragraph-big">
@@ -730,7 +750,7 @@
                 </div>
               </div>
             </li>
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".15s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">02</div>
                 <span class="paragraph-big">
@@ -746,7 +766,7 @@
                 </div>
               </div>
             </li>
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".20s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">04</div>
                 <span class="paragraph-big">
@@ -761,7 +781,7 @@
                 </div>
               </div>
             </li>
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".25s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">05</div>
                 <span class="paragraph-big">
@@ -776,7 +796,7 @@
                 </div>
               </div>
             </li>
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".30s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">06</div>
                 <span class="paragraph-big">
@@ -791,7 +811,7 @@
                 </div>
               </div>
             </li>
-            <li class="faq__item">
+            <li class="faq__item wow animate__animated animate__fadeIn" data-wow-delay=".35s">
               <div class="faq__title">
                 <div class="faq-number paragraph-big">07</div>
                 <span class="paragraph-big">
@@ -816,49 +836,49 @@
       <div class="footer-container main-container">
         <div class="footer__content">
           <div class="footer__row logo__container">
-            <h2 class="logo__text">DAMOS</h2>
-            <div class="horizontal-line"></div>
+            <h2 class="logo__text wow animate__animated animate__fadeInLeft">DAMOS</h2>
+            <div class="horizontal-line wow animate__animated animate__fadeIn"></div>
           </div>
           <div class="footer__row">
             <div class="footer__column social__links">
-              <p class="footer__description">Creating timeless beauty through ceramics. We unite art and craftsmanship to offer unique pieces that enchant and endure over time.</p>
+              <p class="footer__description wow animate__animated animate__fadeInLeft" data-wow-delay=".05">Creating timeless beauty through ceramics. We unite art and craftsmanship to offer unique pieces that enchant and endure over time.</p>
               <div class="wrap-socials">
-                <a href="#" class="link-social w-inline-block">
+                <a href="#" class="link-social w-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".10s">
                   <img src="./img/twitter.svg" loading="lazy" alt="Twitter Icon" class="icon-social">
                 </a>
-                <a href="#" class="link-social w-inline-block">
+                <a href="#" class="link-social w-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".20s">
                   <img src="./img/instagram.svg" loading="lazy" alt="Instagram Icon" class="icon-social">
                 </a>
-                <a href="#" class="link-social w-inline-block">
+                <a href="#" class="link-social w-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".25s">
                   <img src="./img/dribble.svg" loading="lazy" alt="Dribble Icon" class="icon-social">
                 </a>
               </div>
             </div>
             <div class="footer__column footer__column-links">
-              <h4>Links</h4>
+              <h4 class="wow animate__animated animate__fadeIn" data-wow-delay=".05s">Links</h4>
               <ul class="footer__links">
-                <li><a class="link" href="#">Home</a></li>
-                <li><a class="link" href="#">Our Collection</a></li>
-                <li><a class="link" href="#">Gallery</a></li>
-                <li><a class="link" href="#">Our Team</a></li>
-                <li><a class="link" href="#">Contact Us</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".10s"><a class="link" href="#">Home</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".15s"><a class="link" href="#">Our Collection</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".20s"><a class="link" href="#">Gallery</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".25s"><a class="link" href="#">Our Team</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".30s"><a class="link" href="#">Contact Us</a></li>
               </ul>
             </div>
             <div class="footer__column  footer__column-legal">
-              <h4>Legal</h4>
+              <h4 class="wow animate__animated animate__fadeIn" data-wow-delay=".05s">Legal</h4>
               <ul class="footer__links">
-                <li><a class="link" href="#">Legal Notice</a></li>
-                <li><a class="link" href="#">Privacy Policy</a></li>
-                <li><a class="link" href="#">Cookies Policy</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".10s"><a class="link" href="#">Legal Notice</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".15s"><a class="link" href="#">Privacy Policy</a></li>
+                <li class="wow animate__animated animate__fadeIn" data-wow-delay=".20s"><a class="link" href="#">Cookies Policy</a></li>
               </ul>
             </div>
             <div class="footer__column  footer__column-visit">
-              <h4>Visit us</h4>
-              <p>
+              <h4 class="wow animate__animated animate__fadeIn" data-wow-delay=".05s">Visit us</h4>
+              <p class="wow animate__animated animate__fadeIn" data-wow-delay=".10s">
                 New York, <br>
                 Brooklyn Henry Lane.
               </p>
-              <p>
+              <p class="wow animate__animated animate__fadeIn" data-wow-delay=".15s">
                 <span class="bold">Opening Hours</span>
                 <br>
                 10:00 - 18:00
@@ -867,27 +887,26 @@
           </div>
           <div class="footer__row copyright__container">
             <div class="footer__column">
-              <div class="horizontal-line"></div>
+              <div class="horizontal-line wow animate__animated animate__fadeIn"></div>
               <div class="copyright__text">
-                <p class="footer__copy">© 2023 Damos Studio. All rights reserved.</p>
-                <p class="footer__copy">Designed by <a href="https://github.com/jmcamposdev">jmcamposdev</a></p>
+                <p class="footer__copy wow animate__animated animate__fadeIn" data-wow-delay=".05s">© 2023 Damos Studio. All rights reserved.</p>
+                <p class="footer__copy wow animate__animated animate__fadeIn" data-wow-delay=".10s">Designed by <a href="https://github.com/jmcamposdev">jmcamposdev</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
-
-
-    
-
   </main>
 
   <script src="./js/isotope.min.js"></script>
+  <script src="./js/wow.min.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/accordion.js"></script>
   <script type="module" src="./js/main.js"></script>
+  <script>
+   
+  </script>
 </body>
 
 </html>
