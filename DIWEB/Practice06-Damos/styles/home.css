@@ -39,6 +39,11 @@ header {
   padding-right: 20px;
 }
 
+.nav__item--active a::before {
+    visibility: visible;
+    width: 100%;
+}
+
 .nav__item a,
 .nav__button a {
   color: var(--light);
@@ -904,11 +909,11 @@ footer .copyright__container a {
   footer .social__links {
     -ms-grid-column-span: 3;
     grid-column-end: 4;
-    -ms-grid-column: 1;
+    grid-column: 1;
     grid-column-start: 1;
     -ms-grid-row-span: 1;
     grid-row-end: 2;
-    -ms-grid-row: 1;
+    grid-row: 1;
     grid-row-start: 1;
     margin-bottom: 50px;
   }
@@ -958,6 +963,14 @@ footer .copyright__container a {
     gap: 25px;
     flex-direction: column;
     padding-inline: 24px;
+  }
+
+  .collection__item--reverse {
+    text-align: left;
+  }
+
+  .collection__item--reverse .collection__description {
+    align-items: start;
   }
 
   .collection__image {
