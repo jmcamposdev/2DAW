@@ -1,6 +1,11 @@
+import navActive from "./navActive.js";
 import NavCollapse from "./navCollapse.js";
 
 window.addEventListener('load', function() {
+  // Initialize WOW
+  new WOW().init();
+  // Call to navActive function
+  navActive();
   // Create a new instance of NavCollapse class
   new NavCollapse("nav", "burger-nav-icon", ["cross-icon", "nav__item"]);
   imagesInit();
