@@ -3,7 +3,8 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
     console.log("scrollY > 30");
-    header.classList.remove("wow");
+    header.classList.remove("wow", "animate__animated", "animate__fadeIn");
+    header.style.visibility = "visible";
   }
   if (window.scrollY > 200) { // 200px from top
       // Show the header background
