@@ -11,11 +11,13 @@ G) Eliminar el primero y segundo elemento.
 H) Eliminar los dos últimos.
  */
 
+// Declare constants
 const LIST = '.order__list';
+const LIST_DEFAULT_NUMBER = 7;
 
 
+// Main Entry
 $(function(){
-
   // Add bottoms events
   $('.btn__remove-all-list').click(removeList);
   $('.btn__restore-list').click(restoreList);
@@ -27,45 +29,74 @@ $(function(){
   $('.btn__remove__last__two').click(removeLastTwoElements);
 });
 
+/**
+ * Remove all list elements
+ */
 function removeList(){
   $(LIST).empty();
 }
 
+/**
+ * Restore list elements
+ * Add 7 elements to the list
+ */
 function restoreList() {
-  removeList();
-  const listsChildren = 7;
-  for (let i = 1; i <= listsChildren ; i++) {
+  removeList(); // Remove all elements
+
+  for (let i = 1; i <= LIST_DEFAULT_NUMBER ; i++) {
     addElementToBottom();
   }
 }
 
+/**
+ * Add element to the start of the list
+ */
 function addElementToStart() {
-  $(LIST).prepend(getListItem());
+  $(LIST).prepend(createNextListItem());
 }
 
+/**
+ * Add element to the bottom of the list
+ */
 function addElementToBottom() {
-  $(LIST).append(getListItem());
+  $(LIST).append(createNextListItem());
 }
 
+/**
+ * Remove last element of the list
+ */
 function removeLastElement() {
   $(LIST).children().last().remove();
 }
 
+/**
+ * Remove first element of the list
+ */
 function removeFirstElement() {
   $(LIST).children().first().remove();
 }
 
+/**
+ * Remove first and second element of the list
+ */
 function removeFirstAndSecondElement() {
   removeFirstElement();
   removeLastElement();
 }
 
+/**
+ * Remove last two elements of the list
+ */
 function removeLastTwoElements() {
   removeLastElement();
   removeLastElement();
 }
 
-function getListItem() {
+/**
+ * Get a list item
+ * @returns {jQuery|HTMLElement}
+ */
+function createNextListItem() {
   const n = $(LIST).children().length + 1;
   return $("<li class='order__list__item'></li>").text(`Element ${n}`);
 }

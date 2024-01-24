@@ -1,3 +1,8 @@
+/**
+ * 4.Realiza al menos uno de los ejercicios de la relación de API fetch con las funciones de Ajax de
+ * jQuery.
+ */
+
 $(document).ready(function() {
   // Get the buttons
   const getDogButton = $('#get-dog-button');
