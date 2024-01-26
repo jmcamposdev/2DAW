@@ -2,7 +2,6 @@ const header = document.getElementById('header');
 // When the user scrolls down 200px from the top of the document, show the button
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
-    console.log("scrollY > 30");
     header.classList.remove("wow", "animate__animated", "animate__fadeIn");
     header.style.visibility = "visible";
   }
