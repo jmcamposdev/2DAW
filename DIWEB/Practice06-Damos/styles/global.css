@@ -396,3 +396,47 @@ p {
 .link-social img {
   width: 18px;
 }
+
+/* ///////////////////////////////// */
+/* GO TO TOP */
+/* ///////////////////////////////// */
+.scrollBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 2.3em;
+  height: 2.3em;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--bg-light);
+  border: 1px solid var(--bg-light);
+  cursor: pointer;
+  border-radius: 100%;
+  font-size: 18px;
+}
+
+.scrollBtn:hover {
+  background-color: var(--bg-dark);
+}
+
+.scrollBtn:hover .scrollBtn-icon {
+  fill: white;
+}
+
+.scrollBtn--active {
+  bottom: 30px;
+  transition: all 0.5s;
+}
+
+.scrollBtn--inactive {
+  bottom: -100px;
+  transition: bottom 0.5s;
+}
+
+.scrollBtn-icon {
+  width: 21px;
+  fill: var(--background-color);
+}
