@@ -15,6 +15,9 @@ The first practice was a true test, creating a page for the sale of tickets for 
 - [View Code 💻](./Practice02-BioParc)
 - [View Website 🌐](https://servidor.jmcampos.dev/DIWEB/Practice02-BioParc/)
 
+
+![SCR-20240204-ocrq](https://github.com/jmcamposdev/2DAW/assets/108521775/711944ed-5566-4ad4-b8e2-67d8929e610a)
+
 **Pages:**
 - Home
 - Facilities
@@ -37,6 +40,9 @@ Focused on an ecological and environmentally conscious luxury restaurant, Broze 
 - [View Code 💻](./Practice03-Restaurant/)
 - [View Website 🌐](https://servidor.jmcampos.dev/DIWEB/Practice03-Restaurant/)
 
+![SCR-20240204-odil](https://github.com/jmcamposdev/2DAW/assets/108521775/3dcbac9f-c1e3-431d-8e55-12da59f157c7)
+
+
 **Pages:**
 - Home
 - Team
@@ -57,6 +63,8 @@ Developing a tourism website for New Zealand, this practice delved into presenti
 **Website:**
 - [View Code 💻](./Practice04-NewZealand/)
 - [View Website 🌐](https://servidor.jmcampos.dev/DIWEB/Practice04-NewZealand/)
+
+![SCR-20240204-odte](https://github.com/jmcamposdev/2DAW/assets/108521775/497ad852-ca05-47b9-8424-177153bbf120)
 
 **Pages:**
 - Home
@@ -80,6 +88,8 @@ For ArkStudio, the focus was on a minimalistic design for an architectural studi
 - [View Code 💻](./Practice05-ArkStudio/)
 - [View Website 🌐](https://servidor.jmcampos.dev/DIWEB/Practice05-ArkStudio/)
 
+![SCR-20240204-oeaf](https://github.com/jmcamposdev/2DAW/assets/108521775/c61af40f-c714-4f49-b042-a283dffd3e85)
+
 **Sections:**
 - Home
 - About
@@ -100,6 +110,8 @@ A festive project for a ceramic studio called Damos, this practice explored mini
 **Website:**
 - [View Code 💻](./Practice06-Damos/)
 - [View Website 🌐](https://servidor.jmcampos.dev/DIWEB/Practice06-Damos/)
+
+![SCR-20240204-oejd](https://github.com/jmcamposdev/2DAW/assets/108521775/7d91f328-1441-4d63-97d8-def0cf7dcd34)
 
 **Sections:**
 - Home
