@@ -30,7 +30,7 @@ function showTodosCompleted() {
     .then(response => response.json()) // Convert the response to JSON
     .then(todos => { // Get the todos
       // Filter the completed todos
-      const completed = todos.filter(todo => todo.completed);
+      const completed = todos.filter(todo => todo.completed === true);
 
       // Create the rows
       completed.forEach(todo => {
