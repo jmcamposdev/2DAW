@@ -1,4 +1,4 @@
-# 2 Web Application Development
+# 2º Desarrollo de Aplicaiones Web / Web Application Development
 
 Welcome to the 2DAW repository, where you'll find resources and practices from the Second Year of the Higher Degree in Web Development.
 
