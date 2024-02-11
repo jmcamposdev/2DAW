@@ -18,6 +18,7 @@ The first practice was a true test, creating a page for the sale of tickets for 
 
 ![SCR-20240204-ocrq](https://github.com/jmcamposdev/2DAW/assets/108521775/711944ed-5566-4ad4-b8e2-67d8929e610a)
 
+
 **Pages:**
 - Home
 - Facilities
