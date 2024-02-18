@@ -105,7 +105,7 @@ For ArkStudio, the focus was on a minimalistic design for an architectural studi
 - Animations
 - Responsive Design
 
-### 5. Damos - Christmas Special
+### 5. Damos - Ceramic Studio
 A festive project for a ceramic studio called Damos, this practice explored minimalism and the contrast of black and white. Incorporating on-scroll animations and a Masonry grid with filtering, it showcased adaptability and responsiveness for various devices.
 
 **Website:**
