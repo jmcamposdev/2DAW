@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){s("info-message")});function s(n){var e=document.getElementsByClassName(n)[0];e&&(e.classList.add("animate-fade-in"),setTimeout(function(){e.classList.add("animate-fade-out"),e.addEventListener("animationend",function(){e.remove()})},3e3))}
